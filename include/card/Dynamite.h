@@ -24,6 +24,8 @@ namespace BangCard {
 
         bool onDrawCard(Room *room, Player *drawer);
 
+        ~Dynamite();
+
     private:
         static const std::string name;
         static const std::string feature;

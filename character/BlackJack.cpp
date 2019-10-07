@@ -49,7 +49,7 @@ bool BlackJack::isHasMultiAttack() const {
 }
 
 void BlackJack::drawCard(Room *room, Player *player) {
-    // flip, to be continued
+    // TODO flip animation , to be continued
     room->drawCard(room->getPositionByPlayer(player), 1);
     Card *drawedCard = room->drawCardFromPlagueForDetermine();
     if (drawedCard->getSuit() == Suit::Heart || drawedCard->getSuit() == Suit::Diamond) {

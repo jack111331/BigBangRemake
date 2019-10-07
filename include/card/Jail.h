@@ -26,6 +26,8 @@ namespace BangCard {
 
         bool onUnequip(Room *room, Card *card, Player *unequiper);
 
+        ~Jail();
+
     private:
         static const std::string name;
         static const std::string feature;

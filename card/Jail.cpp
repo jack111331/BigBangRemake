@@ -55,6 +55,7 @@ bool Jail::onUnequip(Room *room, Card *card, Player *unequiper) {
 }
 
 bool Jail::onDrawCard(Room *room, Player *drawer) {
+    // TODO refactor this
 //    if (drawer->GetEquipment() && drawer->GetEquipment()->GetName() == "Jail") {
 //        CCard *DrawedCard = NSAction::DrawCardFromPlagueForDetermine(room);
 //        room->GetDiscardPlague()->InsertCardToPlague(DrawedCard);
@@ -65,4 +66,8 @@ bool Jail::onDrawCard(Room *room, Player *drawer) {
 //        }
 //    }
     return true;
+}
+
+Jail::~Jail() {
+    delete listener;
 }

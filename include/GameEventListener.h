@@ -4,7 +4,6 @@
 #include <functional>
 #include "Player.h"
 
-// TODO All code in this file need to me refactor
 class Room;
 
 class Player;

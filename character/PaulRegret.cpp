@@ -2,7 +2,6 @@
 #include <string>
 #include "Room.h"
 
-
 using std::string;
 using namespace BangCharacter;
 

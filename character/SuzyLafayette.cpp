@@ -1,7 +1,6 @@
 #include "character/SuzyLafayette.h"
 #include <string>
 #include "Player.h"
-#include "Action.h"
 #include "Room.h"
 
 using std::string;
@@ -61,5 +60,5 @@ void SuzyLafayette::onRoundEnd(Room *room, Player *roundEnder) {
 }
 
 SuzyLafayette::~SuzyLafayette() {
-    // TODO destroy event
+    delete listener;
 }

@@ -57,7 +57,5 @@ void BartCassidy::onLossBlood(Room *room, Player *loser, Player *attacker) {
 }
 
 BartCassidy::~BartCassidy() {
-    //TODO destroy listener and clear it from room
     delete listener;
-//    GetInRoom()->GetRoomEvent()->unregisterOnLossBlood(OnLossBlood);
 }

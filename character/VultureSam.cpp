@@ -68,5 +68,5 @@ void VultureSam::onDeath(Room *room, Player *deadPerson, Player *attacker) {
 }
 
 VultureSam::~VultureSam() {
-    // TODO destroy listener
+    delete listener;
 }

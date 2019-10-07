@@ -1,8 +1,6 @@
 #include "card/Stagecoach.h"
 #include <string>
 #include "Room.h"
-#include "Action.h"
-#include <vector>
 
 using std::string;
 using namespace BangCard;

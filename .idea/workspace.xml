@@ -11,7 +11,30 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53543359-5bb5-4bf5-9eda-a6871d9e451e" name="Default Changelist" comment="" />
+    <list default="true" id="53543359-5bb5-4bf5-9eda-a6871d9e451e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/card/Bang.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/card/Bang.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/card/Barrel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/card/Barrel.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/card/Beer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/card/Beer.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/card/CatBalou.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/card/CatBalou.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/card/Dynamite.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/card/Dynamite.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/card/Jail.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/card/Jail.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/card/Stagecoach.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/card/Stagecoach.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/card/Wellsfargo.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/card/Wellsfargo.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/BartCassidy.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/character/BartCassidy.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/BlackJack.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/character/BlackJack.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/ElGringo.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/character/ElGringo.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/PaulRegret.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/character/PaulRegret.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/SuzyLafayette.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/character/SuzyLafayette.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character/VultureSam.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/character/VultureSam.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/GameEventListener.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/GameEventListener.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/card/Barrel.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/card/Barrel.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/card/Beer.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/card/Beer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/card/Dynamite.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/card/Dynamite.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/card/Jail.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/card/Jail.h" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,9 +45,13 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectId" id="1RXYoBypykK1zK61uKEX1gD4wQO" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/character" />
   </component>
@@ -90,10 +117,22 @@
       <workItem from="1570342555097" duration="5953000" />
       <workItem from="1570372269399" duration="2667000" />
       <workItem from="1570376503092" duration="1398000" />
+      <workItem from="1570412645460" duration="776000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

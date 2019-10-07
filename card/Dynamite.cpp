@@ -43,6 +43,7 @@ bool Dynamite::onUnequip(Room *room, Card *card, Player *unequiper) {
 }
 
 bool Dynamite::onDrawCard(Room *room, Player *drawer) {
+    // TODO refactor this
     //    if (drawer->GetEquipment() && drawer->GetEquipment()->GetName() == "Dynamite") {
     //        CCard *DrawedCard = NSAction::DrawCardFromPlagueForDetermine(room);
     //        if (DrawedCard->GetSuit() == Suit::Spade && DrawedCard->GetNumber() >= 2 && DrawedCard->GetNumber() <= 9) {
@@ -62,4 +63,8 @@ bool Dynamite::onDrawCard(Room *room, Player *drawer) {
     //        drawer->ChangeEquipment(nullptr);
     //    }
     return true;
+}
+
+Dynamite::~Dynamite() {
+    delete listener;
 }

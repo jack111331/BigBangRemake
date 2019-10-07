@@ -23,6 +23,8 @@ namespace BangCard {
 
         void onLossBlood(Room *room, Player *loser, Player *attacker);
 
+        ~Beer();
+
     private:
         static const std::string name;
         static const std::string feature;

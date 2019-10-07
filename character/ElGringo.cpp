@@ -53,6 +53,7 @@ bool ElGringo::isHasMultiAttack() const {
 }
 
 void ElGringo::onLossBlood(Room *room, Player *loser, Player *attacker) {
+    // TODO draw card strategy
 //    CDrawCardFromPlayer *DrawCardStrategy = new CDrawCardFromPlayer(
 //            NSDrawCardFactory::DrawCard("Random Choose Card"));
 //    DrawCardStrategy->DrawCardFromPlayer(loser, attacker);
@@ -60,5 +61,5 @@ void ElGringo::onLossBlood(Room *room, Player *loser, Player *attacker) {
 }
 
 ElGringo::~ElGringo() {
-//    GetInRoom()->GetRoomEvent()->unregisterOnLossBlood(OnLossBlood);
+    delete listener;
 }

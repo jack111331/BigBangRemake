@@ -51,3 +51,6 @@ bool Barrel::onPreLossBlood(Room *room, Player *loser) {
 bool Barrel::onUnequip(Room *room, Card *card, Player *unequiper) {
     listener->onPreLossBlood = nullptr;
 }
+Barrel::~Barrel() {
+    delete listener;
+}

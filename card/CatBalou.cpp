@@ -36,6 +36,7 @@ bool CatBalou::useCardEffect(Room *room, Player *myself, Player *target) {
     if(!Card::useCardEffect(room, myself, target)) {
         return false;
     }
+    // TODO fix communicate
 //    myself->GetUser()->SendMessage("Send Message", NSWrapInfo::WrapShowCard(myself, target).dump());
 //    target->GetUser()->SendMessage("Send Message", NSWrapInfo::WrapShowCard(myself, target).dump());
 //    myself->GetUser()->SendMessage("Send Message", NSWrapInfo::WrapChooseCard(myself, target, false).dump());

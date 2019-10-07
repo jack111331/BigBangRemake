@@ -5,6 +5,7 @@
 #include "Character.h"
 #include "Card.h"
 #include "Agent.h"
+#include "nlohmann/json.hpp"
 
 enum class Team {
     Sergeant = 0, //警長
@@ -24,6 +25,9 @@ class Equipment;
 class Player {
 public:
     Player(Agent *agent);
+
+    // information update related
+    void handleMessage(const nlohmann::json &jsonMessage);
 
     // holding related
     void addCardToHolding(Card *card);

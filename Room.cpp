@@ -173,6 +173,7 @@ position Room::getPositionByPlayer(Player *targetPlayer) {
             return i;
         }
     }
+    return playerList.size();
 }
 
 EventSubject *Room::getEventListener() const {
@@ -234,6 +235,10 @@ size_t Room::getAlivePlayerAmount() {
 
 const std::vector<Player *> &Room::getPlayerList() const {
     return playerList;
+}
+
+size_t Room::getPlayerAmount() {
+    return playerList.size();
 }
 
 void Room::resetPlayerRoundState(Player *player) {

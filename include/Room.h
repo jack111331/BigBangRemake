@@ -65,6 +65,8 @@ public:
 
     const std::vector<Player *> &getPlayerList() const;
 
+    size_t getPlayerAmount();
+
     Player *getNextPlayer(Player *currentPlayer);
 
     Player *getPlayerByPosition(int position);

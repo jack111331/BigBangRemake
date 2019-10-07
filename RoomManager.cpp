@@ -22,7 +22,12 @@ void RoomManager::addUserToRoom(User *user, Room *room) {
     room->playerJoin(user->getAgent());
 }
 
-Room *RoomManager::searchRoom(uint32_t id) const {
+Room *RoomManager::searchRoom(Player *player) const {
+    for(auto room : roomList) {
+        if(room->getPositionByPlayer(player) != room->getPlayerAmount()) {
+            return room;
+        }
+    }
     return nullptr;
 }
 

@@ -3,8 +3,11 @@
 //
 
 #include "Agent.h"
-
 #include <utility>
+#include "nlohmann/json.hpp"
+#include "User.h"
+#include "Player.h"
+using nlohmann::json;
 Agent::Agent(websocketpp::connection_hdl hdl) : token(std::move(hdl)), user(nullptr), player(nullptr) {
 
 }
@@ -14,6 +17,20 @@ const websocketpp::connection_hdl &Agent::getToken() const {
 
 void Agent::handleMessage(const std::string &message) {
     // TODO handle message
+    json jsonMessage = json(message);
+    if(jsonMessage.at("user")) {
+        if(user) {
+            user->handleMessage(jsonMessage.at("user"));
+        } else {
+            // TODO record error
+        }
+    } else if(jsonMessage.at("player")) {
+        if(player) {
+            player->handleMessage(jsonMessage.at("player"));
+        } else {
+            // TODO record error
+        }
+    }
 }
 
 

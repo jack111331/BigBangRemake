@@ -16,7 +16,7 @@ public:
 
     static void addUserToRoom(User *user, Room *room);
 
-    Room *searchRoom(uint32_t id) const;
+    Room *searchRoom(Player *player) const;
 
     void removeRoom(Room *targetRoom);
 

@@ -1,5 +1,7 @@
 #include "User.h"
 
+using nlohmann::json;
+
 User::User(Agent *agnet) : agent(agent), name(""), money(0), win(0), lose(0), id(0) {
 }
 
@@ -46,4 +48,8 @@ uint32_t User::getId() const {
 
 void User::setId(uint32_t id) {
     this->id = id;
+}
+
+void User::handleMessage(const json &jsonMessage) {
+
 }

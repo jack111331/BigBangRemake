@@ -3,6 +3,7 @@
 #include <stdint.h>
 #include <string>
 #include "Agent.h"
+#include "nlohmann/json.hpp"
 
 class User {
 public:
@@ -29,6 +30,8 @@ public:
     uint32_t getId() const;
 
     void setId(uint32_t id);
+
+    void handleMessage(const nlohmann::json &jsonMessage);
 
 private:
     Agent *agent;

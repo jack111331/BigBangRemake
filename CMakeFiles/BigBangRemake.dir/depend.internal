@@ -10,12 +10,80 @@ CMakeFiles/BigBangRemake.dir/Action.cpp.o
  ./include/Plague.h
  ./include/Player.h
  ./include/Room.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
  /home/edge/BigBangRemake/Action.cpp
 CMakeFiles/BigBangRemake.dir/Agent.cpp.o
  ./include/Agent.h
+ ./include/Card.h
+ ./include/Character.h
+ ./include/Player.h
+ ./include/User.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
@@ -28,6 +96,38 @@ CMakeFiles/BigBangRemake.dir/Card.cpp.o
  ./include/Plague.h
  ./include/Player.h
  ./include/Room.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
@@ -62,6 +162,38 @@ CMakeFiles/BigBangRemake.dir/CardGenerator.cpp.o
  ./include/card/Volcanic.h
  ./include/card/Wellsfargo.h
  ./include/card/Winchester.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
@@ -74,6 +206,38 @@ CMakeFiles/BigBangRemake.dir/Character.cpp.o
  ./include/Plague.h
  ./include/Player.h
  ./include/Room.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
@@ -88,6 +252,38 @@ CMakeFiles/BigBangRemake.dir/CharacterGenerator.cpp.o
  ./include/Plague.h
  ./include/Player.h
  ./include/Room.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
@@ -108,6 +304,38 @@ CMakeFiles/BigBangRemake.dir/EquipmentCard.cpp.o
  ./include/Plague.h
  ./include/Player.h
  ./include/Room.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
@@ -120,6 +348,38 @@ CMakeFiles/BigBangRemake.dir/GameEventListener.cpp.o
  ./include/Plague.h
  ./include/Player.h
  ./include/Room.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
@@ -128,6 +388,38 @@ CMakeFiles/BigBangRemake.dir/Lounge.cpp.o
  ./include/Agent.h
  ./include/Lounge.h
  ./include/User.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
@@ -137,6 +429,38 @@ CMakeFiles/BigBangRemake.dir/LoungeManager.cpp.o
  ./include/Lounge.h
  ./include/LoungeManager.h
  ./include/User.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
@@ -145,6 +469,38 @@ CMakeFiles/BigBangRemake.dir/Network.cpp.o
  ./include/Agent.h
  ./include/Network.h
  ./include/User.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/base64/base64.hpp
  ./include/websocketpp/close.hpp
  ./include/websocketpp/common/asio.hpp
@@ -223,6 +579,38 @@ CMakeFiles/BigBangRemake.dir/Plague.cpp.o
  ./include/Plague.h
  ./include/Player.h
  ./include/Room.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
@@ -239,6 +627,38 @@ CMakeFiles/BigBangRemake.dir/Player.cpp.o
  ./include/Room.h
  ./include/User.h
  ./include/WeaponCard.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
@@ -253,6 +673,38 @@ CMakeFiles/BigBangRemake.dir/Room.cpp.o
  ./include/Player.h
  ./include/Room.h
  ./include/User.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
@@ -267,6 +719,38 @@ CMakeFiles/BigBangRemake.dir/RoomManager.cpp.o
  ./include/Room.h
  ./include/RoomManager.h
  ./include/User.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
@@ -274,6 +758,38 @@ CMakeFiles/BigBangRemake.dir/RoomManager.cpp.o
 CMakeFiles/BigBangRemake.dir/User.cpp.o
  ./include/Agent.h
  ./include/User.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
@@ -289,6 +805,38 @@ CMakeFiles/BigBangRemake.dir/WeaponCard.cpp.o
  ./include/Player.h
  ./include/Room.h
  ./include/WeaponCard.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
@@ -303,6 +851,38 @@ CMakeFiles/BigBangRemake.dir/card/Bang.cpp.o
  ./include/Player.h
  ./include/Room.h
  ./include/card/Bang.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
@@ -319,6 +899,38 @@ CMakeFiles/BigBangRemake.dir/card/Barrel.cpp.o
  ./include/Room.h
  ./include/WeaponCard.h
  ./include/card/Barrel.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
@@ -333,6 +945,38 @@ CMakeFiles/BigBangRemake.dir/card/Beer.cpp.o
  ./include/Player.h
  ./include/Room.h
  ./include/card/Beer.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
@@ -348,6 +992,38 @@ CMakeFiles/BigBangRemake.dir/card/Carabine.cpp.o
  ./include/Room.h
  ./include/WeaponCard.h
  ./include/card/Carabine.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
@@ -363,6 +1039,38 @@ CMakeFiles/BigBangRemake.dir/card/CatBalou.cpp.o
  ./include/Room.h
  ./include/User.h
  ./include/card/CatBalou.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
@@ -377,6 +1085,38 @@ CMakeFiles/BigBangRemake.dir/card/Duel.cpp.o
  ./include/Player.h
  ./include/Room.h
  ./include/card/Duel.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
@@ -392,6 +1132,38 @@ CMakeFiles/BigBangRemake.dir/card/Dynamite.cpp.o
  ./include/Player.h
  ./include/Room.h
  ./include/card/Dynamite.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
@@ -406,6 +1178,38 @@ CMakeFiles/BigBangRemake.dir/card/Gatling.cpp.o
  ./include/Player.h
  ./include/Room.h
  ./include/card/Gatling.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
@@ -420,6 +1224,38 @@ CMakeFiles/BigBangRemake.dir/card/GeneralStore.cpp.o
  ./include/Room.h
  ./include/User.h
  ./include/card/GeneralStore.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
@@ -434,6 +1270,38 @@ CMakeFiles/BigBangRemake.dir/card/Indians.cpp.o
  ./include/Player.h
  ./include/Room.h
  ./include/card/Indians.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
@@ -450,6 +1318,38 @@ CMakeFiles/BigBangRemake.dir/card/Jail.cpp.o
  ./include/Room.h
  ./include/User.h
  ./include/card/Jail.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
@@ -463,6 +1363,38 @@ CMakeFiles/BigBangRemake.dir/card/Missed.cpp.o
  ./include/Player.h
  ./include/Room.h
  ./include/card/Missed.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
@@ -478,6 +1410,38 @@ CMakeFiles/BigBangRemake.dir/card/Mustang.cpp.o
  ./include/Room.h
  ./include/WeaponCard.h
  ./include/card/Mustang.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
@@ -492,6 +1456,38 @@ CMakeFiles/BigBangRemake.dir/card/Panic.cpp.o
  ./include/Player.h
  ./include/Room.h
  ./include/card/Panic.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
@@ -507,6 +1503,38 @@ CMakeFiles/BigBangRemake.dir/card/Remington.cpp.o
  ./include/Room.h
  ./include/WeaponCard.h
  ./include/card/Remington.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
@@ -521,6 +1549,38 @@ CMakeFiles/BigBangRemake.dir/card/Saloon.cpp.o
  ./include/Player.h
  ./include/Room.h
  ./include/card/Saloon.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
@@ -536,12 +1596,43 @@ CMakeFiles/BigBangRemake.dir/card/Schofield.cpp.o
  ./include/Room.h
  ./include/WeaponCard.h
  ./include/card/Schofield.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
  /home/edge/BigBangRemake/card/Schofield.cpp
 CMakeFiles/BigBangRemake.dir/card/Stagecoach.cpp.o
- ./include/Action.h
  ./include/Agent.h
  ./include/Card.h
  ./include/Character.h
@@ -550,6 +1641,38 @@ CMakeFiles/BigBangRemake.dir/card/Stagecoach.cpp.o
  ./include/Player.h
  ./include/Room.h
  ./include/card/Stagecoach.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
@@ -565,12 +1688,43 @@ CMakeFiles/BigBangRemake.dir/card/Volcanic.cpp.o
  ./include/Room.h
  ./include/WeaponCard.h
  ./include/card/Volcanic.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
  /home/edge/BigBangRemake/card/Volcanic.cpp
 CMakeFiles/BigBangRemake.dir/card/Wellsfargo.cpp.o
- ./include/Action.h
  ./include/Agent.h
  ./include/Card.h
  ./include/Character.h
@@ -579,6 +1733,38 @@ CMakeFiles/BigBangRemake.dir/card/Wellsfargo.cpp.o
  ./include/Player.h
  ./include/Room.h
  ./include/card/Wellsfargo.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
@@ -594,6 +1780,38 @@ CMakeFiles/BigBangRemake.dir/card/Winchester.cpp.o
  ./include/Room.h
  ./include/WeaponCard.h
  ./include/card/Winchester.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
@@ -607,6 +1825,38 @@ CMakeFiles/BigBangRemake.dir/character/BartCassidy.cpp.o
  ./include/Player.h
  ./include/Room.h
  ./include/character/BartCassidy.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
@@ -620,6 +1870,38 @@ CMakeFiles/BigBangRemake.dir/character/BlackJack.cpp.o
  ./include/Player.h
  ./include/Room.h
  ./include/character/BlackJack.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
@@ -633,6 +1915,38 @@ CMakeFiles/BigBangRemake.dir/character/ElGringo.cpp.o
  ./include/Player.h
  ./include/Room.h
  ./include/character/ElGringo.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
@@ -646,6 +1960,38 @@ CMakeFiles/BigBangRemake.dir/character/GodDeveloper.cpp.o
  ./include/Player.h
  ./include/Room.h
  ./include/character/GodDeveloper.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
@@ -659,6 +2005,38 @@ CMakeFiles/BigBangRemake.dir/character/PaulRegret.cpp.o
  ./include/Player.h
  ./include/Room.h
  ./include/character/PaulRegret.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
@@ -672,12 +2050,43 @@ CMakeFiles/BigBangRemake.dir/character/RoseDoolan.cpp.o
  ./include/Player.h
  ./include/Room.h
  ./include/character/RoseDoolan.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
  /home/edge/BigBangRemake/character/RoseDoolan.cpp
 CMakeFiles/BigBangRemake.dir/character/SuzyLafayette.cpp.o
- ./include/Action.h
  ./include/Agent.h
  ./include/Card.h
  ./include/Character.h
@@ -686,6 +2095,38 @@ CMakeFiles/BigBangRemake.dir/character/SuzyLafayette.cpp.o
  ./include/Player.h
  ./include/Room.h
  ./include/character/SuzyLafayette.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
@@ -699,6 +2140,38 @@ CMakeFiles/BigBangRemake.dir/character/VultureSam.cpp.o
  ./include/Player.h
  ./include/Room.h
  ./include/character/VultureSam.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
@@ -712,6 +2185,38 @@ CMakeFiles/BigBangRemake.dir/character/WillyTheKid.cpp.o
  ./include/Player.h
  ./include/Room.h
  ./include/character/WillyTheKid.h
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp

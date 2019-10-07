@@ -3,7 +3,13 @@
 #include "User.h"
 #include "Equipment.h"
 
+using nlohmann::json;
+
 Player::Player(Agent *agent) : agent(agent) {
+
+}
+
+void Player::handleMessage(const json &jsonMessage) {
 
 }
 

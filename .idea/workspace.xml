@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="BigBangRemake" targetName="BigBangRemake" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="53543359-5bb5-4bf5-9eda-a6871d9e451e" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
+  <component name="ProjectId" id="1RXYoBypykK1zK61uKEX1gD4wQO" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/character" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/character" />
+      <recent name="$PROJECT_DIR$/include/character" />
+      <recent name="$PROJECT_DIR$/include" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/include/card" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/card" />
+      <recent name="$PROJECT_DIR$/include" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="BigBangRemake" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BigBangRemake" TARGET_NAME="BigBangRemake" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BigBangRemake" RUN_TARGET_NAME="BigBangRemake">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="53543359-5bb5-4bf5-9eda-a6871d9e451e" name="Default Changelist" comment="" />
+      <created>1569815079640</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1569815079640</updated>
+      <workItem from="1569815081066" duration="5100000" />
+      <workItem from="1569833050796" duration="4370000" />
+      <workItem from="1569846359082" duration="7221000" />
+      <workItem from="1569892317129" duration="1067000" />
+      <workItem from="1569929870786" duration="2686000" />
+      <workItem from="1569932619041" duration="10189000" />
+      <workItem from="1569980226283" duration="1385000" />
+      <workItem from="1569998401055" duration="1725000" />
+      <workItem from="1570061457282" duration="1736000" />
+      <workItem from="1570076250664" duration="5719000" />
+      <workItem from="1570083797067" duration="3281000" />
+      <workItem from="1570106507009" duration="6581000" />
+      <workItem from="1570196623811" duration="5826000" />
+      <workItem from="1570239390926" duration="1444000" />
+      <workItem from="1570244624044" duration="3755000" />
+      <workItem from="1570290902098" duration="2019000" />
+      <workItem from="1570328970322" duration="4938000" />
+      <workItem from="1570342555097" duration="5953000" />
+      <workItem from="1570372269399" duration="2667000" />
+      <workItem from="1570376503092" duration="1398000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

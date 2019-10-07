@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/BigBangRemake.dir/main.cpp.o  -o BigBangRemake 

@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="BigBangRemake"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/edge/BigBangRemake"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/edge/BigBangRemake/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/edge/BigBangRemake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/edge/BigBangRemake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/edge/BigBangRemake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/edge/BigBangRemake"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/edge/BigBangRemake/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/edge/BigBangRemake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/edge/BigBangRemake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/edge/BigBangRemake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="BigBangRemake">
+				<Option output="/home/edge/BigBangRemake/BigBangRemake" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/edge/BigBangRemake"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/edge/BigBangRemake/./include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/edge/BigBangRemake/Makefile&quot;  VERBOSE=1 BigBangRemake"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/edge/BigBangRemake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/edge/BigBangRemake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/edge/BigBangRemake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="BigBangRemake/fast">
+				<Option output="/home/edge/BigBangRemake/BigBangRemake" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/edge/BigBangRemake"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/edge/BigBangRemake/./include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/edge/BigBangRemake/Makefile&quot;  VERBOSE=1 BigBangRemake/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/edge/BigBangRemake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/edge/BigBangRemake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/edge/BigBangRemake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/edge/BigBangRemake"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/edge/BigBangRemake/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/edge/BigBangRemake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/edge/BigBangRemake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/edge/BigBangRemake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/edge/BigBangRemake/Action.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/Agent.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/Card.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/CardGenerator.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/Character.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/CharacterGenerator.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/Equipment.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/EquipmentCard.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/GameEventListener.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/Lounge.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/LoungeManager.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/Network.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/Plague.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/Player.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/Room.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/RoomManager.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/User.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/WeaponCard.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/card/Bang.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/card/Barrel.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/card/Beer.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/card/Carabine.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/card/CatBalou.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/card/Duel.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/card/Dynamite.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/card/Gatling.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/card/GeneralStore.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/card/Indians.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/card/Jail.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/card/Missed.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/card/Mustang.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/card/Panic.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/card/Remington.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/card/Saloon.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/card/Schofield.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/card/Stagecoach.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/card/Volcanic.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/card/Wellsfargo.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/card/Winchester.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/character/BartCassidy.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/character/BlackJack.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/character/ElGringo.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/character/GodDeveloper.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/character/PaulRegret.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/character/RoseDoolan.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/character/SuzyLafayette.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/character/VultureSam.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/character/WillyTheKid.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/Action.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/Agent.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/Card.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/CardGenerator.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/Character.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/CharacterGenerator.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/Equipment.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/EquipmentCard.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/GameEventListener.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/Lounge.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/LoungeManager.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/Network.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/Plague.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/Player.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/Room.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/RoomManager.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/User.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/WeaponCard.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/card/Bang.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/card/Barrel.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/card/Beer.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/card/Carabine.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/card/CatBalou.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/card/Duel.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/card/Dynamite.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/card/Gatling.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/card/GeneralStore.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/card/Indians.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/card/Jail.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/card/Missed.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/card/Mustang.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/card/Panic.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/card/Remington.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/card/Saloon.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/card/Schofield.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/card/Stagecoach.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/card/Volcanic.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/card/Wellsfargo.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/card/Winchester.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/character/BartCassidy.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/character/BlackJack.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/character/ElGringo.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/character/GodDeveloper.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/character/PaulRegret.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/character/RoseDoolan.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/character/SuzyLafayette.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/character/VultureSam.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/character/WillyTheKid.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/main.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

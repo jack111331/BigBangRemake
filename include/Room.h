@@ -47,6 +47,8 @@ public:
     Card *drawCardFromPlagueForDetermine();
 
     // Room Related
+    void changeRoomState(RoomState roomState);
+
     void flushPlague();
 
     void playerJoin(Agent *agent);
@@ -72,6 +74,8 @@ public:
     Player *getPlayerByPosition(int position);
 
     position getPositionByPlayer(Player *targetPlayer);
+
+    bool isPlayerTurn(Player *player);
 
     EventSubject *getEventListener() const;
 

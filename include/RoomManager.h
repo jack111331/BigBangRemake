@@ -10,7 +10,7 @@
 
 class RoomManager {
 public:
-    RoomManager *getInstance();
+    static RoomManager *getInstance();
 
     Room *createRoom();
 

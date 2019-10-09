@@ -12,8 +12,10 @@ const string Barrel::feature = "When attacked, draw a card and determine whether
 
 Barrel::Barrel(Room *room, int number, Suit suit) : EquipmentCard(room, number, suit) {
     this->listener = new GameEventListener();
-    listener->onEquip = std::bind(&Barrel::onEquip, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3);
-    listener->onUnequip = std::bind(&Barrel::onUnequip, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3);
+    listener->onEquip = std::bind(&Barrel::onEquip, this, std::placeholders::_1, std::placeholders::_2,
+                                  std::placeholders::_3);
+    listener->onUnequip = std::bind(&Barrel::onUnequip, this, std::placeholders::_1, std::placeholders::_2,
+                                    std::placeholders::_3);
     room->getEventListener()->subscribe(listener);
 }
 
@@ -39,18 +41,21 @@ bool Barrel::onEquip(Room *room, Card *card, Player *equiper) {
 
 bool Barrel::onPreLossBlood(Room *room, Player *loser) {
     if (loser->getEquipment()->isEquipmentCardExist("Barrel")) {
-        //        CCard *DrawedCard = NSAction::DrawCardFromPlagueForDetermine(room);
-        //        if (DrawedCard->GetSuit() == Suit::Heart) {
-        //            return false;
-        //        }
+        Card *drawedCard = room->drawCardFromPlagueForDetermine();
+        if (drawedCard->getSuit() == Suit::Heart) {
+            // FIXME another mechanism to stop lossing blood
+            loser->setHp(loser->getHp()+1);
+        }
         room->getEventListener()->unsubscribe(listener);
         return true;
     }
     return true;
 }
+
 bool Barrel::onUnequip(Room *room, Card *card, Player *unequiper) {
     listener->onPreLossBlood = nullptr;
 }
+
 Barrel::~Barrel() {
     delete listener;
 }

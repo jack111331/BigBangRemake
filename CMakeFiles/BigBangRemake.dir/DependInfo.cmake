@@ -53,6 +53,8 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/edge/BigBangRemake/character/VultureSam.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/character/VultureSam.cpp.o"
   "/home/edge/BigBangRemake/character/WillyTheKid.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/character/WillyTheKid.cpp.o"
   "/home/edge/BigBangRemake/main.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/main.cpp.o"
+  "/home/edge/BigBangRemake/vo/ChooseCardFromAnotherPlayerRequest.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromAnotherPlayerRequest.cpp.o"
+  "/home/edge/BigBangRemake/vo/ChooseCardFromAnotherPlayerResponse.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromAnotherPlayerResponse.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

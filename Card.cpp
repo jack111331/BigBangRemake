@@ -2,6 +2,7 @@
 #include "Room.h"
 
 using std::string;
+using nlohmann::json;
 
 uint32_t Card::cardId = 0;
 
@@ -9,10 +10,13 @@ Card::Card(Room *room, int number, Suit suit) : number(number), suit(suit) {
     this->id = cardId++;
 }
 
-
 bool Card::useCardEffect(Room *room, Player *myself, Player *target) {
     room->foldCard(getId(), room->getPositionByPlayer(myself));
     return true;
+}
+
+void Card::handleMessage(const json &jsonMessage) {
+
 }
 
 int Card::getNumber() const {

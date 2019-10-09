@@ -51,5 +51,5 @@ void User::setId(uint32_t id) {
 }
 
 void User::handleMessage(const json &jsonMessage) {
-
+    // TODO handle message
 }

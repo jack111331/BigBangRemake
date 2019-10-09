@@ -29,6 +29,10 @@ public:
     // information update related
     void handleMessage(const nlohmann::json &jsonMessage);
 
+    void informFinishUsingCard();
+
+    void informFinishFoldingCard();
+
     // holding related
     void addCardToHolding(Card *card);
 

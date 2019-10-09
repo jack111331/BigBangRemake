@@ -41,7 +41,7 @@ Network *Network::getInstance() {
     return Network::instance;
 }
 
-void Network::onOpen(const websocketpp::connection_hdl& hdl) {
+void Network::onOpen(const websocketpp::connection_hdl &hdl) {
     auto agent = new Agent(hdl);
     auto user = new User(agent);
     agent->setUser(user);
@@ -49,14 +49,17 @@ void Network::onOpen(const websocketpp::connection_hdl& hdl) {
 }
 
 void Network::onMessage(websocketpp::connection_hdl hdl, server::message_ptr msg) {
-    agentSet.at(hdl)->handleMessage(msg->get_payload());
+    std::thread thread(std::bind(&Agent::handleMessage, agentSet.at(hdl), std::placeholders::_1), msg->get_payload());
+    thread.detach();
+    // single thread approach
+    //    agentSet.at(hdl)->handleMessage(msg->get_payload());
 }
 
 void Network::sendMessage(websocketpp::connection_hdl hdl, const std::string &message) {
     gameServer->send(hdl, message, websocketpp::frame::opcode::value::TEXT);
 }
 
-void Network::onClose(const websocketpp::connection_hdl& hdl) {
+void Network::onClose(const websocketpp::connection_hdl &hdl) {
     // TODO release more resource
     delete agentSet.at(hdl);
     agentSet.erase(hdl);

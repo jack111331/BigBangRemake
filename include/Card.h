@@ -3,6 +3,7 @@
 #include <string>
 #include <map>
 #include <vector>
+#include "nlohmann/json.hpp"
 
 class Player;
 
@@ -25,6 +26,8 @@ public:
     virtual const std::string &getCardName() const = 0;
 
     virtual const std::string &getCardFeature() const = 0;
+
+    virtual void handleMessage(const nlohmann::json &jsonMessage);
 
     int getNumber() const;
 

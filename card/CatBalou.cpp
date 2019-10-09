@@ -1,10 +1,8 @@
 #include "card/CatBalou.h"
 #include <string>
 #include "Room.h"
-#include "Action.h"
-//#include "DrawCardFactory.h"
 #include "User.h"
-//#include "WrapInfo.h"
+
 
 using std::string;
 using namespace BangCard;
@@ -40,6 +38,17 @@ bool CatBalou::useCardEffect(Room *room, Player *myself, Player *target) {
 //    myself->GetUser()->SendMessage("Send Message", NSWrapInfo::WrapShowCard(myself, target).dump());
 //    target->GetUser()->SendMessage("Send Message", NSWrapInfo::WrapShowCard(myself, target).dump());
 //    myself->GetUser()->SendMessage("Send Message", NSWrapInfo::WrapChooseCard(myself, target, false).dump());
-//    myself->BusyWaiting(11);
+    std::unique_lock<std::mutex> lock(conditionVariableMutex);
+    conditionVariable.wait(lock, [this]{return response.cardList.size();});
+    for(auto card : response.cardList) {
+        room->foldCard(card, room->getPositionByPlayer(target));
+    }
     return true;
 }
+
+void CatBalou::handleMessage(const nlohmann::json &jsonMessage) {
+    if(jsonMessage.at("chooseCardFromAnotherPlayer")) {
+        this->response = jsonMessage.at("chooseCardFromAnotherPlayer").get<PlayerCard::Response::ChooseCardFromAnotherPlayerResponse>();
+    }
+}
+

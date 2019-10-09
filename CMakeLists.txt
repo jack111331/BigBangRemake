@@ -107,6 +107,8 @@ list(APPEND SERVER_SOURCE
         Action.cpp
         Equipment.cpp
         GameEventListener.cpp
+        vo/ChooseCardFromAnotherPlayerRequest.cpp
+        vo/ChooseCardFromAnotherPlayerResponse.cpp
         )
 list(APPEND SERVER_HEADER
         include/User.h
@@ -127,6 +129,7 @@ list(APPEND SERVER_HEADER
         include/Action.h
         include/Equipment.h
         include/GameEventListener.h
+        include/vo/
         )
 
 set(all_code_files

@@ -214,6 +214,9 @@
 		<Unit filename="/home/edge/BigBangRemake/character/WillyTheKid.cpp">
 			<Option target="BigBangRemake"/>
 		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include">
+			<Option target="BigBangRemake"/>
+		</Unit>
 		<Unit filename="/home/edge/BigBangRemake/include/Action.h">
 			<Option target="BigBangRemake"/>
 		</Unit>
@@ -359,6 +362,12 @@
 			<Option target="BigBangRemake"/>
 		</Unit>
 		<Unit filename="/home/edge/BigBangRemake/main.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/vo/ChooseCardFromAnotherPlayerRequest.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/vo/ChooseCardFromAnotherPlayerResponse.cpp">
 			<Option target="BigBangRemake"/>
 		</Unit>
 		<Unit filename="/home/edge/BigBangRemake/CMakeLists.txt">

@@ -1,3 +1,4 @@
+#include <RoomManager.h>
 #include "Player.h"
 #include "Room.h"
 #include "User.h"
@@ -10,8 +11,30 @@ Player::Player(Agent *agent) : agent(agent) {
 }
 
 void Player::handleMessage(const json &jsonMessage) {
-
+    //TODO handle message
+    if(jsonMessage.at("card")) {
+        uint32_t cardId = jsonMessage.at("card").at("id");
+        if(cardId) {
+            auto card = getCardInHoldingById(cardId);
+            card->handleMessage(jsonMessage.at("card"));
+        } else {
+            // TODO report error
+        }
+    }
 }
+
+void Player::informFinishUsingCard() {
+    auto roomManager = RoomManager::getInstance();
+    auto room = roomManager->searchRoom(this);
+    room->changeRoomState(RoomState::PlayerCompleteUsedCard);
+}
+
+void Player::informFinishFoldingCard() {
+    auto roomManager = RoomManager::getInstance();
+    auto room = roomManager->searchRoom(this);
+    room->changeRoomState(RoomState::PlayerCompleteFoldedCard);
+}
+
 
 void Player::addCardToHolding(Card *card) {
     holding.push_back(card);

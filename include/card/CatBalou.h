@@ -1,7 +1,10 @@
 #pragma once
 
+#include <vo/ChooseCardFromAnotherPlayerResponse.h>
+#include <condition_variable>
 #include "Card.h"
 #include "Player.h"
+#include "nlohmann/json.hpp"
 
 class Room;
 namespace BangCard {
@@ -19,9 +22,15 @@ namespace BangCard {
 
         bool useCardEffect(Room *room, Player *myself, Player *target) override;
 
+        void handleMessage(const nlohmann::json &jsonMessage) override;
+
     private:
         static const std::string name;
         static const std::string feature;
+        PlayerCard::Response::ChooseCardFromAnotherPlayerResponse response;
+        std::condition_variable conditionVariable;
+        std::mutex conditionVariableMutex;
+
     };
 
 }

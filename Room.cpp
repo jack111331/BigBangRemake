@@ -66,7 +66,9 @@ bool Room::giveCard(uint32_t cardId, position giverPosition, position receiverPo
 }
 
 Card *Room::drawCardFromPlagueForDetermine() {
-    flushPlague();
+    if(plague->getPlagueCardAmount() == 0) {
+        flushPlague();
+    }
     Card *drawCard = plague->chooseTopCard();
     if (drawCard) {
         plague->removeCardFromPlague(drawCard);
@@ -78,6 +80,12 @@ Card *Room::drawCardFromPlagueForDetermine() {
     }
     return drawCard;
 }
+
+void Room::changeRoomState(RoomState roomState) {
+    // TODO more determine
+    this->roomState = roomState;
+}
+
 
 void Room::flushPlague() {
     while (discardPlague->getPlagueCardAmount()) {
@@ -175,6 +183,11 @@ position Room::getPositionByPlayer(Player *targetPlayer) {
     }
     return playerList.size();
 }
+
+bool Room::isPlayerTurn(Player *player) {
+    return player == currentPlayer;
+}
+
 
 EventSubject *Room::getEventListener() const {
     return eventListener;

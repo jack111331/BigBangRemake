@@ -10,7 +10,6 @@ using namespace BangCard;
 const string GeneralStore::name = "General Store";
 const string GeneralStore::feature = "Draw alive amount player card and distribute them to every player, start from yourself.";
 
-
 GeneralStore::GeneralStore(Room *room, int number, Suit suit) : Card(room, number, suit) {
 }
 
@@ -34,9 +33,11 @@ bool GeneralStore::useCardEffect(Room *room, Player *myself, Player *target) {
     if (!Card::useCardEffect(room, myself, target)) {
         return false;
     }
+    // TODO complete this part
     size_t drawCardAmount = room->getAlivePlayerAmount();
     std::vector<Card *> chooseCardList;
     for (size_t i = 0; i < drawCardAmount; i++) {
+//        chooseCardList.push_back(room->drawCardFromPlagueForDetermine());
 //        Card *card;
 //        if (room->GetPlague()->GetPlagueCardAmount() - i <= 0) {
 //            card = room->GetPlague()->ChooseTopCard();

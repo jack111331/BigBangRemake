@@ -36,6 +36,7 @@ bool Panic::useCardEffect(Room *room, Player *myself, Player *target) {
         if (!Card::useCardEffect(room, myself, target)) {
             return false;
         }
+        // TODO complete this
         //        CDrawCardFromPlayer *DrawCard = new CDrawCardFromPlayer(NSDrawCardFactory::DrawCard("Choose Card"));
         //        DrawCard->DrawCardFromPlayer(myself, target);
         //        delete DrawCard;

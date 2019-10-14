@@ -50,6 +50,12 @@ file(REMOVE_RECURSE
   "CMakeFiles/BigBangRemake.dir/GameEventListener.cpp.o"
   "CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromAnotherPlayerRequest.cpp.o"
   "CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromAnotherPlayerResponse.cpp.o"
+  "CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromCardListRequest.cpp.o"
+  "CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromCardListResponse.cpp.o"
+  "CMakeFiles/BigBangRemake.dir/vo/ResistAttackRequest.cpp.o"
+  "CMakeFiles/BigBangRemake.dir/vo/ResistAttackResponse.cpp.o"
+  "CMakeFiles/BigBangRemake.dir/vo/EndGameRequest.cpp.o"
+  "CMakeFiles/BigBangRemake.dir/vo/EndGameResponse.cpp.o"
   "BigBangRemake.pdb"
   "BigBangRemake"
 )

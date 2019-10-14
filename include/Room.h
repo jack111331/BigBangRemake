@@ -44,7 +44,7 @@ public:
 
     bool giveCard(uint32_t cardId, position giverPosition, position receiverPosition);
 
-    Card *drawCardFromPlagueForDetermine();
+    Card *drawCardFromPlagueForDetermine(); // TODO name should be refactor to be more general
 
     // Room Related
     void changeRoomState(RoomState roomState);

@@ -1,5 +1,6 @@
 #include "card/Bang.h"
 #include <string>
+#include <card/Missed.h>
 #include "Room.h"
 #include "Action.h"
 
@@ -31,7 +32,8 @@ const std::string &Bang::getCardFeature() const {
 bool Bang::useCardEffect(Room *room, Player *myself, Player *target) {
     if (!target->isDead() && room->getDistance(myself, target) <= myself->getAttackRange() && !myself->isAttacked()) {
         room->foldCard(getId(), room->getPositionByPlayer(myself));
-        Action::attack(room, myself, target, "Missed!");
+        // TODO response
+        Action::attack(room, myself, target, BangCard::Missed::getName(), &response);
         if (!myself->isHasMultiAttack()) {
             myself->setAttacked(true);
         }

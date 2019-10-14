@@ -16,7 +16,6 @@ const websocketpp::connection_hdl &Agent::getToken() const {
 }
 
 void Agent::handleMessage(const std::string &message) {
-    // TODO handle message
     json jsonMessage = json(message);
     if(jsonMessage.at("user")) {
         if(user) {
@@ -48,4 +47,9 @@ Player *Agent::getPlayer() const {
 
 void Agent::setPlayer(Player *player) {
     this->player = player;
+}
+
+Agent::~Agent() {
+    delete user;
+    delete player;
 }

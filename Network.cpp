@@ -8,7 +8,6 @@
 Network *Network::instance = nullptr;
 
 Network::Network() {
-    // TODO config
     this->gameServer = new server();
 
     // Set logging level
@@ -60,7 +59,6 @@ void Network::sendMessage(websocketpp::connection_hdl hdl, const std::string &me
 }
 
 void Network::onClose(const websocketpp::connection_hdl &hdl) {
-    // TODO release more resource
     delete agentSet.at(hdl);
     agentSet.erase(hdl);
 }

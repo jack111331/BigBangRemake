@@ -109,6 +109,12 @@ list(APPEND SERVER_SOURCE
         GameEventListener.cpp
         vo/ChooseCardFromAnotherPlayerRequest.cpp
         vo/ChooseCardFromAnotherPlayerResponse.cpp
+        vo/ChooseCardFromCardListRequest.cpp
+        vo/ChooseCardFromCardListResponse.cpp
+        vo/ResistAttackRequest.cpp
+        vo/ResistAttackResponse.cpp
+        vo/EndGameRequest.cpp
+        vo/EndGameResponse.cpp
         )
 list(APPEND SERVER_HEADER
         include/User.h

@@ -1,9 +1,11 @@
 #include <algorithm>
 #include <random>
 #include <CharacterGenerator.h>
+#include <Network.h>
 #include "Room.h"
 #include "User.h"
 #include "GameEventListener.h"
+#include "vo/EndGameRequest.h"
 
 Room::Room() {
     this->eventListener = new EventSubject();
@@ -14,8 +16,7 @@ Room::Room() {
 
 bool Room::drawCard(position drawerPosition, size_t amount) {
     Player *drawer = getPlayerByPosition(drawerPosition);
-    // FIXME timing
-    eventListener->notifyDrawCardEvent(this, drawer);
+    eventListener->notifyPreDrawCardEvent(this, drawer);
     for (size_t i = 0; i < amount; ++i) {
         if (plague->getPlagueCardAmount() == 0) {
             flushPlague();
@@ -29,11 +30,11 @@ bool Room::drawCard(position drawerPosition, size_t amount) {
 
 
 bool Room::useCard(uint32_t cardId, position userPosition, position targetPosition) {
-    // TODO WIP
     Player *user = getPlayerByPosition(userPosition);
     Player *target = getPlayerByPosition(targetPosition);
     Card *card = user->getCardInHoldingById(cardId);
     if (card && card->useCardEffect(this, user, target)) {
+        // TODO send message to inform
         //        User->SendMessage("Send Message", NSWrapInfo::WrapWhoUseCard(this, cardID).dump());
         return true;
     }
@@ -41,12 +42,12 @@ bool Room::useCard(uint32_t cardId, position userPosition, position targetPositi
 }
 
 bool Room::foldCard(uint32_t cardId, position folderPosition) {
-    // TODO WIP
     Player *folder = getPlayerByPosition(folderPosition);
     Card *card = folder->getCardInHoldingById(cardId);
     if (card) {
         discardPlague->insertCardToPlague(card);
         folder->removeCardInHolding(card);
+        // TODO send message to inform
         return true;
     }
     return false;
@@ -60,6 +61,7 @@ bool Room::giveCard(uint32_t cardId, position giverPosition, position receiverPo
     if (card) {
         receiver->addCardToHolding(card);
         giver->removeCardInHolding(card);
+        // TODO send message to inform
         return true;
     }
     return false;
@@ -304,21 +306,36 @@ void Room::initGame() {
 }
 
 void Room::endGame(WinCondition endGameState) {
-    // TODO WIP
+    auto network = Network::getInstance();
+    std::vector<Player *> winnerList, loserList;
     for (auto player : playerList) {
         if (endGameState == WinCondition::SergeantWin) {
             if (player->getIdentity() == Team::Sergeant || player->getIdentity() == Team::ChiefSergeant) {
+                winnerList.push_back(player);
             } else {
+                loserList.push_back(player);
             }
         } else if (endGameState == WinCondition::BadAssWin) {
             if (player->getIdentity() == Team::BadAss) {
+                winnerList.push_back(player);
             } else {
+                loserList.push_back(player);
             }
         } else if (endGameState == WinCondition::TraitorWin) {
             if (player->getIdentity() == Team::Traitor) {
+                winnerList.push_back(player);
             } else {
+                loserList.push_back(player);
             }
         }
+    }
+    for(auto winner : winnerList) {
+        Request::Player::EndGameRequest request = {true};
+        network->sendMessage(winner->getAgent()->getToken(), nlohmann::json(request));
+    }
+    for(auto loser : loserList) {
+        Request::Player::EndGameRequest request = {false};
+        network->sendMessage(loser->getAgent()->getToken(), nlohmann::json(request));
     }
 }
 

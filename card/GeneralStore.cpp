@@ -35,27 +35,32 @@ bool GeneralStore::useCardEffect(Room *room, Player *myself, Player *target) {
     }
     // TODO complete this part
     size_t drawCardAmount = room->getAlivePlayerAmount();
-    std::vector<Card *> chooseCardList;
+    std::map<uint32_t, Card *> chooseCardSet;
     for (size_t i = 0; i < drawCardAmount; i++) {
-//        chooseCardList.push_back(room->drawCardFromPlagueForDetermine());
-//        Card *card;
-//        if (room->GetPlague()->GetPlagueCardAmount() - i <= 0) {
-//            card = room->GetPlague()->ChooseTopCard();
-//        } else {
-//            card = room->GetDiscardPlague()->ChooseTopCard();
-//        }
-//        chooseCardList.push_back(card);
+        auto card = room->drawCardFromPlagueForDetermine();
+        chooseCardSet.insert(std::pair<uint32_t, Card *>(card->getId(), card));
     }
-    for (Player *CurrentPlayer = myself;
-         room->getNextPlayer(CurrentPlayer) != myself; CurrentPlayer = room->getNextPlayer(CurrentPlayer)) {
+    for (Player *currentPlayer = myself;
+         room->getNextPlayer(currentPlayer) != myself; currentPlayer = room->getNextPlayer(currentPlayer)) {
         //        CurrentPlayer->GetUser()->SendMessage("Send Message", NSWrapInfo::WrapChooseCardInfo(chooseCardList).dump());
-        //        int choice = CurrentPlayer->BusyWaiting(29);
-        //        for (std::vector<CCard *>::iterator it = chooseCardList.begin(); it != chooseCardList.end(); ++it) {
-        //            if ((*it)->GetID() == choice) {
-        //                chooseCardList.erase(it);
-        //                break;
-        //            }
-        //        }
+        std::unique_lock<std::mutex> lock(conditionVariableMutex);
+        conditionVariable.wait(lock, [this] { return response.cardList.size(); });
+        for (auto card : response.cardList) {
+            if(chooseCardSet.find(card) != chooseCardSet.end()) {
+                currentPlayer->addCardToHolding(chooseCardSet.at(card));
+                chooseCardSet.erase(card);
+            } else {
+                // TODO log wrong card
+            }
+        }
+        response.cardList.clear();
     }
     return true;
+}
+
+void GeneralStore::handleMessage(const nlohmann::json &jsonMessage) {
+    if (jsonMessage.at("chooseCardFromCardList")) {
+        this->response = jsonMessage.at(
+                "chooseCardFromCardList").get<Response::PlayerCard::ChooseCardFromCardListResponse>();
+    }
 }

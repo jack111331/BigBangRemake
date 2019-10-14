@@ -22,7 +22,7 @@ namespace BangCard {
 
         bool onUnequip(Room *room, Card *card, Player *unequiper);
 
-        bool onDrawCard(Room *room, Player *drawer);
+        bool onPreDrawCard(Room *room, Player *drawer);
 
         ~Dynamite();
 

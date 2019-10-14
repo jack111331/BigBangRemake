@@ -4,11 +4,11 @@
 
 #include "vo/ChooseCardFromAnotherPlayerResponse.h"
 
-void PlayerCard::Response::to_json(nlohmann::json &j, const ChooseCardFromAnotherPlayerResponse &p) {
+void Response::PlayerCard::to_json(nlohmann::json &j, const ChooseCardFromAnotherPlayerResponse &p) {
     j = nlohmann::json{{"cardList", p.cardList}};
 }
 
-void PlayerCard::Response::from_json(const nlohmann::json &j, ChooseCardFromAnotherPlayerResponse &p) {
+void Response::PlayerCard::from_json(const nlohmann::json &j, ChooseCardFromAnotherPlayerResponse &p) {
     j.at("cardList").get_to(p.cardList);
 }
 

@@ -36,7 +36,8 @@ bool Gatling::useCardEffect(Room *room, Player *myself, Player *target) {
     auto playerList = room->getPlayerList();
     for (auto player : playerList) {
         if (player != myself) {
-            Action::attack(room, myself, player, "Missed!");
+            // TODO response
+            Action::attack(room, myself, player, BangCard::Gatling::getName(), &response);
         }
     }
     return true;

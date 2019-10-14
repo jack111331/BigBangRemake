@@ -1,6 +1,7 @@
 #pragma once
 #include "Card.h"
 #include "Player.h"
+#include "vo/ResistAttackResponse.h"
 class Room;
 namespace BangCard {
     class Indians : public Card
@@ -20,6 +21,7 @@ namespace BangCard {
     private:
         static const std::string name;
         static const std::string feature;
+        Response::PlayerCard::ResistAttackResponse response;
     };
 
 }

@@ -2,15 +2,15 @@
 // Created by edge on 2019-10-08.
 //
 
-#ifndef BIGBANGREMAKE_CHOOSECARDFROMANOTHERPLAYER_H
-#define BIGBANGREMAKE_CHOOSECARDFROMANOTHERPLAYER_H
+#ifndef BIGBANGREMAKE_CHOOSECARDFROMANOTHERPLAYERRESPONSE_H
+#define BIGBANGREMAKE_CHOOSECARDFROMANOTHERPLAYERRESPONSE_H
 
 #include <string>
 #include "nlohmann/json.hpp"
 
-namespace PlayerCard {
+namespace Response {
 
-    namespace Response {
+    namespace PlayerCard {
         struct ChooseCardFromAnotherPlayerResponse {
             std::vector<uint32_t> cardList;
         };
@@ -19,4 +19,4 @@ namespace PlayerCard {
     }
 }
 
-#endif //BIGBANGREMAKE_CHOOSECARDFROMANOTHERPLAYER_H
+#endif //BIGBANGREMAKE_CHOOSECARDFROMANOTHERPLAYERRESPONSE_H

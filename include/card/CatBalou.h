@@ -27,7 +27,7 @@ namespace BangCard {
     private:
         static const std::string name;
         static const std::string feature;
-        PlayerCard::Response::ChooseCardFromAnotherPlayerResponse response;
+        Response::PlayerCard::ChooseCardFromAnotherPlayerResponse response;
         std::condition_variable conditionVariable;
         std::mutex conditionVariableMutex;
 

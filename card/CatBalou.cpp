@@ -48,7 +48,7 @@ bool CatBalou::useCardEffect(Room *room, Player *myself, Player *target) {
 
 void CatBalou::handleMessage(const nlohmann::json &jsonMessage) {
     if(jsonMessage.at("chooseCardFromAnotherPlayer")) {
-        this->response = jsonMessage.at("chooseCardFromAnotherPlayer").get<PlayerCard::Response::ChooseCardFromAnotherPlayerResponse>();
+        this->response = jsonMessage.at("chooseCardFromAnotherPlayer").get<Response::PlayerCard::ChooseCardFromAnotherPlayerResponse>();
     }
 }
 

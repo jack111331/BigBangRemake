@@ -1,4 +1,5 @@
 #include "card/Indians.h"
+#include "card/Bang.h"
 #include <string>
 #include "Room.h"
 #include "Action.h"
@@ -35,7 +36,8 @@ bool Indians::useCardEffect(Room *room, Player *myself, Player *target) {
     auto playerList = room->getPlayerList();
     for (auto player : playerList) {
         if (player != myself) {
-            Action::attack(room, myself, player, "Bang!");
+            // TODO response
+            Action::attack(room, myself, player, BangCard::Bang::getName(), &response);
         }
     }
     return true;

@@ -19,7 +19,7 @@ public:
     playerCallback onPreLossBlood;
     playerInteractCallback onLossBlood;
     playerInteractCallback onDeath;
-    playerCallback onDrawCard;
+    playerCallback onPreDrawCard;
     cardCallback onEquip;
     cardCallback onUnequip;
     playerCallback onRoundEnd;
@@ -38,7 +38,7 @@ public:
 
     bool notifyDeathEvent(Room *room, Player *deadPerson, Player *attacker);
 
-    bool notifyDrawCardEvent(Room *room, Player *drawer);
+    bool notifyPreDrawCardEvent(Room *room, Player *drawer);
 
     bool notifyEquipEvent(Room *room, Card *card, Player *equiper);
 

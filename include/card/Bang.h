@@ -1,5 +1,6 @@
 #pragma once
 
+#include <vo/ResistAttackResponse.h>
 #include "Card.h"
 #include "Player.h"
 
@@ -23,5 +24,6 @@ namespace BangCard {
     private:
         static const std::string name;
         static const std::string feature;
+        Response::PlayerCard::ResistAttackResponse response;
     };
 }

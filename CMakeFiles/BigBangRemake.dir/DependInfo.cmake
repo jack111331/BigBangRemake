@@ -55,6 +55,12 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/edge/BigBangRemake/main.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/main.cpp.o"
   "/home/edge/BigBangRemake/vo/ChooseCardFromAnotherPlayerRequest.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromAnotherPlayerRequest.cpp.o"
   "/home/edge/BigBangRemake/vo/ChooseCardFromAnotherPlayerResponse.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromAnotherPlayerResponse.cpp.o"
+  "/home/edge/BigBangRemake/vo/ChooseCardFromCardListRequest.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromCardListRequest.cpp.o"
+  "/home/edge/BigBangRemake/vo/ChooseCardFromCardListResponse.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromCardListResponse.cpp.o"
+  "/home/edge/BigBangRemake/vo/EndGameRequest.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/vo/EndGameRequest.cpp.o"
+  "/home/edge/BigBangRemake/vo/EndGameResponse.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/vo/EndGameResponse.cpp.o"
+  "/home/edge/BigBangRemake/vo/ResistAttackRequest.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/vo/ResistAttackRequest.cpp.o"
+  "/home/edge/BigBangRemake/vo/ResistAttackResponse.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/vo/ResistAttackResponse.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -26,6 +26,8 @@ public:
 
     void setPlayer(Player *player);
 
+    ~Agent();
+
 private:
     websocketpp::connection_hdl token;
     User *user;

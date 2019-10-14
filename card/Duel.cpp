@@ -1,5 +1,6 @@
 #include "card/Duel.h"
 #include <string>
+#include <card/Bang.h>
 #include "Room.h"
 #include "Action.h"
 
@@ -33,12 +34,13 @@ bool Duel::useCardEffect(Room *room, Player *myself, Player *target) {
         if (!Card::useCardEffect(room, myself, target)) {
             return false;
         }
-        int MyTurn = 0;
+        size_t myTurn = 0;
         bool isEnd = 0;
         while (!isEnd) {
+            // TODO response
             isEnd = std::max(isEnd,
-                             Action::attack(room, MyTurn ? target : myself, MyTurn ? myself : target, "Bang!"));
-            MyTurn ^= 1;
+                             Action::attack(room, myTurn ? target : myself, myTurn ? myself : target, BangCard::Bang::getName(), &response));
+            myTurn ^= 1;
         }
         return true;
     }

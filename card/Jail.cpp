@@ -36,6 +36,7 @@ const std::string &Jail::getCardFeature() const {
 }
 
 bool Jail::useCardEffect(Room *room, Player *myself, Player *target) {
+    // TODO Pre draw card
     if (target->getIdentity() != Team::Sergeant) {
         if(!EquipmentCard::useCardEffect(room, myself, target)) {
             return false;
@@ -47,14 +48,14 @@ bool Jail::useCardEffect(Room *room, Player *myself, Player *target) {
 }
 
 bool Jail::onEquip(Room *room, Card *card, Player *equiper) {
-    listener->onDrawCard = std::bind(&Jail::onDrawCard, this, std::placeholders::_1, std::placeholders::_2);
+    listener->onPreDrawCard = std::bind(&Jail::onPreDrawCard, this, std::placeholders::_1, std::placeholders::_2);
 }
 
 bool Jail::onUnequip(Room *room, Card *card, Player *unequiper) {
-    listener->onDrawCard = nullptr;
+    listener->onPreDrawCard = nullptr;
 }
 
-bool Jail::onDrawCard(Room *room, Player *drawer) {
+bool Jail::onPreDrawCard(Room *room, Player *drawer) {
     // TODO refactor this
 //    if (drawer->GetEquipment() && drawer->GetEquipment()->GetName() == "Jail") {
 //        CCard *DrawedCard = NSAction::DrawCardFromPlagueForDetermine(room);

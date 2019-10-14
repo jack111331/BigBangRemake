@@ -35,14 +35,14 @@ const std::string &Dynamite::getCardFeature() const {
 }
 
 bool Dynamite::onEquip(Room *room, Card *card, Player *equiper) {
-    listener->onDrawCard = std::bind(&Dynamite::onDrawCard, this, std::placeholders::_1, std::placeholders::_2);
+    listener->onPreDrawCard = std::bind(&Dynamite::onPreDrawCard, this, std::placeholders::_1, std::placeholders::_2);
 }
 
 bool Dynamite::onUnequip(Room *room, Card *card, Player *unequiper) {
-    listener->onDrawCard = nullptr;
+    listener->onPreDrawCard = nullptr;
 }
 
-bool Dynamite::onDrawCard(Room *room, Player *drawer) {
+bool Dynamite::onPreDrawCard(Room *room, Player *drawer) {
     // TODO refactor this
     //    if (drawer->GetEquipment() && drawer->GetEquipment()->GetName() == "Dynamite") {
     //        CCard *DrawedCard = NSAction::DrawCardFromPlagueForDetermine(room);

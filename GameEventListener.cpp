@@ -4,7 +4,7 @@
 #include "Card.h"
 
 GameEventListener::GameEventListener() : onPreLossBlood(nullptr), onLossBlood(nullptr), onDeath(nullptr),
-                                         onDrawCard(nullptr), onEquip(nullptr), onUnequip(nullptr),
+                                         onPreDrawCard(nullptr), onEquip(nullptr), onUnequip(nullptr),
                                          onRoundEnd(nullptr) {
 }
 
@@ -46,10 +46,10 @@ bool EventSubject::notifyDeathEvent(Room *room, Player *deadPerson, Player *atta
     }
 }
 
-bool EventSubject::notifyDrawCardEvent(Room *room, Player *drawer) {
+bool EventSubject::notifyPreDrawCardEvent(Room *room, Player *drawer) {
     for (auto subscriber:subscriberList) {
-        if (subscriber->onDrawCard) {
-            subscriber->onDrawCard(room, drawer);
+        if (subscriber->onPreDrawCard) {
+            subscriber->onPreDrawCard(room, drawer);
         }
     }
 }

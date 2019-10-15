@@ -18,7 +18,10 @@ namespace BangCard {
 
         const std::string &getCardFeature() const override;
 
-        bool useCardEffect(Room *room, Player *myself, Player *target);
+        bool useCardEffect(Room *room, Player *myself, Player *target) override;
+
+        void handleMessage(const nlohmann::json &jsonMessage) override;
+
     private:
         static const std::string name;
         static const std::string feature;

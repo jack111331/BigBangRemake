@@ -20,6 +20,8 @@ namespace BangCard {
 
         bool useCardEffect(Room *room, Player *myself, Player *target);
 
+        void handleMessage(const nlohmann::json &jsonMessage) override;
+
     private:
         static const std::string name;
         static const std::string feature;

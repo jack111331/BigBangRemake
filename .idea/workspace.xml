@@ -13,45 +13,17 @@
   <component name="ChangeListManager">
     <list default="true" id="53543359-5bb5-4bf5-9eda-a6871d9e451e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Action.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Action.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Agent.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BigBangRemake" beforeDir="false" afterPath="$PROJECT_DIR$/BigBangRemake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BigBangRemake.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/BigBangRemake.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameEventListener.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GameEventListener.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Network.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Network.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Room.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Room.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/card/Bang.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/card/Bang.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/card/CatBalou.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/card/CatBalou.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/card/Duel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/card/Duel.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/card/Dynamite.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/card/Dynamite.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/card/Gatling.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/card/Gatling.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/card/GeneralStore.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/card/GeneralStore.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/card/Indians.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/card/Indians.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/card/Jail.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/card/Jail.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/Action.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Action.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/Agent.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Agent.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/GameEventListener.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/GameEventListener.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/Room.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Room.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/card/Bang.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/card/Bang.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/card/CatBalou.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/card/CatBalou.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/card/Duel.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/card/Duel.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/card/Dynamite.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/card/Dynamite.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/card/Gatling.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/card/Gatling.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/card/GeneralStore.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/card/GeneralStore.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/card/Indians.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/card/Indians.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/card/Jail.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/card/Jail.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/vo/ChooseCardFromAnotherPlayerRequest.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/vo/ChooseCardFromAnotherPlayerRequest.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/vo/ChooseCardFromAnotherPlayerResponse.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/vo/ChooseCardFromAnotherPlayerResponse.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vo/ChooseCardFromAnotherPlayerRequest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/vo/ChooseCardFromAnotherPlayerRequest.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vo/ChooseCardFromAnotherPlayerResponse.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/vo/ChooseCardFromAnotherPlayerResponse.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -144,7 +116,8 @@
       <workItem from="1570584776169" duration="1469000" />
       <workItem from="1571016987630" duration="993000" />
       <workItem from="1571035771686" duration="1382000" />
-      <workItem from="1571063476956" duration="2050000" />
+      <workItem from="1571063476956" duration="2638000" />
+      <workItem from="1571101757817" duration="1420000" />
     </task>
     <servers />
   </component>

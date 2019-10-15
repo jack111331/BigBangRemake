@@ -36,9 +36,15 @@ bool Indians::useCardEffect(Room *room, Player *myself, Player *target) {
     auto playerList = room->getPlayerList();
     for (auto player : playerList) {
         if (player != myself) {
-            // TODO response
             Action::attack(room, myself, player, BangCard::Bang::getName(), &response);
+            // TODO resset response
         }
     }
     return true;
+}
+
+void Indians::handleMessage(const nlohmann::json &jsonMessage) {
+    if(jsonMessage.at("resistAttack")) {
+        this->response = jsonMessage.at("resistAttack").get<Response::PlayerCard::ResistAttackResponse>();
+    }
 }

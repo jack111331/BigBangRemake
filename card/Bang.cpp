@@ -32,7 +32,6 @@ const std::string &Bang::getCardFeature() const {
 bool Bang::useCardEffect(Room *room, Player *myself, Player *target) {
     if (!target->isDead() && room->getDistance(myself, target) <= myself->getAttackRange() && !myself->isAttacked()) {
         room->foldCard(getId(), room->getPositionByPlayer(myself));
-        // TODO response
         Action::attack(room, myself, target, BangCard::Missed::getName(), &response);
         if (!myself->isHasMultiAttack()) {
             myself->setAttacked(true);
@@ -40,4 +39,10 @@ bool Bang::useCardEffect(Room *room, Player *myself, Player *target) {
         return true;
     }
     return false;
+}
+
+void Bang::handleMessage(const nlohmann::json &jsonMessage) {
+    if(jsonMessage.at("resistAttack")) {
+        this->response = jsonMessage.at("resistAttack").get<Response::PlayerCard::ResistAttackResponse>();
+    }
 }

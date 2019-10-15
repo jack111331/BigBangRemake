@@ -68,7 +68,7 @@ bool Room::giveCard(uint32_t cardId, position giverPosition, position receiverPo
 }
 
 Card *Room::drawCardFromPlagueForDetermine() {
-    if(plague->getPlagueCardAmount() == 0) {
+    if (plague->getPlagueCardAmount() == 0) {
         flushPlague();
     }
     Card *drawCard = plague->chooseTopCard();
@@ -329,13 +329,13 @@ void Room::endGame(WinCondition endGameState) {
             }
         }
     }
-    for(auto winner : winnerList) {
+    for (auto winner : winnerList) {
         Request::Player::EndGameRequest request = {true};
-        network->sendMessage(winner->getAgent()->getToken(), nlohmann::json(request));
+        network->sendMessage(winner->getAgent()->getToken(), nlohmann::json(request).dump());
     }
-    for(auto loser : loserList) {
+    for (auto loser : loserList) {
         Request::Player::EndGameRequest request = {false};
-        network->sendMessage(loser->getAgent()->getToken(), nlohmann::json(request));
+        network->sendMessage(loser->getAgent()->getToken(), nlohmann::json(request).dump());
     }
 }
 

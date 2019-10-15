@@ -2,6 +2,8 @@
 #include <string>
 #include "Room.h"
 #include <vector>
+#include <Network.h>
+#include <vo/ChooseCardFromCardListRequest.h>
 #include "User.h"
 
 using std::string;
@@ -33,7 +35,7 @@ bool GeneralStore::useCardEffect(Room *room, Player *myself, Player *target) {
     if (!Card::useCardEffect(room, myself, target)) {
         return false;
     }
-    // TODO complete this part
+    auto network = Network::getInstance();
     size_t drawCardAmount = room->getAlivePlayerAmount();
     std::map<uint32_t, Card *> chooseCardSet;
     for (size_t i = 0; i < drawCardAmount; i++) {
@@ -42,11 +44,16 @@ bool GeneralStore::useCardEffect(Room *room, Player *myself, Player *target) {
     }
     for (Player *currentPlayer = myself;
          room->getNextPlayer(currentPlayer) != myself; currentPlayer = room->getNextPlayer(currentPlayer)) {
-        //        CurrentPlayer->GetUser()->SendMessage("Send Message", NSWrapInfo::WrapChooseCardInfo(chooseCardList).dump());
+        Request::PlayerCard::ChooseCardFromCardListRequest request;
+        request.amount = 1;
+        for (auto card : chooseCardSet) {
+            request.cardList.push_back(card.first);
+        }
+        network->sendMessage(currentPlayer->getAgent()->getToken(), nlohmann::json(request).dump());
         std::unique_lock<std::mutex> lock(conditionVariableMutex);
         conditionVariable.wait(lock, [this] { return response.cardList.size(); });
         for (auto card : response.cardList) {
-            if(chooseCardSet.find(card) != chooseCardSet.end()) {
+            if (chooseCardSet.find(card) != chooseCardSet.end()) {
                 currentPlayer->addCardToHolding(chooseCardSet.at(card));
                 chooseCardSet.erase(card);
             } else {

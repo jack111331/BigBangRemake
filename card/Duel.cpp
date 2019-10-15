@@ -37,7 +37,6 @@ bool Duel::useCardEffect(Room *room, Player *myself, Player *target) {
         size_t myTurn = 0;
         bool isEnd = 0;
         while (!isEnd) {
-            // TODO response
             isEnd = std::max(isEnd,
                              Action::attack(room, myTurn ? target : myself, myTurn ? myself : target, BangCard::Bang::getName(), &response));
             myTurn ^= 1;
@@ -45,4 +44,10 @@ bool Duel::useCardEffect(Room *room, Player *myself, Player *target) {
         return true;
     }
     return false;
+}
+
+void Duel::handleMessage(const nlohmann::json &jsonMessage) {
+    if (jsonMessage.at("resistAttack")) {
+        this->response = jsonMessage.at("resistAttack").get<Response::PlayerCard::ResistAttackResponse>();
+    }
 }

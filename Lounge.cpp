@@ -28,7 +28,7 @@ User *Lounge::getFirstUser() {
     return userList.at(0);
 }
 
-std::vector<User *> &Lounge::getAllUser() {
+std::vector<User *> &Lounge::getUserList() {
     return userList;
 }
 

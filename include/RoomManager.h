@@ -14,8 +14,6 @@ public:
 
     Room *createRoom();
 
-    static void addUserToRoom(User *user, Room *room);
-
     Room *searchRoom(Player *player) const;
 
     void removeRoom(Room *targetRoom);

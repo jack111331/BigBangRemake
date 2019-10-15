@@ -364,6 +364,9 @@
 		<Unit filename="/home/edge/BigBangRemake/main.cpp">
 			<Option target="BigBangRemake"/>
 		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/vo/ChangeNicknameRequest.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
 		<Unit filename="/home/edge/BigBangRemake/vo/ChooseCardFromAnotherPlayerRequest.cpp">
 			<Option target="BigBangRemake"/>
 		</Unit>
@@ -382,10 +385,22 @@
 		<Unit filename="/home/edge/BigBangRemake/vo/EndGameResponse.cpp">
 			<Option target="BigBangRemake"/>
 		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/vo/JoinLoungeRequest.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/vo/ReadyInLoungeRequest.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
 		<Unit filename="/home/edge/BigBangRemake/vo/ResistAttackRequest.cpp">
 			<Option target="BigBangRemake"/>
 		</Unit>
 		<Unit filename="/home/edge/BigBangRemake/vo/ResistAttackResponse.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/vo/RetrieveLoungeInfoResponse.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/vo/RetrieveLoungeListInfoResponse.cpp">
 			<Option target="BigBangRemake"/>
 		</Unit>
 		<Unit filename="/home/edge/BigBangRemake/CMakeLists.txt">

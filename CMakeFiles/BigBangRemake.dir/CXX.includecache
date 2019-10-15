@@ -574,13 +574,13 @@ string
 vector
 -
 
-./include/vo/ChooseCardFromAnotherPlayerRequest.h
+./include/vo/RetrieveLoungeInfoResponse.h
 string
 -
 nlohmann/json.hpp
 ./include/vo/nlohmann/json.hpp
 
-/home/edge/BigBangRemake/vo/ChooseCardFromAnotherPlayerRequest.cpp
-vo/ChooseCardFromAnotherPlayerRequest.h
-/home/edge/BigBangRemake/vo/vo/ChooseCardFromAnotherPlayerRequest.h
+/home/edge/BigBangRemake/vo/RetrieveLoungeInfoResponse.cpp
+vo/RetrieveLoungeInfoResponse.h
+/home/edge/BigBangRemake/vo/vo/RetrieveLoungeInfoResponse.h
 

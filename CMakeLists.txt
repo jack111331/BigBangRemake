@@ -107,6 +107,11 @@ list(APPEND SERVER_SOURCE
         Action.cpp
         Equipment.cpp
         GameEventListener.cpp
+        vo/JoinLoungeRequest.cpp
+        vo/RetrieveLoungeInfoResponse.cpp
+        vo/RetrieveLoungeListInfoResponse.cpp
+        vo/ReadyInLoungeRequest.cpp
+        vo/ChangeNicknameRequest.cpp
         vo/ChooseCardFromAnotherPlayerRequest.cpp
         vo/ChooseCardFromAnotherPlayerResponse.cpp
         vo/ChooseCardFromCardListRequest.cpp

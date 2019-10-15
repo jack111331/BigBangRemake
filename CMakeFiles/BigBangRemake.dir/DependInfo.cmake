@@ -53,14 +53,19 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/edge/BigBangRemake/character/VultureSam.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/character/VultureSam.cpp.o"
   "/home/edge/BigBangRemake/character/WillyTheKid.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/character/WillyTheKid.cpp.o"
   "/home/edge/BigBangRemake/main.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/main.cpp.o"
+  "/home/edge/BigBangRemake/vo/ChangeNicknameRequest.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/vo/ChangeNicknameRequest.cpp.o"
   "/home/edge/BigBangRemake/vo/ChooseCardFromAnotherPlayerRequest.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromAnotherPlayerRequest.cpp.o"
   "/home/edge/BigBangRemake/vo/ChooseCardFromAnotherPlayerResponse.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromAnotherPlayerResponse.cpp.o"
   "/home/edge/BigBangRemake/vo/ChooseCardFromCardListRequest.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromCardListRequest.cpp.o"
   "/home/edge/BigBangRemake/vo/ChooseCardFromCardListResponse.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromCardListResponse.cpp.o"
   "/home/edge/BigBangRemake/vo/EndGameRequest.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/vo/EndGameRequest.cpp.o"
   "/home/edge/BigBangRemake/vo/EndGameResponse.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/vo/EndGameResponse.cpp.o"
+  "/home/edge/BigBangRemake/vo/JoinLoungeRequest.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/vo/JoinLoungeRequest.cpp.o"
+  "/home/edge/BigBangRemake/vo/ReadyInLoungeRequest.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/vo/ReadyInLoungeRequest.cpp.o"
   "/home/edge/BigBangRemake/vo/ResistAttackRequest.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/vo/ResistAttackRequest.cpp.o"
   "/home/edge/BigBangRemake/vo/ResistAttackResponse.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/vo/ResistAttackResponse.cpp.o"
+  "/home/edge/BigBangRemake/vo/RetrieveLoungeInfoResponse.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/vo/RetrieveLoungeInfoResponse.cpp.o"
+  "/home/edge/BigBangRemake/vo/RetrieveLoungeListInfoResponse.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/vo/RetrieveLoungeListInfoResponse.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

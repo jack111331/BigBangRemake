@@ -22,7 +22,7 @@ public:
 
     User *getFirstUser();
 
-    std::vector<User *> &getAllUser();
+    std::vector<User *> &getUserList();
 
     void changeRoomOwner(User *user);
 

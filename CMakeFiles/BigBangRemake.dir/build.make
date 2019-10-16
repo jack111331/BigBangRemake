@@ -746,9 +746,48 @@ CMakeFiles/BigBangRemake.dir/vo/ReadyInLoungeRequest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BigBangRemake.dir/vo/ReadyInLoungeRequest.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edge/BigBangRemake/vo/ReadyInLoungeRequest.cpp -o CMakeFiles/BigBangRemake.dir/vo/ReadyInLoungeRequest.cpp.s
 
+CMakeFiles/BigBangRemake.dir/vo/UseCardRequest.cpp.o: CMakeFiles/BigBangRemake.dir/flags.make
+CMakeFiles/BigBangRemake.dir/vo/UseCardRequest.cpp.o: vo/UseCardRequest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edge/BigBangRemake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object CMakeFiles/BigBangRemake.dir/vo/UseCardRequest.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BigBangRemake.dir/vo/UseCardRequest.cpp.o -c /home/edge/BigBangRemake/vo/UseCardRequest.cpp
+
+CMakeFiles/BigBangRemake.dir/vo/UseCardRequest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BigBangRemake.dir/vo/UseCardRequest.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edge/BigBangRemake/vo/UseCardRequest.cpp > CMakeFiles/BigBangRemake.dir/vo/UseCardRequest.cpp.i
+
+CMakeFiles/BigBangRemake.dir/vo/UseCardRequest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BigBangRemake.dir/vo/UseCardRequest.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edge/BigBangRemake/vo/UseCardRequest.cpp -o CMakeFiles/BigBangRemake.dir/vo/UseCardRequest.cpp.s
+
+CMakeFiles/BigBangRemake.dir/vo/FoldCardRequest.cpp.o: CMakeFiles/BigBangRemake.dir/flags.make
+CMakeFiles/BigBangRemake.dir/vo/FoldCardRequest.cpp.o: vo/FoldCardRequest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edge/BigBangRemake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object CMakeFiles/BigBangRemake.dir/vo/FoldCardRequest.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BigBangRemake.dir/vo/FoldCardRequest.cpp.o -c /home/edge/BigBangRemake/vo/FoldCardRequest.cpp
+
+CMakeFiles/BigBangRemake.dir/vo/FoldCardRequest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BigBangRemake.dir/vo/FoldCardRequest.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edge/BigBangRemake/vo/FoldCardRequest.cpp > CMakeFiles/BigBangRemake.dir/vo/FoldCardRequest.cpp.i
+
+CMakeFiles/BigBangRemake.dir/vo/FoldCardRequest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BigBangRemake.dir/vo/FoldCardRequest.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edge/BigBangRemake/vo/FoldCardRequest.cpp -o CMakeFiles/BigBangRemake.dir/vo/FoldCardRequest.cpp.s
+
+CMakeFiles/BigBangRemake.dir/vo/FoldCardResponse.cpp.o: CMakeFiles/BigBangRemake.dir/flags.make
+CMakeFiles/BigBangRemake.dir/vo/FoldCardResponse.cpp.o: vo/FoldCardResponse.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edge/BigBangRemake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object CMakeFiles/BigBangRemake.dir/vo/FoldCardResponse.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BigBangRemake.dir/vo/FoldCardResponse.cpp.o -c /home/edge/BigBangRemake/vo/FoldCardResponse.cpp
+
+CMakeFiles/BigBangRemake.dir/vo/FoldCardResponse.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BigBangRemake.dir/vo/FoldCardResponse.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edge/BigBangRemake/vo/FoldCardResponse.cpp > CMakeFiles/BigBangRemake.dir/vo/FoldCardResponse.cpp.i
+
+CMakeFiles/BigBangRemake.dir/vo/FoldCardResponse.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BigBangRemake.dir/vo/FoldCardResponse.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edge/BigBangRemake/vo/FoldCardResponse.cpp -o CMakeFiles/BigBangRemake.dir/vo/FoldCardResponse.cpp.s
+
 CMakeFiles/BigBangRemake.dir/vo/ChangeNicknameRequest.cpp.o: CMakeFiles/BigBangRemake.dir/flags.make
 CMakeFiles/BigBangRemake.dir/vo/ChangeNicknameRequest.cpp.o: vo/ChangeNicknameRequest.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edge/BigBangRemake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object CMakeFiles/BigBangRemake.dir/vo/ChangeNicknameRequest.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edge/BigBangRemake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building CXX object CMakeFiles/BigBangRemake.dir/vo/ChangeNicknameRequest.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BigBangRemake.dir/vo/ChangeNicknameRequest.cpp.o -c /home/edge/BigBangRemake/vo/ChangeNicknameRequest.cpp
 
 CMakeFiles/BigBangRemake.dir/vo/ChangeNicknameRequest.cpp.i: cmake_force
@@ -759,9 +798,35 @@ CMakeFiles/BigBangRemake.dir/vo/ChangeNicknameRequest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BigBangRemake.dir/vo/ChangeNicknameRequest.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edge/BigBangRemake/vo/ChangeNicknameRequest.cpp -o CMakeFiles/BigBangRemake.dir/vo/ChangeNicknameRequest.cpp.s
 
+CMakeFiles/BigBangRemake.dir/vo/ChooseCharacterRequest.cpp.o: CMakeFiles/BigBangRemake.dir/flags.make
+CMakeFiles/BigBangRemake.dir/vo/ChooseCharacterRequest.cpp.o: vo/ChooseCharacterRequest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edge/BigBangRemake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building CXX object CMakeFiles/BigBangRemake.dir/vo/ChooseCharacterRequest.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BigBangRemake.dir/vo/ChooseCharacterRequest.cpp.o -c /home/edge/BigBangRemake/vo/ChooseCharacterRequest.cpp
+
+CMakeFiles/BigBangRemake.dir/vo/ChooseCharacterRequest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BigBangRemake.dir/vo/ChooseCharacterRequest.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edge/BigBangRemake/vo/ChooseCharacterRequest.cpp > CMakeFiles/BigBangRemake.dir/vo/ChooseCharacterRequest.cpp.i
+
+CMakeFiles/BigBangRemake.dir/vo/ChooseCharacterRequest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BigBangRemake.dir/vo/ChooseCharacterRequest.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edge/BigBangRemake/vo/ChooseCharacterRequest.cpp -o CMakeFiles/BigBangRemake.dir/vo/ChooseCharacterRequest.cpp.s
+
+CMakeFiles/BigBangRemake.dir/vo/ChooseCharacterResponse.cpp.o: CMakeFiles/BigBangRemake.dir/flags.make
+CMakeFiles/BigBangRemake.dir/vo/ChooseCharacterResponse.cpp.o: vo/ChooseCharacterResponse.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edge/BigBangRemake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building CXX object CMakeFiles/BigBangRemake.dir/vo/ChooseCharacterResponse.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BigBangRemake.dir/vo/ChooseCharacterResponse.cpp.o -c /home/edge/BigBangRemake/vo/ChooseCharacterResponse.cpp
+
+CMakeFiles/BigBangRemake.dir/vo/ChooseCharacterResponse.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BigBangRemake.dir/vo/ChooseCharacterResponse.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edge/BigBangRemake/vo/ChooseCharacterResponse.cpp > CMakeFiles/BigBangRemake.dir/vo/ChooseCharacterResponse.cpp.i
+
+CMakeFiles/BigBangRemake.dir/vo/ChooseCharacterResponse.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BigBangRemake.dir/vo/ChooseCharacterResponse.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edge/BigBangRemake/vo/ChooseCharacterResponse.cpp -o CMakeFiles/BigBangRemake.dir/vo/ChooseCharacterResponse.cpp.s
+
 CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromAnotherPlayerRequest.cpp.o: CMakeFiles/BigBangRemake.dir/flags.make
 CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromAnotherPlayerRequest.cpp.o: vo/ChooseCardFromAnotherPlayerRequest.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edge/BigBangRemake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromAnotherPlayerRequest.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edge/BigBangRemake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building CXX object CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromAnotherPlayerRequest.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromAnotherPlayerRequest.cpp.o -c /home/edge/BigBangRemake/vo/ChooseCardFromAnotherPlayerRequest.cpp
 
 CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromAnotherPlayerRequest.cpp.i: cmake_force
@@ -774,7 +839,7 @@ CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromAnotherPlayerRequest.cpp.s: cmake_
 
 CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromAnotherPlayerResponse.cpp.o: CMakeFiles/BigBangRemake.dir/flags.make
 CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromAnotherPlayerResponse.cpp.o: vo/ChooseCardFromAnotherPlayerResponse.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edge/BigBangRemake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromAnotherPlayerResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edge/BigBangRemake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building CXX object CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromAnotherPlayerResponse.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromAnotherPlayerResponse.cpp.o -c /home/edge/BigBangRemake/vo/ChooseCardFromAnotherPlayerResponse.cpp
 
 CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromAnotherPlayerResponse.cpp.i: cmake_force
@@ -787,7 +852,7 @@ CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromAnotherPlayerResponse.cpp.s: cmake
 
 CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromCardListRequest.cpp.o: CMakeFiles/BigBangRemake.dir/flags.make
 CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromCardListRequest.cpp.o: vo/ChooseCardFromCardListRequest.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edge/BigBangRemake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building CXX object CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromCardListRequest.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edge/BigBangRemake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building CXX object CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromCardListRequest.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromCardListRequest.cpp.o -c /home/edge/BigBangRemake/vo/ChooseCardFromCardListRequest.cpp
 
 CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromCardListRequest.cpp.i: cmake_force
@@ -800,7 +865,7 @@ CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromCardListRequest.cpp.s: cmake_force
 
 CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromCardListResponse.cpp.o: CMakeFiles/BigBangRemake.dir/flags.make
 CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromCardListResponse.cpp.o: vo/ChooseCardFromCardListResponse.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edge/BigBangRemake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building CXX object CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromCardListResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edge/BigBangRemake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building CXX object CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromCardListResponse.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromCardListResponse.cpp.o -c /home/edge/BigBangRemake/vo/ChooseCardFromCardListResponse.cpp
 
 CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromCardListResponse.cpp.i: cmake_force
@@ -813,7 +878,7 @@ CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromCardListResponse.cpp.s: cmake_forc
 
 CMakeFiles/BigBangRemake.dir/vo/ResistAttackRequest.cpp.o: CMakeFiles/BigBangRemake.dir/flags.make
 CMakeFiles/BigBangRemake.dir/vo/ResistAttackRequest.cpp.o: vo/ResistAttackRequest.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edge/BigBangRemake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building CXX object CMakeFiles/BigBangRemake.dir/vo/ResistAttackRequest.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edge/BigBangRemake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building CXX object CMakeFiles/BigBangRemake.dir/vo/ResistAttackRequest.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BigBangRemake.dir/vo/ResistAttackRequest.cpp.o -c /home/edge/BigBangRemake/vo/ResistAttackRequest.cpp
 
 CMakeFiles/BigBangRemake.dir/vo/ResistAttackRequest.cpp.i: cmake_force
@@ -826,7 +891,7 @@ CMakeFiles/BigBangRemake.dir/vo/ResistAttackRequest.cpp.s: cmake_force
 
 CMakeFiles/BigBangRemake.dir/vo/ResistAttackResponse.cpp.o: CMakeFiles/BigBangRemake.dir/flags.make
 CMakeFiles/BigBangRemake.dir/vo/ResistAttackResponse.cpp.o: vo/ResistAttackResponse.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edge/BigBangRemake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building CXX object CMakeFiles/BigBangRemake.dir/vo/ResistAttackResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edge/BigBangRemake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building CXX object CMakeFiles/BigBangRemake.dir/vo/ResistAttackResponse.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BigBangRemake.dir/vo/ResistAttackResponse.cpp.o -c /home/edge/BigBangRemake/vo/ResistAttackResponse.cpp
 
 CMakeFiles/BigBangRemake.dir/vo/ResistAttackResponse.cpp.i: cmake_force
@@ -839,7 +904,7 @@ CMakeFiles/BigBangRemake.dir/vo/ResistAttackResponse.cpp.s: cmake_force
 
 CMakeFiles/BigBangRemake.dir/vo/EndGameRequest.cpp.o: CMakeFiles/BigBangRemake.dir/flags.make
 CMakeFiles/BigBangRemake.dir/vo/EndGameRequest.cpp.o: vo/EndGameRequest.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edge/BigBangRemake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building CXX object CMakeFiles/BigBangRemake.dir/vo/EndGameRequest.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edge/BigBangRemake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building CXX object CMakeFiles/BigBangRemake.dir/vo/EndGameRequest.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BigBangRemake.dir/vo/EndGameRequest.cpp.o -c /home/edge/BigBangRemake/vo/EndGameRequest.cpp
 
 CMakeFiles/BigBangRemake.dir/vo/EndGameRequest.cpp.i: cmake_force
@@ -852,7 +917,7 @@ CMakeFiles/BigBangRemake.dir/vo/EndGameRequest.cpp.s: cmake_force
 
 CMakeFiles/BigBangRemake.dir/vo/EndGameResponse.cpp.o: CMakeFiles/BigBangRemake.dir/flags.make
 CMakeFiles/BigBangRemake.dir/vo/EndGameResponse.cpp.o: vo/EndGameResponse.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edge/BigBangRemake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building CXX object CMakeFiles/BigBangRemake.dir/vo/EndGameResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edge/BigBangRemake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building CXX object CMakeFiles/BigBangRemake.dir/vo/EndGameResponse.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BigBangRemake.dir/vo/EndGameResponse.cpp.o -c /home/edge/BigBangRemake/vo/EndGameResponse.cpp
 
 CMakeFiles/BigBangRemake.dir/vo/EndGameResponse.cpp.i: cmake_force
@@ -918,7 +983,12 @@ BigBangRemake_OBJECTS = \
 "CMakeFiles/BigBangRemake.dir/vo/RetrieveLoungeInfoResponse.cpp.o" \
 "CMakeFiles/BigBangRemake.dir/vo/RetrieveLoungeListInfoResponse.cpp.o" \
 "CMakeFiles/BigBangRemake.dir/vo/ReadyInLoungeRequest.cpp.o" \
+"CMakeFiles/BigBangRemake.dir/vo/UseCardRequest.cpp.o" \
+"CMakeFiles/BigBangRemake.dir/vo/FoldCardRequest.cpp.o" \
+"CMakeFiles/BigBangRemake.dir/vo/FoldCardResponse.cpp.o" \
 "CMakeFiles/BigBangRemake.dir/vo/ChangeNicknameRequest.cpp.o" \
+"CMakeFiles/BigBangRemake.dir/vo/ChooseCharacterRequest.cpp.o" \
+"CMakeFiles/BigBangRemake.dir/vo/ChooseCharacterResponse.cpp.o" \
 "CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromAnotherPlayerRequest.cpp.o" \
 "CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromAnotherPlayerResponse.cpp.o" \
 "CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromCardListRequest.cpp.o" \
@@ -984,7 +1054,12 @@ BigBangRemake: CMakeFiles/BigBangRemake.dir/vo/JoinLoungeRequest.cpp.o
 BigBangRemake: CMakeFiles/BigBangRemake.dir/vo/RetrieveLoungeInfoResponse.cpp.o
 BigBangRemake: CMakeFiles/BigBangRemake.dir/vo/RetrieveLoungeListInfoResponse.cpp.o
 BigBangRemake: CMakeFiles/BigBangRemake.dir/vo/ReadyInLoungeRequest.cpp.o
+BigBangRemake: CMakeFiles/BigBangRemake.dir/vo/UseCardRequest.cpp.o
+BigBangRemake: CMakeFiles/BigBangRemake.dir/vo/FoldCardRequest.cpp.o
+BigBangRemake: CMakeFiles/BigBangRemake.dir/vo/FoldCardResponse.cpp.o
 BigBangRemake: CMakeFiles/BigBangRemake.dir/vo/ChangeNicknameRequest.cpp.o
+BigBangRemake: CMakeFiles/BigBangRemake.dir/vo/ChooseCharacterRequest.cpp.o
+BigBangRemake: CMakeFiles/BigBangRemake.dir/vo/ChooseCharacterResponse.cpp.o
 BigBangRemake: CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromAnotherPlayerRequest.cpp.o
 BigBangRemake: CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromAnotherPlayerResponse.cpp.o
 BigBangRemake: CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromCardListRequest.cpp.o
@@ -995,7 +1070,7 @@ BigBangRemake: CMakeFiles/BigBangRemake.dir/vo/EndGameRequest.cpp.o
 BigBangRemake: CMakeFiles/BigBangRemake.dir/vo/EndGameResponse.cpp.o
 BigBangRemake: CMakeFiles/BigBangRemake.dir/build.make
 BigBangRemake: CMakeFiles/BigBangRemake.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/edge/BigBangRemake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Linking CXX executable BigBangRemake"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/edge/BigBangRemake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Linking CXX executable BigBangRemake"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/BigBangRemake.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

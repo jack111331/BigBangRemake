@@ -173,7 +173,10 @@ Player *Room::getNextPlayer(Player *currentPlayer) {
     }
 }
 
-Player *Room::getPlayerByPosition(int position) {
+Player *Room::getPlayerByPosition(size_t position) {
+    if(position >= playerList.size()) {
+        return nullptr;
+    }
     return playerList.at(position);
 }
 

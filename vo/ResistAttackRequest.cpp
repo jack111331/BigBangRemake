@@ -5,7 +5,9 @@
 #include "vo/ResistAttackRequest.h"
 
 void Request::PlayerCard::to_json(nlohmann::json &j, const ResistAttackRequest &p) {
-    j = nlohmann::json{{"resistCardName", p.resistCardName}};
+    j = nlohmann::json{
+            {"resistCardName", p.resistCardName}
+    };
 }
 
 void Request::PlayerCard::from_json(const nlohmann::json &j, ResistAttackRequest &p) {

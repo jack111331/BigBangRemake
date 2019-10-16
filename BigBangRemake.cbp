@@ -379,10 +379,22 @@
 		<Unit filename="/home/edge/BigBangRemake/vo/ChooseCardFromCardListResponse.cpp">
 			<Option target="BigBangRemake"/>
 		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/vo/ChooseCharacterRequest.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/vo/ChooseCharacterResponse.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
 		<Unit filename="/home/edge/BigBangRemake/vo/EndGameRequest.cpp">
 			<Option target="BigBangRemake"/>
 		</Unit>
 		<Unit filename="/home/edge/BigBangRemake/vo/EndGameResponse.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/vo/FoldCardRequest.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/vo/FoldCardResponse.cpp">
 			<Option target="BigBangRemake"/>
 		</Unit>
 		<Unit filename="/home/edge/BigBangRemake/vo/JoinLoungeRequest.cpp">
@@ -401,6 +413,9 @@
 			<Option target="BigBangRemake"/>
 		</Unit>
 		<Unit filename="/home/edge/BigBangRemake/vo/RetrieveLoungeListInfoResponse.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/vo/UseCardRequest.cpp">
 			<Option target="BigBangRemake"/>
 		</Unit>
 		<Unit filename="/home/edge/BigBangRemake/CMakeLists.txt">

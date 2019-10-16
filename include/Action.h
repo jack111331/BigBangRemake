@@ -11,7 +11,7 @@ class Card;
 class Room;
 
 namespace Action {
-    bool attack(Room *room, Player *attacker, Player *attackee, std::string dodgeByCard, Response::PlayerCard::ResistAttackResponse *response);
+    bool attack(Room *room, Player *attacker, Player *attackee, const std::string &dodgeByCard, Response::PlayerCard::ResistAttackResponse *response);
 
     void recoverHealth(Player *target, int health);
 };

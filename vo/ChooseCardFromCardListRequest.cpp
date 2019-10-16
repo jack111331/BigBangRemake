@@ -5,8 +5,10 @@
 #include "vo/ChooseCardFromCardListRequest.h"
 
 void Request::PlayerCard::to_json(nlohmann::json &j, const ChooseCardFromCardListRequest &p) {
-    j = nlohmann::json{{"amount",   p.amount},
-                       {"cardList", p.cardList}};
+    j = nlohmann::json{
+            {"amount",   p.amount},
+            {"cardList", p.cardList}
+    };
 }
 
 void Request::PlayerCard::from_json(const nlohmann::json &j, ChooseCardFromCardListRequest &p) {

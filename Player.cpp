@@ -1,4 +1,10 @@
 #include <RoomManager.h>
+#include <vo/ChooseCharacterResponse.h.h>
+#include <CharacterGenerator.h>
+#include <vo/ChooseCharacterResponse.h>
+#include <vo/UseCardRequest.h>
+#include <vo/FoldCardRequest.h>
+#include <vo/FoldCardResponse.h>
 #include "Player.h"
 #include "Room.h"
 #include "User.h"
@@ -11,15 +17,33 @@ Player::Player(Agent *agent) : agent(agent) {
 }
 
 void Player::handleMessage(const json &jsonMessage) {
-    //TODO handle message
-    if(jsonMessage.at("card")) {
+    auto roomManager = RoomManager::getInstance();
+    auto room = roomManager->searchRoom(this);
+    if (jsonMessage.at("card")) {
         uint32_t cardId = jsonMessage.at("card").at("id");
-        if(cardId) {
+        if (cardId) {
             auto card = getCardInHoldingById(cardId);
             card->handleMessage(jsonMessage.at("card"));
         } else {
             // TODO report error
         }
+    } else if (jsonMessage.at("chooseCharacter")) {
+        Response::Player::ChooseCharacterResponse response = jsonMessage.at(
+                "chooseCharacter").get<Response::Player::ChooseCharacterResponse>();
+        this->character = CharacterGenerator::createCharacter(response.chooseCharacterName, room);
+    } else if (jsonMessage.at("useCard")) {
+        // TODO check player turn
+        Request::Player::UseCardRequest request = jsonMessage.at("useCard").get<Request::Player::UseCardRequest>();
+        room->useCard(request.cardId, room->getPositionByPlayer(this), request.targetPosition);
+    } else if (jsonMessage.at("endUsingCard")) {
+
+    } else if (jsonMessage.at("foldCard")) {
+        Response::Player::FoldCardResponse response = jsonMessage.at("foldCard").get<Response::Player::FoldCardResponse>();
+        for(auto cardId : response.cardIdList) {
+            room->foldCard(cardId, room->getPositionByPlayer(this));
+        }
+    } else {
+        // TODO log error
     }
 }
 

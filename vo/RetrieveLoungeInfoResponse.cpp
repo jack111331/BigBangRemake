@@ -5,9 +5,11 @@
 #include "vo/RetrieveLoungeInfoResponse.h"
 
 void Response::User::to_json(nlohmann::json &j, const UserInfo &p) {
-    j = nlohmann::json{{"id", p.id},
-                       {"nickname", p.nickname},
-                       {"ready", p.ready}};
+    j = nlohmann::json{
+            {"id",       p.id},
+            {"nickname", p.nickname},
+            {"ready",    p.ready}
+    };
 }
 
 void Response::User::from_json(const nlohmann::json &j, UserInfo &p) {

@@ -11,7 +11,8 @@ void Response::Player::to_json(nlohmann::json &j, const EndGameResponse &p) {
                     {
                             "endGame", {}
                     }
-            }};
+            }
+    };
 }
 
 void Response::Player::from_json(const nlohmann::json &j, EndGameResponse &p) {

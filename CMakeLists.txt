@@ -111,7 +111,12 @@ list(APPEND SERVER_SOURCE
         vo/RetrieveLoungeInfoResponse.cpp
         vo/RetrieveLoungeListInfoResponse.cpp
         vo/ReadyInLoungeRequest.cpp
+        vo/UseCardRequest.cpp
+        vo/FoldCardRequest.cpp
+        vo/FoldCardResponse.cpp
         vo/ChangeNicknameRequest.cpp
+        vo/ChooseCharacterRequest.cpp
+        vo/ChooseCharacterResponse.cpp
         vo/ChooseCardFromAnotherPlayerRequest.cpp
         vo/ChooseCardFromAnotherPlayerResponse.cpp
         vo/ChooseCardFromCardListRequest.cpp

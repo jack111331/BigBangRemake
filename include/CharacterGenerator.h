@@ -7,7 +7,7 @@
 #include "Room.h"
 
 namespace CharacterGenerator {
-    Character *createCharacter(const std::string &characterName);
+    Character *createCharacter(const std::string &characterName, Room *room);
 }
 class RandomCharacterPool {
 public:

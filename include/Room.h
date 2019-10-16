@@ -71,7 +71,7 @@ public:
 
     Player *getNextPlayer(Player *currentPlayer);
 
-    Player *getPlayerByPosition(int position);
+    Player *getPlayerByPosition(size_t position);
 
     position getPositionByPlayer(Player *targetPlayer);
 

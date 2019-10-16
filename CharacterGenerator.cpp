@@ -1,13 +1,13 @@
 #include "CharacterGenerator.h"
-//#include "BartCassidy.h"
-//#include "BlackJack.h"
-//#include "SuzyLafayette.h"
-//#include "ElGringo.h"
-//#include "VultureSam.h"
-//#include "PaulRegret.h"
-//#include "RoseDoolan.h"
-//#include "WillyTheKid.h"
-//#include "GodDeveloper.h"
+#include "character/BartCassidy.h"
+#include "character/BlackJack.h"
+#include "character/SuzyLafayette.h"
+#include "character/ElGringo.h"
+#include "character/VultureSam.h"
+#include "character/PaulRegret.h"
+#include "character/RoseDoolan.h"
+#include "character/WillyTheKid.h"
+#include "character/GodDeveloper.h"
 //#include "CharacterGenDecorator.h"
 #include <string>
 #include <iterator>
@@ -15,25 +15,25 @@
 #include "Lounge.h"
 
 //#include "ExclusiveCardStore.h"
-Character *CharacterGenerator::createCharacter(const std::string &characterName) {
+Character *CharacterGenerator::createCharacter(const std::string &characterName, Room *room) {
     if (characterName == "Bart Cassidy") {
-//        return new CCharacterBart(room);
+        return new BangCharacter::BartCassidy(room);
     } else if (characterName == "Black Jack") {
-//        return new BlackJack(room);
+        return new BangCharacter::BlackJack(room);
     } else if (characterName == "Suzy Lafayette") {
-//        return new CCharacterLafayette(room);
+        return new BangCharacter::SuzyLafayette(room);
     } else if (characterName == "El Gringo") {
-//        return new CCharacterGringo(room);
+        return new BangCharacter::ElGringo(room);
     } else if (characterName == "Vulture Sam") {
-//        return new CCharacterSam(room);
+        return new BangCharacter::VultureSam(room);
     } else if (characterName == "Paul Regret") {
-//        return new CCharacterPaul(room);
+        return new BangCharacter::PaulRegret(room);
     } else if (characterName == "Rose Doolan") {
-//        return new CCharacterRose(room);
+        return new BangCharacter::RoseDoolan(room);
     } else if (characterName == "Willy The Kid") {
-//        return new CCharacterWilly(room);
+        return new BangCharacter::WillyTheKid(room);
     } else if (characterName == "God Developer") {
-//        return new CCharacterGod(room);
+        return new BangCharacter::GodDeveloper(room);
     } else {
         return nullptr;
     }

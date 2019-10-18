@@ -2,6 +2,10 @@
 #include <random>
 #include <CharacterGenerator.h>
 #include <Network.h>
+#include <vo/WhoUseCardRequest.h>
+#include <vo/WhoFoldCardRequest.h>
+#include <vo/WhoGiveCardRequest.h>
+#include <vo/ShowDetermineCardRequest.h>
 #include "Room.h"
 #include "User.h"
 #include "GameEventListener.h"
@@ -33,9 +37,14 @@ bool Room::useCard(uint32_t cardId, position userPosition, position targetPositi
     Player *user = getPlayerByPosition(userPosition);
     Player *target = getPlayerByPosition(targetPosition);
     Card *card = user->getCardInHoldingById(cardId);
+    auto network = Network::getInstance();
     if (card && card->useCardEffect(this, user, target)) {
-        // TODO send message to inform
-        //        User->SendMessage("Send Message", NSWrapInfo::WrapWhoUseCard(this, cardID).dump());
+        Request::Player::WhoUseCardRequest request = {cardId, userPosition, targetPosition};
+        for (auto player : playerList) {
+            if (getPositionByPlayer(player) != userPosition) {
+                network->sendMessage(player->getAgent()->getToken(), nlohmann::json(request).dump());
+            }
+        }
         return true;
     }
     return false;
@@ -44,24 +53,35 @@ bool Room::useCard(uint32_t cardId, position userPosition, position targetPositi
 bool Room::foldCard(uint32_t cardId, position folderPosition) {
     Player *folder = getPlayerByPosition(folderPosition);
     Card *card = folder->getCardInHoldingById(cardId);
+    auto network = Network::getInstance();
     if (card) {
         discardPlague->insertCardToPlague(card);
         folder->removeCardInHolding(card);
-        // TODO send message to inform
+        Request::Player::WhoFoldCardRequest request = {cardId, folderPosition};
+        for (auto player : playerList) {
+            if (getPositionByPlayer(player) != folderPosition) {
+                network->sendMessage(player->getAgent()->getToken(), nlohmann::json(request).dump());
+            }
+        }
         return true;
     }
     return false;
 }
 
 bool Room::giveCard(uint32_t cardId, position giverPosition, position receiverPosition) {
-    // TODO WIP
     Player *giver = getPlayerByPosition(giverPosition);
     Player *receiver = getPlayerByPosition(receiverPosition);
     Card *card = giver->getCardInHoldingById(cardId);
+    auto network = Network::getInstance();
     if (card) {
         receiver->addCardToHolding(card);
         giver->removeCardInHolding(card);
-        // TODO send message to inform
+        Request::Player::WhoGiveCardRequest request = {cardId, giverPosition, receiverPosition};
+        for (auto player : playerList) {
+            if (getPositionByPlayer(player) != giverPosition) {
+                network->sendMessage(player->getAgent()->getToken(), nlohmann::json(request).dump());
+            }
+        }
         return true;
     }
     return false;
@@ -72,13 +92,13 @@ Card *Room::drawCardFromPlagueForDetermine() {
         flushPlague();
     }
     Card *drawCard = plague->chooseTopCard();
+    auto network = Network::getInstance();
     if (drawCard) {
         plague->removeCardFromPlague(drawCard);
-        // TODO inform room player to show animation
-        //            for (std::vector<CPlayer *>::iterator it = room->GetPlayerList().begin();
-        //                 it != room->GetPlayerList().end(); ++it) {
-        //                (*it)->GetUser()->SendMessage("Send Message", NSWrapInfo::WrapDetermineCard(DrawedCard->GetID()).dump());
-        //            }
+        Request::Player::ShowDetermineCardRequest request = {drawCard->getId()};
+        for (auto player : playerList) {
+            network->sendMessage(player->getAgent()->getToken(), nlohmann::json(request).dump());
+        }
     }
     return drawCard;
 }
@@ -89,7 +109,7 @@ void Room::putDetermineCardIntoPlague(Card *card) {
 
 
 void Room::changeRoomState(RoomState roomState) {
-    // TODO more determine
+    // TODO more state determine
     this->roomState = roomState;
 }
 
@@ -107,21 +127,6 @@ void Room::playerJoin(Agent *agent) {
     auto player = new Player(agent);
     agent->setPlayer(player);
     playerList.push_back(player);
-}
-
-void Room::loopToCheckHaveCharacter() {
-    size_t PlayerHaveCharacter;
-    while (roomState == RoomState::WaitPlayerToChooseCharacter) {
-        PlayerHaveCharacter = 0;
-        for (auto player : playerList) {
-            if (player->getCharacter()) {
-                PlayerHaveCharacter++;
-            }
-        }
-        if (PlayerHaveCharacter == playerList.size()) {
-            roomState = RoomState::StartGame;
-        }
-    }
 }
 
 WinCondition Room::isGameEnd() {
@@ -179,7 +184,7 @@ Player *Room::getNextPlayer(Player *currentPlayer) {
 }
 
 Player *Room::getPlayerByPosition(size_t position) {
-    if(position >= playerList.size()) {
+    if (position >= playerList.size()) {
         return nullptr;
     }
     return playerList.at(position);
@@ -285,21 +290,20 @@ void Room::initGame() {
     // generate 2 random character, this two can't be identical
     roomState = RoomState::WaitPlayerToChooseCharacter;
     auto characterPool = new RandomCharacterPool();
+    auto network = Network::getInstance();
     for (auto player : playerList) {
+        //        network->sendMessage(player->getAgent()->getToken(), );
         //        (*it)->GetUser()->SendMessage("Send Message", NSWrapInfo::WrapStartGame(room, 1).dump());
         characterPool->flushChoicePool();
-        auto CharacterChoicePool = characterPool->choiceCharacterFromPool();
         // Hard code to have 2 character
-        //        (*it)->GetUser()->SendMessage("Send Message", NSWrapInfo::WrapChooseCharacter(characterChoicePool[0],
-        //                                                                                      characterChoicePool[1]).dump());
+        playerService->sendChooseCardRequest(player, characterPool->choiceCharacterFromPool());
         characterPool->removeChoiceFromPool();
     }
     delete characterPool;
 
     // loop to check if everybody has character card
-    // TODO change to sleepUntil
-    //    sleepUntil(RoomState::PlayerCompleteChoosedCharacter);
-    loopToCheckHaveCharacter();
+    sleepUntil(RoomState::PlayerCompleteChoosedCharacter);
+    roomState = RoomState::StartGame;
 
     // auto choose team for player, tbc
     autoChooseIdentity();
@@ -308,6 +312,7 @@ void Room::initGame() {
     for (auto player : playerList) {
         if (player->getIdentity() == Team::Sergeant) {
             currentPlayer = player;
+            break;
         }
     }
     initPlayerState();
@@ -391,5 +396,6 @@ Room::~Room() {
     delete this->plague;
     delete this->discardPlague;
     delete this->eventListener;
+    delete this->playerService;
 }
 

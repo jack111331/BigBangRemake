@@ -4,6 +4,7 @@
 #include "Player.h"
 #include "Agent.h"
 #include "GameEventListener.h"
+#include "PlayerService.h"
 #include <vector>
 #include <thread>
 #include <condition_variable>
@@ -55,8 +56,6 @@ public:
 
     void playerJoin(Agent *agent);
 
-    void loopToCheckHaveCharacter();
-
     WinCondition isGameEnd();
 
     void initPlayerState();
@@ -105,6 +104,9 @@ private:
     std::vector<Player *> playerList;
     Player *currentPlayer;
     EventSubject *eventListener;
+
+    // Network related
+    PlayerService *playerService;
 
     // thread administration
     std::thread gameThread;

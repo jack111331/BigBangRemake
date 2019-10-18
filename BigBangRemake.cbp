@@ -115,6 +115,9 @@
 		<Unit filename="/home/edge/BigBangRemake/Player.cpp">
 			<Option target="BigBangRemake"/>
 		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/PlayerService.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
 		<Unit filename="/home/edge/BigBangRemake/Room.cpp">
 			<Option target="BigBangRemake"/>
 		</Unit>
@@ -263,6 +266,9 @@
 			<Option target="BigBangRemake"/>
 		</Unit>
 		<Unit filename="/home/edge/BigBangRemake/include/Player.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/PlayerService.h">
 			<Option target="BigBangRemake"/>
 		</Unit>
 		<Unit filename="/home/edge/BigBangRemake/include/Room.h">
@@ -421,7 +427,22 @@
 		<Unit filename="/home/edge/BigBangRemake/vo/RetrieveLoungeListInfoResponse.cpp">
 			<Option target="BigBangRemake"/>
 		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/vo/ShowDetermineCardRequest.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/vo/StartGameRequest.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
 		<Unit filename="/home/edge/BigBangRemake/vo/UseCardRequest.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/vo/WhoFoldCardRequest.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/vo/WhoGiveCardRequest.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/vo/WhoUseCardRequest.cpp">
 			<Option target="BigBangRemake"/>
 		</Unit>
 		<Unit filename="/home/edge/BigBangRemake/CMakeLists.txt">

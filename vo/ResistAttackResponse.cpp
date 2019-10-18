@@ -11,6 +11,7 @@ void Response::PlayerCard::to_json(nlohmann::json &j, const ResistAttackResponse
 }
 
 void Response::PlayerCard::from_json(const nlohmann::json &j, ResistAttackResponse &p) {
+    p.updated = true;
     j.at("resist").get_to(p.resist);
 }
 

@@ -108,11 +108,17 @@ list(APPEND SERVER_SOURCE
         Equipment.cpp
         GameEventListener.cpp
         Logger.cpp
+        PlayerService.cpp
         vo/JoinLoungeRequest.cpp
         vo/RetrieveLoungeInfoResponse.cpp
         vo/RetrieveLoungeListInfoResponse.cpp
         vo/ReadyInLoungeRequest.cpp
         vo/UseCardRequest.cpp
+        vo/WhoUseCardRequest.cpp
+        vo/WhoFoldCardRequest.cpp
+        vo/WhoGiveCardRequest.cpp
+        vo/ShowDetermineCardRequest.cpp
+        vo/StartGameRequest.cpp
         vo/FoldCardRequest.cpp
         vo/FoldCardResponse.cpp
         vo/ChangeNicknameRequest.cpp
@@ -147,6 +153,7 @@ list(APPEND SERVER_HEADER
         include/Equipment.h
         include/GameEventListener.h
         include/Logger.h
+        include/PlayerService.h
         include/vo/
         )
 

@@ -17,8 +17,7 @@ bool Action::attack(Room *room, Player *attacker, Player *attackee, const std::s
         Request::PlayerCard::ResistAttackRequest request = {dodgeByCardName};
         network->sendMessage(attackee->getAgent()->getToken(), nlohmann::json(request).dump());
         std::unique_lock<std::mutex> lock(conditionVariableMutex);
-        //FIXME some problem might occur
-        conditionVariable.wait(lock, [response] { return response->resist; });
+        conditionVariable.wait(lock, [response] { return response->updated; });
         int resist = response->resist;
         if (resist) {
             room->foldCard(resistCard->getId(), room->getPositionByPlayer(attackee));

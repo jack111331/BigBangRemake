@@ -32,17 +32,23 @@ void Player::handleMessage(const json &jsonMessage) {
         Response::Player::ChooseCharacterResponse response = jsonMessage.at(
                 "chooseCharacter").get<Response::Player::ChooseCharacterResponse>();
         this->character = CharacterGenerator::createCharacter(response.chooseCharacterName, room);
+        for (auto player:room->getPlayerList()) {
+            if(!player->getCharacter()) {
+                return;
+            }
+        }
+        room->changeRoomState(RoomState::PlayerCompleteChoosedCharacter);
     } else if (jsonMessage.at("useCard")) {
-        if(room->isPlayerTurn(this)) {
+        if (room->isPlayerTurn(this)) {
             Request::Player::UseCardRequest request = jsonMessage.at("useCard").get<Request::Player::UseCardRequest>();
             room->useCard(request.cardId, room->getPositionByPlayer(this), request.targetPosition);
         }
     } else if (jsonMessage.at("endUsingCard")) {
-        if(room->isPlayerTurn(this)) {
+        if (room->isPlayerTurn(this)) {
             room->changeRoomState(RoomState::PlayerCompleteUsedCard);
         }
     } else if (jsonMessage.at("foldCard")) {
-        if(room->isPlayerTurn(this)) {
+        if (room->isPlayerTurn(this)) {
             Response::Player::FoldCardResponse response = jsonMessage.at(
                     "foldCard").get<Response::Player::FoldCardResponse>();
             for (auto cardId : response.cardIdList) {

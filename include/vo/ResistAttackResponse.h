@@ -12,6 +12,7 @@ namespace Response {
 
     namespace PlayerCard {
         struct ResistAttackResponse {
+            bool updated; // FIXME better way
             bool resist;
         };
         void to_json(nlohmann::json &j, const ResistAttackResponse &p);

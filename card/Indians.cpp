@@ -37,7 +37,7 @@ bool Indians::useCardEffect(Room *room, Player *myself, Player *target) {
     for (auto player : playerList) {
         if (player != myself) {
             Action::attack(room, myself, player, BangCard::Bang::getName(), &response);
-            // TODO reset response
+            response.updated = false;
         }
     }
     return true;

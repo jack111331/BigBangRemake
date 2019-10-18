@@ -34,12 +34,12 @@ bool Duel::useCardEffect(Room *room, Player *myself, Player *target) {
         if (!Card::useCardEffect(room, myself, target)) {
             return false;
         }
-        size_t myTurn = 0;
-        bool isEnd = 0;
+        bool myTurn = false;
+        bool isEnd = false;
         while (!isEnd) {
             isEnd = std::max(isEnd,
                              Action::attack(room, myTurn ? target : myself, myTurn ? myself : target, BangCard::Bang::getName(), &response));
-            myTurn ^= 1;
+            myTurn = !myTurn;
         }
         return true;
     }

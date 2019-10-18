@@ -11,17 +11,15 @@
 
 class Logger {
 public:
-    Logger(std::string loggerName);
-
-    static Logger *getInstance(std::string loggerName);
+    static std::shared_ptr<spdlog::logger> getLogger(const std::string &loggerName);
 
     ~Logger();
 
 private:
     Logger();
 
-    static std::map<std::string, Logger *> instance;
-    std::shared_ptr<spdlog::sinks::basic_file_sink_mt> loggerSink;
+    static std::map<std::string, std::shared_ptr<spdlog::logger>> loggerMap;
+    static std::shared_ptr<spdlog::sinks::basic_file_sink_mt> loggerSink;
 };
 
 

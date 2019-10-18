@@ -4,21 +4,18 @@
 
 #include "Logger.h"
 
-std::map<std::string, Logger *> Logger::instance;
+std::map<std::string, std::shared_ptr<spdlog::logger>> Logger::loggerMap;
+std::shared_ptr<spdlog::sinks::basic_file_sink_mt> Logger::loggerSink;
 
 Logger::Logger() {
     this->loggerSink = std::make_shared<spdlog::sinks::basic_file_sink_mt>("BigBangRemake.log");
 }
 
-Logger::Logger(std::string loggerName) {
-    auto logger = std::make_shared<spdlog::logger>(loggerName, loggerSink);
-}
-
-Logger *Logger::getInstance(std::string loggerName) {
-    if (Logger::instance.find(loggerName) == Logger::instance.end()) {
-        Logger::instance.insert(std::pair<std::string, Logger *>(loggerName, new Logger(loggerName)));
+std::shared_ptr<spdlog::logger> Logger::getLogger(const std::string &loggerName) {
+    if (loggerMap.find(loggerName) == loggerMap.end()) {
+        loggerMap.insert(std::pair<std::string, std::shared_ptr<spdlog::logger>>(loggerName, std::make_shared<spdlog::logger>(loggerName, loggerSink)));
     }
-    return Logger::instance.at(loggerName);
+    return Logger::loggerMap.at(loggerName);
 }
 
 Logger::~Logger() {

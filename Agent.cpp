@@ -4,6 +4,7 @@
 
 #include "Agent.h"
 #include <utility>
+#include <Logger.h>
 #include "nlohmann/json.hpp"
 #include "User.h"
 #include "Player.h"
@@ -17,17 +18,18 @@ const websocketpp::connection_hdl &Agent::getToken() const {
 
 void Agent::handleMessage(const std::string &message) {
     json jsonMessage = json(message);
+    auto logger = Logger::getLogger("[Agent]");
     if(jsonMessage.at("user")) {
         if(user) {
             user->handleMessage(jsonMessage.at("user"));
         } else {
-            // TODO record error
+            logger->error("Wrong Message, jsonMessage={}", jsonMessage.dump());
         }
     } else if(jsonMessage.at("player")) {
         if(player) {
             player->handleMessage(jsonMessage.at("player"));
         } else {
-            // TODO record error
+            logger->error("Wrong Message, jsonMessage={}", jsonMessage.dump());
         }
     }
 }

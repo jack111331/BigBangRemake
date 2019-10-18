@@ -4,6 +4,7 @@
 #include <vector>
 #include <Network.h>
 #include <vo/ChooseCardFromCardListRequest.h>
+#include <Logger.h>
 #include "User.h"
 
 using std::string;
@@ -57,7 +58,8 @@ bool GeneralStore::useCardEffect(Room *room, Player *myself, Player *target) {
                 currentPlayer->addCardToHolding(chooseCardSet.at(card));
                 chooseCardSet.erase(card);
             } else {
-                // TODO log wrong card
+                auto logger = Logger::getLogger("[Card]");
+                logger->error("Wrong Card, card={}", card);
             }
         }
         response.cardList.clear();

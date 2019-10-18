@@ -6,6 +6,7 @@
 #include <vo/RetrieveLoungeInfoResponse.h>
 #include <vo/ReadyInLoungeRequest.h>
 #include <RoomManager.h>
+#include <Logger.h>
 #include "User.h"
 
 using nlohmann::json;
@@ -102,6 +103,7 @@ void User::handleMessage(const json &jsonMessage) {
             }
         }
     } else {
-        // TODO log error
+        auto logger = Logger::getLogger("[User]");
+        logger->error("Wrong Message, jsonMessage={}", jsonMessage.dump());
     }
 }

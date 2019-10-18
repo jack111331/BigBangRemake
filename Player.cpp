@@ -4,6 +4,7 @@
 #include <vo/UseCardRequest.h>
 #include <vo/FoldCardRequest.h>
 #include <vo/FoldCardResponse.h>
+#include <Logger.h>
 #include "Player.h"
 #include "Room.h"
 #include "User.h"
@@ -18,13 +19,14 @@ Player::Player(Agent *agent) : agent(agent) {
 void Player::handleMessage(const json &jsonMessage) {
     auto roomManager = RoomManager::getInstance();
     auto room = roomManager->searchRoom(this);
+    auto logger = Logger::getLogger("[Player]");
     if (jsonMessage.at("card")) {
         uint32_t cardId = jsonMessage.at("card").at("id");
         if (cardId) {
             auto card = getCardInHoldingById(cardId);
             card->handleMessage(jsonMessage.at("card"));
         } else {
-            // TODO report error
+            logger->error("Wrong Message, jsonMessage={}", jsonMessage.dump());
         }
     } else if (jsonMessage.at("chooseCharacter")) {
         Response::Player::ChooseCharacterResponse response = jsonMessage.at(
@@ -49,7 +51,7 @@ void Player::handleMessage(const json &jsonMessage) {
             room->changeRoomState(RoomState::PlayerCompleteFoldedCard);
         }
     } else {
-        // TODO log error
+        logger->error("Wrong Message, jsonMessage={}", jsonMessage.dump());
     }
 }
 

@@ -19,15 +19,15 @@ bool Equipment::addEquipmentCard(EquipmentCard *equipmentCard) {
 }
 
 void Equipment::removeEquipmentCard(EquipmentCard *equipmentCard) {
-    for(auto card = equipmentCardList.begin();card != equipmentCardList.end();++card) {
-        if(*card == equipmentCard) {
+    for (auto card = equipmentCardList.begin(); card != equipmentCardList.end(); ++card) {
+        if (*card == equipmentCard) {
             equipmentCardList.erase(card);
             break;
         }
     }
 }
 
-bool Equipment::isEquipmentCardExist(const std::string & cardName) const{
+bool Equipment::isEquipmentCardExist(const std::string &cardName) const {
     for (auto card : equipmentCardList) {
         if (cardName == card->getCardName()) {
             return true;
@@ -36,13 +36,36 @@ bool Equipment::isEquipmentCardExist(const std::string & cardName) const{
     return false;
 }
 
-
-WeaponCard *Equipment::getWeaponCard() const {
-    return weaponCard;
+void Equipment::setWeaponCard(WeaponCard *weaponCard) {
+    this->weaponCard = weaponCard;
 }
 
-void Equipment::setWeaponCard(WeaponCard *weaponCard) {
-    Equipment::weaponCard = weaponCard;
+bool Equipment::isHasMultiAttack() const {
+    if(weaponCard) {
+        return weaponCard->isMultiAttack();
+    }
+    return false;
+}
+
+int Equipment::getAttackRange() const {
+    if(weaponCard) {
+        return weaponCard->getAttackRange();
+    }
+    return 1;
+}
+
+int Equipment::getAddAttackRange() const {
+    if(weaponCard) {
+        return weaponCard->getAddAttackRange();
+    }
+    return 0;
+}
+
+int Equipment::getDefendAttackRange() const {
+    if(weaponCard) {
+        return weaponCard->getDefendRange();
+    }
+    return false;
 }
 
 Equipment::~Equipment() {

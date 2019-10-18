@@ -18,9 +18,15 @@ public:
 
     bool isEquipmentCardExist(const std::string & cardName) const;
 
-    WeaponCard *getWeaponCard() const;
-
     void setWeaponCard(WeaponCard *weaponCard);
+
+    bool isHasMultiAttack() const;
+
+    int getAttackRange() const;
+
+    int getAddAttackRange() const;
+
+    int getDefendAttackRange() const;
 
     ~Equipment();
 

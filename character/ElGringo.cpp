@@ -40,11 +40,11 @@ int ElGringo::getAttackRange() const {
     return ElGringo::attackRange;
 }
 
-int ElGringo::getAddRange() const {
+int ElGringo::getAddAttackRange() const {
     return ElGringo::addRange;
 }
 
-int ElGringo::getDefendRange() const {
+int ElGringo::getDefendAttackRange() const {
     return ElGringo::defendRange;
 }
 
@@ -53,11 +53,9 @@ bool ElGringo::isHasMultiAttack() const {
 }
 
 void ElGringo::onLossBlood(Room *room, Player *loser, Player *attacker) {
-    // TODO draw card strategy
-//    CDrawCardFromPlayer *DrawCardStrategy = new CDrawCardFromPlayer(
-//            NSDrawCardFactory::DrawCard("Random Choose Card"));
-//    DrawCardStrategy->DrawCardFromPlayer(loser, attacker);
-//    delete DrawCardStrategy;
+    // TODO inform random choose card
+    auto card = attacker->getRandomHoldingCard();
+    room->giveCard(card->getId(), room->getPositionByPlayer(attacker), room->getPositionByPlayer(loser));
 }
 
 ElGringo::~ElGringo() {

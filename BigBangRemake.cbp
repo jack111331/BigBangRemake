@@ -97,6 +97,9 @@
 		<Unit filename="/home/edge/BigBangRemake/GameEventListener.cpp">
 			<Option target="BigBangRemake"/>
 		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/Logger.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
 		<Unit filename="/home/edge/BigBangRemake/Lounge.cpp">
 			<Option target="BigBangRemake"/>
 		</Unit>
@@ -242,6 +245,9 @@
 			<Option target="BigBangRemake"/>
 		</Unit>
 		<Unit filename="/home/edge/BigBangRemake/include/GameEventListener.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/Logger.h">
 			<Option target="BigBangRemake"/>
 		</Unit>
 		<Unit filename="/home/edge/BigBangRemake/include/Lounge.h">

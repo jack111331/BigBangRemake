@@ -1,5 +1,4 @@
 #include <RoomManager.h>
-#include <vo/ChooseCharacterResponse.h.h>
 #include <CharacterGenerator.h>
 #include <vo/ChooseCharacterResponse.h>
 #include <vo/UseCardRequest.h>
@@ -13,7 +12,7 @@
 using nlohmann::json;
 
 Player::Player(Agent *agent) : agent(agent) {
-
+    this->equipment = new Equipment();
 }
 
 void Player::handleMessage(const json &jsonMessage) {
@@ -32,15 +31,22 @@ void Player::handleMessage(const json &jsonMessage) {
                 "chooseCharacter").get<Response::Player::ChooseCharacterResponse>();
         this->character = CharacterGenerator::createCharacter(response.chooseCharacterName, room);
     } else if (jsonMessage.at("useCard")) {
-        // TODO check player turn
-        Request::Player::UseCardRequest request = jsonMessage.at("useCard").get<Request::Player::UseCardRequest>();
-        room->useCard(request.cardId, room->getPositionByPlayer(this), request.targetPosition);
+        if(room->isPlayerTurn(this)) {
+            Request::Player::UseCardRequest request = jsonMessage.at("useCard").get<Request::Player::UseCardRequest>();
+            room->useCard(request.cardId, room->getPositionByPlayer(this), request.targetPosition);
+        }
     } else if (jsonMessage.at("endUsingCard")) {
-
+        if(room->isPlayerTurn(this)) {
+            room->changeRoomState(RoomState::PlayerCompleteUsedCard);
+        }
     } else if (jsonMessage.at("foldCard")) {
-        Response::Player::FoldCardResponse response = jsonMessage.at("foldCard").get<Response::Player::FoldCardResponse>();
-        for(auto cardId : response.cardIdList) {
-            room->foldCard(cardId, room->getPositionByPlayer(this));
+        if(room->isPlayerTurn(this)) {
+            Response::Player::FoldCardResponse response = jsonMessage.at(
+                    "foldCard").get<Response::Player::FoldCardResponse>();
+            for (auto cardId : response.cardIdList) {
+                room->foldCard(cardId, room->getPositionByPlayer(this));
+            }
+            room->changeRoomState(RoomState::PlayerCompleteFoldedCard);
         }
     } else {
         // TODO log error
@@ -109,10 +115,6 @@ void Player::removeCardFromMyselfById(uint32_t cardId) {
     }
 }
 
-void Player::changeEquipment(Equipment *equipment) {
-    this->equipment = equipment;
-}
-
 Agent *Player::getAgent() const {
     return agent;
 }
@@ -123,10 +125,6 @@ void Player::setIdentity(Team identity) {
 
 void Player::setCharacter(Character *character) {
     this->character = character;
-}
-
-void Player::setEquipment(Equipment *equipment) {
-    this->equipment = equipment;
 }
 
 void Player::setHp(int hp) {
@@ -166,19 +164,19 @@ const std::vector<Card *> &Player::getHolding() const {
 }
 
 bool Player::isHasMultiAttack() const {
-
+    return std::max(character->isHasMultiAttack(), equipment->isHasMultiAttack());
 }
 
 int Player::getAttackRange() const {
-
+    return character->getAttackRange() + equipment->getAttackRange();
 }
 
 int Player::getAddAttackRange() const {
-
+    return character->getAddAttackRange() + equipment->getAddAttackRange();
 }
 
 int Player::getDefendAttackRange() const {
-
+    return character->getDefendAttackRange() + equipment->getDefendAttackRange();
 }
 
 bool Player::isAttacked() const {

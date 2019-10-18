@@ -31,6 +31,10 @@ int Carabine::getAttackRange() const {
     return Carabine::attackRange;
 }
 
+int Carabine::getAddAttackRange() const {
+    return Carabine::addAttackRange;
+}
+
 int Carabine::getDefendRange() const {
     return Carabine::defendRange;
 }

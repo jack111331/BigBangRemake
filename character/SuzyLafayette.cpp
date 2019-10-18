@@ -41,11 +41,11 @@ int SuzyLafayette::getAttackRange() const {
     return SuzyLafayette::attackRange;
 }
 
-int SuzyLafayette::getAddRange() const {
+int SuzyLafayette::getAddAttackRange() const {
     return SuzyLafayette::addRange;
 }
 
-int SuzyLafayette::getDefendRange() const {
+int SuzyLafayette::getDefendAttackRange() const {
     return SuzyLafayette::defendRange;
 }
 

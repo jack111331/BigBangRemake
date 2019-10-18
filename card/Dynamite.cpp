@@ -2,6 +2,7 @@
 #include <string>
 #include "Room.h"
 #include "Action.h"
+#include "Equipment.h"
 
 using std::string;
 using namespace BangCard;
@@ -43,25 +44,17 @@ bool Dynamite::onUnequip(Room *room, Card *card, Player *unequiper) {
 }
 
 bool Dynamite::onPreDrawCard(Room *room, Player *drawer) {
-    // TODO refactor this
-    //    if (drawer->GetEquipment() && drawer->GetEquipment()->GetName() == "Dynamite") {
-    //        CCard *DrawedCard = NSAction::DrawCardFromPlagueForDetermine(room);
-    //        if (DrawedCard->GetSuit() == Suit::Spade && DrawedCard->GetNumber() >= 2 && DrawedCard->GetNumber() <= 9) {
-    //            drawer->SetHP(drawer->GetHP() - 3);
-    //            if (drawer->GetHP() <= 0) {
-    //                room->GetRoomEvent()->callDeath(room, drawer, drawer);
-    //                if (drawer->GetHP() <= 0) {
-    //                    drawer->SetDead(true);
-    //                }
-    //            }
-    //        } else {
-    //            CPlayer *NextPlayer = room->GetNextPlayer(drawer);
-    //            NextPlayer->AddHolding(const_cast<CCard *>(drawer->GetEquipment()));
-    //            NextPlayer->UseCard(room, NextPlayer->GetCardInHolding("Dynamite")->GetID(), nullptr);//equip immediately
-    //        }
-    //        room->GetDiscardPlague()->InsertCardToPlague(DrawedCard);
-    //        drawer->ChangeEquipment(nullptr);
-    //    }
+    if (drawer->getEquipment()->isEquipmentCardExist(Dynamite::name)) {
+        auto drawedCard = room->drawCardFromPlagueForDetermine();
+        if (drawedCard->getSuit() == Suit::Spade && drawedCard->getNumber() >= 2 && drawedCard->getNumber() <= 9) {
+            Action::lossHealth(room, drawer, drawer, 3);
+        } else {
+            auto nextPlayer = room->getNextPlayer(drawer);
+            nextPlayer->getEquipment()->addEquipmentCard(this);
+            drawer->getEquipment()->removeEquipmentCard(this);
+        }
+        room->putDetermineCardIntoPlague(drawedCard);
+    }
     return true;
 }
 

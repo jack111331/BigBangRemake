@@ -9,6 +9,8 @@ public:
 
     virtual int getAttackRange() const = 0;
 
+    virtual int getAddAttackRange() const = 0;
+
     virtual int getDefendRange() const = 0;
 
     virtual bool isMultiAttack() const = 0;

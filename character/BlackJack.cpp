@@ -36,11 +36,11 @@ int BlackJack::getAttackRange() const {
     return BlackJack::attackRange;
 }
 
-int BlackJack::getAddRange() const {
+int BlackJack::getAddAttackRange() const {
     return BlackJack::addRange;
 }
 
-int BlackJack::getDefendRange() const {
+int BlackJack::getDefendAttackRange() const {
     return BlackJack::defendRange;
 }
 
@@ -49,7 +49,7 @@ bool BlackJack::isHasMultiAttack() const {
 }
 
 void BlackJack::drawCard(Room *room, Player *player) {
-    // TODO flip animation , to be continued
+    // TODO inform flip animation
     room->drawCard(room->getPositionByPlayer(player), 1);
     Card *drawedCard = room->drawCardFromPlagueForDetermine();
     if (drawedCard->getSuit() == Suit::Heart || drawedCard->getSuit() == Suit::Diamond) {

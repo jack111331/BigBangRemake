@@ -11,6 +11,6 @@ bool EquipmentCard::useCardEffect(Room *room, Player *myself, Player *target) {
     if (!Card::useCardEffect(room, myself, target)) {
         return false;
     }
-    //    GetInRoom()->GetRoomEvent()->callEquip(this, myself);
+    room->getEventListener()->notifyEquipEvent(room, this, myself);
     return true;
 }

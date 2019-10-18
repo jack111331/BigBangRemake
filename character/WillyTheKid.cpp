@@ -35,11 +35,11 @@ int WillyTheKid::getAttackRange() const {
     return WillyTheKid::attackRange;
 }
 
-int WillyTheKid::getAddRange() const {
+int WillyTheKid::getAddAttackRange() const {
     return WillyTheKid::addRange;
 }
 
-int WillyTheKid::getDefendRange() const {
+int WillyTheKid::getDefendAttackRange() const {
     return WillyTheKid::defendRange;
 }
 

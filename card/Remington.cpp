@@ -31,6 +31,10 @@ int Remington::getAttackRange() const {
     return Remington::attackRange;
 }
 
+int Remington::getAddAttackRange() const {
+    return Remington::addAttackRange;
+}
+
 int Remington::getDefendRange() const {
     return Remington::defendRange;
 }

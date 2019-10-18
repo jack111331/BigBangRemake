@@ -35,11 +35,11 @@ int GodDeveloper::getAttackRange() const {
     return GodDeveloper::attackRange;
 }
 
-int GodDeveloper::getAddRange() const {
+int GodDeveloper::getAddAttackRange() const {
     return GodDeveloper::addRange;
 }
 
-int GodDeveloper::getDefendRange() const {
+int GodDeveloper::getDefendAttackRange() const {
     return GodDeveloper::defendRange;
 }
 

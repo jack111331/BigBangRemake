@@ -40,11 +40,11 @@ int BartCassidy::getAttackRange() const {
     return BartCassidy::attackRange;
 }
 
-int BartCassidy::getAddRange() const {
+int BartCassidy::getAddAttackRange() const {
     return BartCassidy::addRange;
 }
 
-int BartCassidy::getDefendRange() const {
+int BartCassidy::getDefendAttackRange() const {
     return BartCassidy::defendRange;
 }
 

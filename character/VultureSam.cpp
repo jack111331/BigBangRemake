@@ -41,11 +41,11 @@ int VultureSam::getAttackRange() const {
     return VultureSam::attackRange;
 }
 
-int VultureSam::getAddRange() const {
+int VultureSam::getAddAttackRange() const {
     return VultureSam::addRange;
 }
 
-int VultureSam::getDefendRange() const {
+int VultureSam::getDefendAttackRange() const {
     return VultureSam::defendRange;
 }
 

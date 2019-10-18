@@ -35,11 +35,11 @@ int PaulRegret::getAttackRange() const {
     return PaulRegret::attackRange;
 }
 
-int PaulRegret::getAddRange() const {
+int PaulRegret::getAddAttackRange() const {
     return PaulRegret::addRange;
 }
 
-int PaulRegret::getDefendRange() const {
+int PaulRegret::getDefendAttackRange() const {
     return PaulRegret::defendRange;
 }
 

@@ -35,11 +35,11 @@ int RoseDoolan::getAttackRange() const {
     return RoseDoolan::attackRange;
 }
 
-int RoseDoolan::getAddRange() const {
+int RoseDoolan::getAddAttackRange() const {
     return RoseDoolan::addRange;
 }
 
-int RoseDoolan::getDefendRange() const {
+int RoseDoolan::getDefendAttackRange() const {
     return RoseDoolan::defendRange;
 }
 

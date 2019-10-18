@@ -31,6 +31,11 @@ int Winchester::getAttackRange() const {
     return Winchester::attackRange;
 }
 
+int Winchester::getAddAttackRange() const {
+    return Winchester::addAttackRange;
+}
+
+
 int Winchester::getDefendRange() const {
     return Winchester::defendRange;
 }

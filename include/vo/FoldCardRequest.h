@@ -10,7 +10,6 @@
 
 namespace Request {
     namespace Player {
-        const uint32_t NO_TARGET = 0xffffffff;
         struct FoldCardRequest {
             uint32_t amount;
         };

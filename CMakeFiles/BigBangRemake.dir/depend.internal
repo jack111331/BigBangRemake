@@ -7,6 +7,7 @@ CMakeFiles/BigBangRemake.dir/Action.cpp.o
  ./include/Card.h
  ./include/Character.h
  ./include/GameEventListener.h
+ ./include/Network.h
  ./include/Plague.h
  ./include/Player.h
  ./include/Room.h
@@ -42,10 +43,76 @@ CMakeFiles/BigBangRemake.dir/Action.cpp.o
  ./include/nlohmann/detail/value_t.hpp
  ./include/nlohmann/json.hpp
  ./include/nlohmann/json_fwd.hpp
+ ./include/vo/ResistAttackRequest.h
  ./include/vo/ResistAttackResponse.h
+ ./include/websocketpp/base64/base64.hpp
+ ./include/websocketpp/close.hpp
+ ./include/websocketpp/common/asio.hpp
+ ./include/websocketpp/common/asio_ssl.hpp
+ ./include/websocketpp/common/chrono.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
+ ./include/websocketpp/common/functional.hpp
+ ./include/websocketpp/common/md5.hpp
  ./include/websocketpp/common/memory.hpp
+ ./include/websocketpp/common/network.hpp
+ ./include/websocketpp/common/platforms.hpp
+ ./include/websocketpp/common/stdint.hpp
+ ./include/websocketpp/common/system_error.hpp
+ ./include/websocketpp/common/thread.hpp
+ ./include/websocketpp/common/time.hpp
+ ./include/websocketpp/common/type_traits.hpp
+ ./include/websocketpp/concurrency/basic.hpp
+ ./include/websocketpp/config/asio.hpp
+ ./include/websocketpp/config/asio_no_tls.hpp
+ ./include/websocketpp/config/core.hpp
+ ./include/websocketpp/connection.hpp
+ ./include/websocketpp/connection_base.hpp
+ ./include/websocketpp/endpoint.hpp
+ ./include/websocketpp/endpoint_base.hpp
+ ./include/websocketpp/error.hpp
+ ./include/websocketpp/extensions/extension.hpp
+ ./include/websocketpp/extensions/permessage_deflate/disabled.hpp
+ ./include/websocketpp/frame.hpp
+ ./include/websocketpp/http/constants.hpp
+ ./include/websocketpp/http/impl/parser.hpp
+ ./include/websocketpp/http/impl/request.hpp
+ ./include/websocketpp/http/impl/response.hpp
+ ./include/websocketpp/http/parser.hpp
+ ./include/websocketpp/http/request.hpp
+ ./include/websocketpp/http/response.hpp
+ ./include/websocketpp/impl/connection_impl.hpp
+ ./include/websocketpp/impl/endpoint_impl.hpp
+ ./include/websocketpp/impl/utilities_impl.hpp
+ ./include/websocketpp/logger/basic.hpp
+ ./include/websocketpp/logger/levels.hpp
+ ./include/websocketpp/message_buffer/alloc.hpp
+ ./include/websocketpp/message_buffer/message.hpp
+ ./include/websocketpp/processors/base.hpp
+ ./include/websocketpp/processors/hybi00.hpp
+ ./include/websocketpp/processors/hybi07.hpp
+ ./include/websocketpp/processors/hybi08.hpp
+ ./include/websocketpp/processors/hybi13.hpp
+ ./include/websocketpp/processors/processor.hpp
+ ./include/websocketpp/random/none.hpp
+ ./include/websocketpp/roles/server_endpoint.hpp
+ ./include/websocketpp/server.hpp
+ ./include/websocketpp/sha1/sha1.hpp
+ ./include/websocketpp/transport/asio/base.hpp
+ ./include/websocketpp/transport/asio/connection.hpp
+ ./include/websocketpp/transport/asio/endpoint.hpp
+ ./include/websocketpp/transport/asio/security/base.hpp
+ ./include/websocketpp/transport/asio/security/none.hpp
+ ./include/websocketpp/transport/asio/security/tls.hpp
+ ./include/websocketpp/transport/base/connection.hpp
+ ./include/websocketpp/transport/base/endpoint.hpp
+ ./include/websocketpp/transport/iostream/base.hpp
+ ./include/websocketpp/transport/iostream/connection.hpp
+ ./include/websocketpp/transport/iostream/endpoint.hpp
+ ./include/websocketpp/uri.hpp
+ ./include/websocketpp/utf8_validator.hpp
+ ./include/websocketpp/utilities.hpp
+ ./include/websocketpp/version.hpp
  /home/edge/BigBangRemake/Action.cpp
 CMakeFiles/BigBangRemake.dir/Agent.cpp.o
  ./include/Agent.h
@@ -256,6 +323,15 @@ CMakeFiles/BigBangRemake.dir/CharacterGenerator.cpp.o
  ./include/Plague.h
  ./include/Player.h
  ./include/Room.h
+ ./include/character/BartCassidy.h
+ ./include/character/BlackJack.h
+ ./include/character/ElGringo.h
+ ./include/character/GodDeveloper.h
+ ./include/character/PaulRegret.h
+ ./include/character/RoseDoolan.h
+ ./include/character/SuzyLafayette.h
+ ./include/character/VultureSam.h
+ ./include/character/WillyTheKid.h
  ./include/nlohmann/adl_serializer.hpp
  ./include/nlohmann/detail/conversions/from_json.hpp
  ./include/nlohmann/detail/conversions/to_chars.hpp
@@ -421,6 +497,53 @@ CMakeFiles/BigBangRemake.dir/GameEventListener.cpp.o
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
  /home/edge/BigBangRemake/GameEventListener.cpp
+CMakeFiles/BigBangRemake.dir/Logger.cpp.o
+ ./include/Logger.h
+ ./include/spdlog/common-inl.h
+ ./include/spdlog/common.h
+ ./include/spdlog/details/backtracer-inl.h
+ ./include/spdlog/details/backtracer.h
+ ./include/spdlog/details/circular_q.h
+ ./include/spdlog/details/console_globals.h
+ ./include/spdlog/details/file_helper-inl.h
+ ./include/spdlog/details/file_helper.h
+ ./include/spdlog/details/fmt_helper.h
+ ./include/spdlog/details/log_msg-inl.h
+ ./include/spdlog/details/log_msg.h
+ ./include/spdlog/details/log_msg_buffer-inl.h
+ ./include/spdlog/details/log_msg_buffer.h
+ ./include/spdlog/details/null_mutex.h
+ ./include/spdlog/details/os-inl.h
+ ./include/spdlog/details/os.h
+ ./include/spdlog/details/pattern_formatter-inl.h
+ ./include/spdlog/details/pattern_formatter.h
+ ./include/spdlog/details/periodic_worker-inl.h
+ ./include/spdlog/details/periodic_worker.h
+ ./include/spdlog/details/registry-inl.h
+ ./include/spdlog/details/registry.h
+ ./include/spdlog/details/synchronous_factory.h
+ ./include/spdlog/fmt/bundled/core.h
+ ./include/spdlog/fmt/bundled/format-inl.h
+ ./include/spdlog/fmt/bundled/format.h
+ ./include/spdlog/fmt/fmt.h
+ ./include/spdlog/formatter.h
+ ./include/spdlog/logger-inl.h
+ ./include/spdlog/logger.h
+ ./include/spdlog/sinks/ansicolor_sink-inl.h
+ ./include/spdlog/sinks/ansicolor_sink.h
+ ./include/spdlog/sinks/base_sink-inl.h
+ ./include/spdlog/sinks/base_sink.h
+ ./include/spdlog/sinks/basic_file_sink-inl.h
+ ./include/spdlog/sinks/basic_file_sink.h
+ ./include/spdlog/sinks/sink-inl.h
+ ./include/spdlog/sinks/sink.h
+ ./include/spdlog/sinks/wincolor_sink-inl.h
+ ./include/spdlog/sinks/wincolor_sink.h
+ ./include/spdlog/spdlog-inl.h
+ ./include/spdlog/spdlog.h
+ ./include/spdlog/tweakme.h
+ ./include/spdlog/version.h
+ /home/edge/BigBangRemake/Logger.cpp
 CMakeFiles/BigBangRemake.dir/Lounge.cpp.o
  ./include/Agent.h
  ./include/Lounge.h
@@ -656,6 +779,7 @@ CMakeFiles/BigBangRemake.dir/Player.cpp.o
  ./include/Agent.h
  ./include/Card.h
  ./include/Character.h
+ ./include/CharacterGenerator.h
  ./include/Equipment.h
  ./include/EquipmentCard.h
  ./include/GameEventListener.h
@@ -697,6 +821,10 @@ CMakeFiles/BigBangRemake.dir/Player.cpp.o
  ./include/nlohmann/detail/value_t.hpp
  ./include/nlohmann/json.hpp
  ./include/nlohmann/json_fwd.hpp
+ ./include/vo/ChooseCharacterResponse.h
+ ./include/vo/FoldCardRequest.h
+ ./include/vo/FoldCardResponse.h
+ ./include/vo/UseCardRequest.h
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
  ./include/websocketpp/common/memory.hpp
@@ -862,9 +990,16 @@ CMakeFiles/BigBangRemake.dir/RoomManager.cpp.o
  /home/edge/BigBangRemake/RoomManager.cpp
 CMakeFiles/BigBangRemake.dir/User.cpp.o
  ./include/Agent.h
+ ./include/Card.h
+ ./include/Character.h
+ ./include/GameEventListener.h
  ./include/Lounge.h
  ./include/LoungeManager.h
  ./include/Network.h
+ ./include/Plague.h
+ ./include/Player.h
+ ./include/Room.h
+ ./include/RoomManager.h
  ./include/User.h
  ./include/nlohmann/adl_serializer.hpp
  ./include/nlohmann/detail/conversions/from_json.hpp
@@ -1377,11 +1512,13 @@ CMakeFiles/BigBangRemake.dir/card/Dynamite.cpp.o
  ./include/Agent.h
  ./include/Card.h
  ./include/Character.h
+ ./include/Equipment.h
  ./include/EquipmentCard.h
  ./include/GameEventListener.h
  ./include/Plague.h
  ./include/Player.h
  ./include/Room.h
+ ./include/WeaponCard.h
  ./include/card/Dynamite.h
  ./include/nlohmann/adl_serializer.hpp
  ./include/nlohmann/detail/conversions/from_json.hpp
@@ -1634,12 +1771,14 @@ CMakeFiles/BigBangRemake.dir/card/Jail.cpp.o
  ./include/Agent.h
  ./include/Card.h
  ./include/Character.h
+ ./include/Equipment.h
  ./include/EquipmentCard.h
  ./include/GameEventListener.h
  ./include/Plague.h
  ./include/Player.h
  ./include/Room.h
  ./include/User.h
+ ./include/WeaponCard.h
  ./include/card/Jail.h
  ./include/nlohmann/adl_serializer.hpp
  ./include/nlohmann/detail/conversions/from_json.hpp
@@ -1776,6 +1915,7 @@ CMakeFiles/BigBangRemake.dir/card/Panic.cpp.o
  ./include/Card.h
  ./include/Character.h
  ./include/GameEventListener.h
+ ./include/Network.h
  ./include/Plague.h
  ./include/Player.h
  ./include/Room.h
@@ -1812,10 +1952,77 @@ CMakeFiles/BigBangRemake.dir/card/Panic.cpp.o
  ./include/nlohmann/detail/value_t.hpp
  ./include/nlohmann/json.hpp
  ./include/nlohmann/json_fwd.hpp
+ ./include/vo/ChooseCardFromAnotherPlayerResponse.h
+ ./include/vo/ChooseCardFromCardListRequest.h
  ./include/vo/ResistAttackResponse.h
+ ./include/websocketpp/base64/base64.hpp
+ ./include/websocketpp/close.hpp
+ ./include/websocketpp/common/asio.hpp
+ ./include/websocketpp/common/asio_ssl.hpp
+ ./include/websocketpp/common/chrono.hpp
  ./include/websocketpp/common/connection_hdl.hpp
  ./include/websocketpp/common/cpp11.hpp
+ ./include/websocketpp/common/functional.hpp
+ ./include/websocketpp/common/md5.hpp
  ./include/websocketpp/common/memory.hpp
+ ./include/websocketpp/common/network.hpp
+ ./include/websocketpp/common/platforms.hpp
+ ./include/websocketpp/common/stdint.hpp
+ ./include/websocketpp/common/system_error.hpp
+ ./include/websocketpp/common/thread.hpp
+ ./include/websocketpp/common/time.hpp
+ ./include/websocketpp/common/type_traits.hpp
+ ./include/websocketpp/concurrency/basic.hpp
+ ./include/websocketpp/config/asio.hpp
+ ./include/websocketpp/config/asio_no_tls.hpp
+ ./include/websocketpp/config/core.hpp
+ ./include/websocketpp/connection.hpp
+ ./include/websocketpp/connection_base.hpp
+ ./include/websocketpp/endpoint.hpp
+ ./include/websocketpp/endpoint_base.hpp
+ ./include/websocketpp/error.hpp
+ ./include/websocketpp/extensions/extension.hpp
+ ./include/websocketpp/extensions/permessage_deflate/disabled.hpp
+ ./include/websocketpp/frame.hpp
+ ./include/websocketpp/http/constants.hpp
+ ./include/websocketpp/http/impl/parser.hpp
+ ./include/websocketpp/http/impl/request.hpp
+ ./include/websocketpp/http/impl/response.hpp
+ ./include/websocketpp/http/parser.hpp
+ ./include/websocketpp/http/request.hpp
+ ./include/websocketpp/http/response.hpp
+ ./include/websocketpp/impl/connection_impl.hpp
+ ./include/websocketpp/impl/endpoint_impl.hpp
+ ./include/websocketpp/impl/utilities_impl.hpp
+ ./include/websocketpp/logger/basic.hpp
+ ./include/websocketpp/logger/levels.hpp
+ ./include/websocketpp/message_buffer/alloc.hpp
+ ./include/websocketpp/message_buffer/message.hpp
+ ./include/websocketpp/processors/base.hpp
+ ./include/websocketpp/processors/hybi00.hpp
+ ./include/websocketpp/processors/hybi07.hpp
+ ./include/websocketpp/processors/hybi08.hpp
+ ./include/websocketpp/processors/hybi13.hpp
+ ./include/websocketpp/processors/processor.hpp
+ ./include/websocketpp/random/none.hpp
+ ./include/websocketpp/roles/server_endpoint.hpp
+ ./include/websocketpp/server.hpp
+ ./include/websocketpp/sha1/sha1.hpp
+ ./include/websocketpp/transport/asio/base.hpp
+ ./include/websocketpp/transport/asio/connection.hpp
+ ./include/websocketpp/transport/asio/endpoint.hpp
+ ./include/websocketpp/transport/asio/security/base.hpp
+ ./include/websocketpp/transport/asio/security/none.hpp
+ ./include/websocketpp/transport/asio/security/tls.hpp
+ ./include/websocketpp/transport/base/connection.hpp
+ ./include/websocketpp/transport/base/endpoint.hpp
+ ./include/websocketpp/transport/iostream/base.hpp
+ ./include/websocketpp/transport/iostream/connection.hpp
+ ./include/websocketpp/transport/iostream/endpoint.hpp
+ ./include/websocketpp/uri.hpp
+ ./include/websocketpp/utf8_validator.hpp
+ ./include/websocketpp/utilities.hpp
+ ./include/websocketpp/version.hpp
  /home/edge/BigBangRemake/card/Panic.cpp
 CMakeFiles/BigBangRemake.dir/card/Remington.cpp.o
  ./include/Agent.h
@@ -2724,6 +2931,76 @@ CMakeFiles/BigBangRemake.dir/vo/ChooseCardFromCardListResponse.cpp.o
  ./include/nlohmann/json_fwd.hpp
  ./include/vo/ChooseCardFromCardListResponse.h
  /home/edge/BigBangRemake/vo/ChooseCardFromCardListResponse.cpp
+CMakeFiles/BigBangRemake.dir/vo/ChooseCharacterRequest.cpp.o
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
+ ./include/vo/ChooseCharacterRequest.h
+ /home/edge/BigBangRemake/vo/ChooseCharacterRequest.cpp
+CMakeFiles/BigBangRemake.dir/vo/ChooseCharacterResponse.cpp.o
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
+ ./include/vo/ChooseCharacterResponse.h
+ /home/edge/BigBangRemake/vo/ChooseCharacterResponse.cpp
 CMakeFiles/BigBangRemake.dir/vo/EndGameRequest.cpp.o
  ./include/nlohmann/adl_serializer.hpp
  ./include/nlohmann/detail/conversions/from_json.hpp
@@ -2794,6 +3071,76 @@ CMakeFiles/BigBangRemake.dir/vo/EndGameResponse.cpp.o
  ./include/nlohmann/json_fwd.hpp
  ./include/vo/EndGameResponse.h
  /home/edge/BigBangRemake/vo/EndGameResponse.cpp
+CMakeFiles/BigBangRemake.dir/vo/FoldCardRequest.cpp.o
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
+ ./include/vo/FoldCardRequest.h
+ /home/edge/BigBangRemake/vo/FoldCardRequest.cpp
+CMakeFiles/BigBangRemake.dir/vo/FoldCardResponse.cpp.o
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
+ ./include/vo/FoldCardResponse.h
+ /home/edge/BigBangRemake/vo/FoldCardResponse.cpp
 CMakeFiles/BigBangRemake.dir/vo/JoinLoungeRequest.cpp.o
  ./include/nlohmann/adl_serializer.hpp
  ./include/nlohmann/detail/conversions/from_json.hpp
@@ -3004,3 +3351,38 @@ CMakeFiles/BigBangRemake.dir/vo/RetrieveLoungeListInfoResponse.cpp.o
  ./include/nlohmann/json_fwd.hpp
  ./include/vo/RetrieveLoungeListInfoResponse.h
  /home/edge/BigBangRemake/vo/RetrieveLoungeListInfoResponse.cpp
+CMakeFiles/BigBangRemake.dir/vo/UseCardRequest.cpp.o
+ ./include/nlohmann/adl_serializer.hpp
+ ./include/nlohmann/detail/conversions/from_json.hpp
+ ./include/nlohmann/detail/conversions/to_chars.hpp
+ ./include/nlohmann/detail/conversions/to_json.hpp
+ ./include/nlohmann/detail/exceptions.hpp
+ ./include/nlohmann/detail/input/binary_reader.hpp
+ ./include/nlohmann/detail/input/input_adapters.hpp
+ ./include/nlohmann/detail/input/json_sax.hpp
+ ./include/nlohmann/detail/input/lexer.hpp
+ ./include/nlohmann/detail/input/parser.hpp
+ ./include/nlohmann/detail/input/position_t.hpp
+ ./include/nlohmann/detail/iterators/internal_iterator.hpp
+ ./include/nlohmann/detail/iterators/iter_impl.hpp
+ ./include/nlohmann/detail/iterators/iteration_proxy.hpp
+ ./include/nlohmann/detail/iterators/iterator_traits.hpp
+ ./include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ ./include/nlohmann/detail/iterators/primitive_iterator.hpp
+ ./include/nlohmann/detail/json_pointer.hpp
+ ./include/nlohmann/detail/json_ref.hpp
+ ./include/nlohmann/detail/macro_scope.hpp
+ ./include/nlohmann/detail/macro_unscope.hpp
+ ./include/nlohmann/detail/meta/cpp_future.hpp
+ ./include/nlohmann/detail/meta/detected.hpp
+ ./include/nlohmann/detail/meta/is_sax.hpp
+ ./include/nlohmann/detail/meta/type_traits.hpp
+ ./include/nlohmann/detail/meta/void_t.hpp
+ ./include/nlohmann/detail/output/binary_writer.hpp
+ ./include/nlohmann/detail/output/output_adapters.hpp
+ ./include/nlohmann/detail/output/serializer.hpp
+ ./include/nlohmann/detail/value_t.hpp
+ ./include/nlohmann/json.hpp
+ ./include/nlohmann/json_fwd.hpp
+ ./include/vo/UseCardRequest.h
+ /home/edge/BigBangRemake/vo/UseCardRequest.cpp

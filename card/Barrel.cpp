@@ -43,7 +43,6 @@ bool Barrel::onPreLossBlood(Room *room, Player *loser) {
     if (loser->getEquipment()->isEquipmentCardExist("Barrel")) {
         Card *drawedCard = room->drawCardFromPlagueForDetermine();
         if (drawedCard->getSuit() == Suit::Heart) {
-            // FIXME another mechanism to stop lossing blood
             loser->setHp(loser->getHp()+1);
         }
         room->getEventListener()->unsubscribe(listener);

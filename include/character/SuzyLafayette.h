@@ -21,9 +21,9 @@ namespace BangCharacter {
 
         int getAttackRange() const override;
 
-        int getAddRange() const override;
+        int getAddAttackRange() const override;
 
-        int getDefendRange() const override;
+        int getDefendAttackRange() const override;
 
         bool isHasMultiAttack() const override;
 
@@ -36,7 +36,7 @@ namespace BangCharacter {
         static const std::string feature;
 
         const int maxHp = 4;
-        const int attackRange = 1;
+        const int attackRange = 0;
         const int addRange = 0;
         const int defendRange = 0;
         const bool hasMultiAttack = false;

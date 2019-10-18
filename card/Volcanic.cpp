@@ -32,6 +32,10 @@ int Volcanic::getAttackRange() const {
     return Volcanic::attackRange;
 }
 
+int Volcanic::getAddAttackRange() const {
+    return Volcanic::addAttackRange;
+}
+
 int Volcanic::getDefendRange() const {
     return Volcanic::defendRange;
 }

@@ -31,6 +31,10 @@ int Mustang::getAttackRange() const {
     return Mustang::attackRange;
 }
 
+int Mustang::getAddAttackRange() const {
+    return Mustang::addAttackRange;
+}
+
 int Mustang::getDefendRange() const {
     return Mustang::defendRange;
 }

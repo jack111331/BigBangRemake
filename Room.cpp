@@ -83,6 +83,11 @@ Card *Room::drawCardFromPlagueForDetermine() {
     return drawCard;
 }
 
+void Room::putDetermineCardIntoPlague(Card *card) {
+    discardPlague->insertCardToPlague(card);
+}
+
+
 void Room::changeRoomState(RoomState roomState) {
     // TODO more determine
     this->roomState = roomState;

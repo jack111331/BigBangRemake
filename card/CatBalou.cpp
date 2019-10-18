@@ -36,13 +36,13 @@ bool CatBalou::useCardEffect(Room *room, Player *myself, Player *target) {
     if(!Card::useCardEffect(room, myself, target)) {
         return false;
     }
+    auto network = Network::getInstance();
     Request::PlayerCard::ChooseCardFromAnotherPlayerRequest request;
     request.chosenPosition = room->getPositionByPlayer(target);
     request.amount = 1;
     for(auto card : target->getHolding()) {
         request.cardList.push_back(card->getId());
     }
-    auto network = Network::getInstance();
     // TODO inform show card
     network->sendMessage(myself->getAgent()->getToken(), nlohmann::json(request).dump());
     std::unique_lock<std::mutex> lock(conditionVariableMutex);

@@ -107,6 +107,7 @@ list(APPEND SERVER_SOURCE
         Action.cpp
         Equipment.cpp
         GameEventListener.cpp
+        Logger.cpp
         vo/JoinLoungeRequest.cpp
         vo/RetrieveLoungeInfoResponse.cpp
         vo/RetrieveLoungeListInfoResponse.cpp
@@ -145,6 +146,7 @@ list(APPEND SERVER_HEADER
         include/Action.h
         include/Equipment.h
         include/GameEventListener.h
+        include/Logger.h
         include/vo/
         )
 

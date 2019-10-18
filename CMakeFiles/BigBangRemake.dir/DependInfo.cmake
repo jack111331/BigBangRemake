@@ -13,6 +13,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/edge/BigBangRemake/Equipment.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/Equipment.cpp.o"
   "/home/edge/BigBangRemake/EquipmentCard.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/EquipmentCard.cpp.o"
   "/home/edge/BigBangRemake/GameEventListener.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/GameEventListener.cpp.o"
+  "/home/edge/BigBangRemake/Logger.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/Logger.cpp.o"
   "/home/edge/BigBangRemake/Lounge.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/Lounge.cpp.o"
   "/home/edge/BigBangRemake/LoungeManager.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/LoungeManager.cpp.o"
   "/home/edge/BigBangRemake/Network.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/Network.cpp.o"

@@ -38,7 +38,6 @@ bool Beer::useCardEffect(Room *room, Player *myself, Player *target) {
     }
     Action::recoverHealth(myself, 1);
     room->getEventListener()->unsubscribe(listener);
-    // TODO need to be destroy
     return true;
 }
 

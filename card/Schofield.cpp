@@ -31,6 +31,10 @@ int Schofield::getAttackRange() const {
     return Schofield::attackRange;
 }
 
+int Schofield::getAddAttackRange() const {
+    return Schofield::addAttackRange;
+}
+
 int Schofield::getDefendRange() const {
     return Schofield::defendRange;
 }

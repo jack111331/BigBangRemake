@@ -20,6 +20,8 @@ namespace BangCard {
 
         int getAttackRange() const override;
 
+        int getAddAttackRange() const override;
+
         int getDefendRange() const override;
 
         bool isMultiAttack() const override;
@@ -27,7 +29,8 @@ namespace BangCard {
     private:
         static const std::string name;
         static const std::string feature;
-        static const int attackRange = 0;
+        static const int attackRange = 1;
+        static const int addAttackRange = 0;
         static const int defendRange = 1;
         static const bool multiAttack = false;
     };

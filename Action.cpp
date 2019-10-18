@@ -11,12 +11,9 @@ bool Action::attack(Room *room, Player *attacker, Player *attackee, const std::s
     std::condition_variable conditionVariable;
     std::mutex conditionVariableMutex;
     auto network = Network::getInstance();
-    Card *HoldingRevoltCard = attackee->getCardInHoldingByName(dodgeByCardName);
-    if (HoldingRevoltCard != nullptr) {
-        if (!room->getEventListener()->notifyPreLossBloodEvent(room, attackee)) {
-            return false;
-        }
-        //invoke player to choose whether he want to use this card
+    Card *resistCard = attackee->getCardInHoldingByName(dodgeByCardName);
+    if (resistCard) {
+        // Invoke player to choose whether he want to use this card
         Request::PlayerCard::ResistAttackRequest request = {dodgeByCardName};
         network->sendMessage(attackee->getAgent()->getToken(), nlohmann::json(request).dump());
         std::unique_lock<std::mutex> lock(conditionVariableMutex);
@@ -24,30 +21,27 @@ bool Action::attack(Room *room, Player *attacker, Player *attackee, const std::s
         conditionVariable.wait(lock, [response] { return response->resist; });
         int resist = response->resist;
         if (resist) {
-            attackee->removeCardInHolding(HoldingRevoltCard);
+            room->foldCard(resistCard->getId(), room->getPositionByPlayer(attackee));
             return false;
         } else {
-            // TODO fix complicate determine
-            room->getEventListener()->notifyLossBloodEvent(room, attackee, attacker);
-            attackee->setHp(attackee->getHp() - 1);
-            if (attackee->getHp() <= 0) {
-                room->getEventListener()->notifyDeathEvent(room, attackee, attacker);
-                if (attackee->getHp() <= 0) {
-                    attackee->setDead(true);
-                }
-            }
+            lossHealth(room, attackee, attacker, 1);
             return true;
         }
     } else {
-        room->getEventListener()->notifyLossBloodEvent(room, attackee, attacker);
-        attackee->setHp(attackee->getHp() - 1);
-        if (attackee->getHp() <= 0) {
-            room->getEventListener()->notifyDeathEvent(room, attackee, attacker);
-            if (attackee->getHp() <= 0) {
-                attackee->setDead(true);
-            }
-        }
+        lossHealth(room, attackee, attacker, 1);
         return true;
+    }
+}
+
+void Action::lossHealth(Room *room, Player *target, Player *attacker, int health) {
+    room->getEventListener()->notifyPreLossBloodEvent(room, target);
+    target->setHp(target->getHp() - health);
+    room->getEventListener()->notifyLossBloodEvent(room, target, attacker);
+    if (target->getHp() <= 0) {
+        room->getEventListener()->notifyDeathEvent(room, target, attacker);
+        if (target->getHp() <= 0) {
+            target->setDead(true);
+        }
     }
 }
 

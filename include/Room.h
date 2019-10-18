@@ -46,6 +46,8 @@ public:
 
     Card *drawCardFromPlagueForDetermine(); // TODO name should be refactor to be more general
 
+    void putDetermineCardIntoPlague(Card *card);
+
     // Room Related
     void changeRoomState(RoomState roomState);
 

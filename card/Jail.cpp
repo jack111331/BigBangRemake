@@ -3,6 +3,7 @@
 #include "Room.h"
 #include "User.h"
 #include "Action.h"
+#include "Equipment.h"
 
 using std::string;
 using namespace BangCard;
@@ -36,12 +37,11 @@ const std::string &Jail::getCardFeature() const {
 }
 
 bool Jail::useCardEffect(Room *room, Player *myself, Player *target) {
-    // TODO Pre draw card
     if (target->getIdentity() != Team::Sergeant) {
-        if(!EquipmentCard::useCardEffect(room, myself, target)) {
+        if(!EquipmentCard::useCardEffect(room, target, target)) {
             return false;
         }
-//        GetInRoom()->GetRoomEvent()->callEquip(this, target);
+        target->getEquipment()->addEquipmentCard(this);
         return true;
     }
     return false;
@@ -56,16 +56,15 @@ bool Jail::onUnequip(Room *room, Card *card, Player *unequiper) {
 }
 
 bool Jail::onPreDrawCard(Room *room, Player *drawer) {
-    // TODO refactor this
-//    if (drawer->GetEquipment() && drawer->GetEquipment()->GetName() == "Jail") {
-//        CCard *DrawedCard = NSAction::DrawCardFromPlagueForDetermine(room);
-//        room->GetDiscardPlague()->InsertCardToPlague(DrawedCard);
-//        drawer->ChangeEquipment(nullptr);
-//        if (DrawedCard->GetSuit() != Suit::Heart) {
+    if (drawer->getEquipment()->isEquipmentCardExist(Jail::name)) {
+        auto drawedCard = room->drawCardFromPlagueForDetermine();
+        drawer->getEquipment()->removeEquipmentCard(this);
+        if (drawedCard->getSuit() != Suit::Heart) {
+            // TODO inform player to be jailed
 //            drawer->GetUser()->SendMessage("Handled Data", std::to_string(13));
-//            return false;
-//        }
-//    }
+        }
+        room->putDetermineCardIntoPlague(drawedCard);
+    }
     return true;
 }
 

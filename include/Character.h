@@ -23,9 +23,9 @@ public:
 
     virtual int getAttackRange() const = 0;
 
-    virtual int getAddRange() const = 0;
+    virtual int getAddAttackRange() const = 0;
 
-    virtual int getDefendRange() const = 0;
+    virtual int getDefendAttackRange() const = 0;
 
     virtual bool isHasMultiAttack() const = 0;
 

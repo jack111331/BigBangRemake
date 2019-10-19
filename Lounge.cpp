@@ -83,25 +83,6 @@ void Lounge::exitLounge(User *user) {
     }
 }
 
-//Room *Lounge::getRoom() {
-//    return this->room;
-//}
-
-//bool Lounge::initGame() {
-//    if (!isAllUserReady() || userSet.size() < 4 || userSet.size() > 7) {
-//        roomOwner->SendMessage("Send Message", NSWrapInfo::WrapStartGame(nullptr, 0));
-//        return false;
-//    }
-//    //Start game
-//    room = new Room(this);
-//    for (std::vector<User *>::iterator it = userSet.begin(); it != userSet.end(); ++it) {
-//        room->playerJoin(*it);
-//    }
-//    //game loop
-//    GameLoopThread = std::thread(Room::gameLoop, room);
-//    return true;
-//}
-
 bool Lounge::getEnableExclusiveCard() const {
     return enableExclusiveCard;
 }
@@ -111,7 +92,5 @@ void Lounge::setEnableExclusiveCard(bool enable) {
 }
 
 Lounge::~Lounge() {
-//    delete room;
-    GameLoopThread.detach();
 }
 

@@ -40,7 +40,8 @@ Character *CharacterGenerator::createCharacter(const std::string &characterName,
 }
 
 RandomCharacterPool::RandomCharacterPool() {
-    //init character deck
+    //TODO init character deck
+
 //    CCharacterGenComponent *CharacterComponent = new CCharacterGenConcreteComponent();
 //    if (room->GetLounge()->getEnableExclusiveCard()) {
 //        std::map<uint32_t, bool> CharacterCardSet;

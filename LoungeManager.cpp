@@ -20,7 +20,7 @@ void LoungeManager::addUserToNewLounge(User *user) {
 
 void LoungeManager::addUserToLounge(User *user, uint32_t id) {
     for (auto &lounge : loungeList) {
-        if (lounge->getId()) {
+        if (lounge->getId() && lounge->getLoungeSize() < Lounge::MAX_LOUNGE_SIZE) {
             lounge->joinLounge(user);
         }
     }

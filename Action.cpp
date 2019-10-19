@@ -42,6 +42,9 @@ void Action::lossHealth(Room *room, Player *target, Player *attacker, int health
             target->setDead(true);
         }
     }
+    if(room->isGameEnd() != WinCondition::None) {
+        room->changeRoomState(RoomState::EndGame);
+    }
 }
 
 void Action::recoverHealth(Player *target, int health) {

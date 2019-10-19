@@ -6,6 +6,26 @@
 #include <vo/WhoFoldCardRequest.h>
 #include <vo/WhoGiveCardRequest.h>
 #include <vo/ShowDetermineCardRequest.h>
+#include <CardGenerator.h>
+#include <card/Winchester.h>
+#include <card/Barrel.h>
+#include <card/Carabine.h>
+#include <card/Mustang.h>
+#include <card/Saloon.h>
+#include <card/Schofield.h>
+#include <card/Volcanic.h>
+#include <card/Stagecoach.h>
+#include <card/Wellsfargo.h>
+#include <card/Jail.h>
+#include <card/Bang.h>
+#include <card/CatBalou.h>
+#include <card/Gatling.h>
+#include <card/Indians.h>
+#include <card/Missed.h>
+#include <card/Duel.h>
+#include <card/Beer.h>
+#include <card/Panic.h>
+#include <card/Dynamite.h>
 #include "Room.h"
 #include "User.h"
 #include "GameEventListener.h"
@@ -13,8 +33,8 @@
 
 Room::Room() {
     this->eventListener = new EventSubject();
-    this->plague = new Plague;
-    this->discardPlague = new Plague;
+    this->plague = new plague;
+    this->discardPlague = new plague;
     this->roomState = RoomState::WaitPlayerToChooseCharacter;
     this->gameEndState = WinCondition::None;
 }
@@ -281,7 +301,7 @@ void Room::resetPlayerRoundState(Player *player) {
 
 void Room::sleepUntil(RoomState untilRoomState) {
     std::unique_lock<std::mutex> lock(mutex);
-    conditionVariable.wait(lock, [this, untilRoomState] { return this->roomState == untilRoomState; });
+    conditionVariable.wait(lock, [this, untilRoomState] { return this->roomState == untilRoomState || this->roomState == RoomState::EndGame; });
 }
 
 void Room::startGame() {
@@ -289,12 +309,57 @@ void Room::startGame() {
     gameThread.detach();
 }
 
-void Room::initGame() {
-    // TODO WIP
-    // TODO generate cardList
+std::vector<Card *> Room::generateCardList() {
     std::vector<Card *> cardList;
+    cardList.push_back(CardGenerator::createCard(BangCard::Winchester::getName(), this, 1, Suit::Diamond));
+    cardList.push_back(CardGenerator::createCard(BangCard::Winchester::getName(), this, 7, Suit::Spade));
+    cardList.push_back(CardGenerator::createCard(BangCard::Barrel::getName(), this, 5, Suit::Heart));
+    cardList.push_back(CardGenerator::createCard(BangCard::Barrel::getName(), this, 8, Suit::Diamond));
+    cardList.push_back(CardGenerator::createCard(BangCard::Carabine::getName(), this, 7, Suit::Spade));
+    cardList.push_back(CardGenerator::createCard(BangCard::Carabine::getName(), this, 2, Suit::Heart));
+    cardList.push_back(CardGenerator::createCard(BangCard::Mustang::getName(), this, 3, Suit::Heart));
+    cardList.push_back(CardGenerator::createCard(BangCard::Mustang::getName(),, this, 8, Suit::Diamond));
+    cardList.push_back(CardGenerator::createCard(BangCard::Saloon::getName(), this, 12, Suit::Diamond));
+    cardList.push_back(CardGenerator::createCard(BangCard::Saloon::getName(), this, 10, Suit::Heart));
+    cardList.push_back(CardGenerator::createCard(BangCard::Schofield::getName(), this, 13, Suit::Club));
+    cardList.push_back(CardGenerator::createCard(BangCard::Schofield::getName(), this, 11, Suit::Spade));
+    cardList.push_back(CardGenerator::createCard(BangCard::Volcanic::getName(), this, 2, Suit::Club));
+    cardList.push_back(CardGenerator::createCard(BangCard::Volcanic::getName(), this, 5, Suit::Spade));
+    cardList.push_back(CardGenerator::createCard(BangCard::Stagecoach::getName(), this, 8, Suit::Heart));
+    cardList.push_back(CardGenerator::createCard(BangCard::Stagecoach::getName(), this, 1, Suit::Heart));
+    cardList.push_back(CardGenerator::createCard(BangCard::Wellsfargo::getName(), this, 11, Suit::Diamond));
+    cardList.push_back(CardGenerator::createCard(BangCard::Wellsfargo::getName(), this, 7, Suit::Heart));
+    cardList.push_back(CardGenerator::createCard(BangCard::Jail::getName(), this, 9, Suit::Club));
+    cardList.push_back(CardGenerator::createCard(BangCard::Jail::getName(),, this, 4, Suit::Spade));
+    cardList.push_back(CardGenerator::createCard(BangCard::Bang::getName(), this, 5, Suit::Diamond));
+    cardList.push_back(CardGenerator::createCard(BangCard::Bang::getName(), this, 6, Suit::Heart));
+    cardList.push_back(CardGenerator::createCard(BangCard::Bang::getName(), this, 7, Suit::Club));
+    cardList.push_back(CardGenerator::createCard(BangCard::Bang::getName(), this, 8, Suit::Spade));
+    cardList.push_back(CardGenerator::createCard(BangCard::Missed::getName(), this, 9, Suit::Diamond));
+    cardList.push_back(CardGenerator::createCard(BangCard::Missed::getName(), this, 10, Suit::Heart));
+    cardList.push_back(CardGenerator::createCard(BangCard::Missed::getName(), this, 11, Suit::Club));
+    cardList.push_back(CardGenerator::createCard(BangCard::Missed::getName() this, 12, Suit::Spade));
+    cardList.push_back(CardGenerator::createCard(BangCard::Indians::getName(), this, 9, Suit::Heart));
+    cardList.push_back(CardGenerator::createCard(BangCard::Indians::getName(), this, 4, Suit::Club));
+    cardList.push_back(CardGenerator::createCard(BangCard::Gatling::getName(), this, 9, Suit::Diamond));
+    cardList.push_back(CardGenerator::createCard(BangCard::Gatling::getName(), this, 9, Suit::Spade));
+    cardList.push_back(CardGenerator::createCard(BangCard::Duel::getName(), this, 3, Suit::Diamond));
+    cardList.push_back(CardGenerator::createCard(BangCard::Duel::getName(), this, 4, Suit::Club));
+    cardList.push_back(CardGenerator::createCard(BangCard::Beer::getName(), this, 9, Suit::Heart));
+    cardList.push_back(CardGenerator::createCard(BangCard::Beer::getName(), this, 10, Suit::Diamond));
+    cardList.push_back(CardGenerator::createCard(BangCard::Panic::getName(), this, 1, Suit::Club));
+    cardList.push_back(CardGenerator::createCard(BangCard::Panic::getName(), this, 7, Suit::Heart));
+    cardList.push_back(CardGenerator::createCard(BangCard::CatBalou::getName(), this, 2, Suit::Spade));
+    cardList.push_back(CardGenerator::createCard(BangCard::CatBalou::getName(), this, 9, Suit::Club));
+    cardList.push_back(CardGenerator::createCard(BangCard::Dynamite::getName(), this, 4, Suit::Diamond));
+    cardList.push_back(CardGenerator::createCard(BangCard::Dynamite::getName(), this, 3, Suit::Heart));
+}
 
-    plague->init();
+
+void Room::initGame() {
+    std::vector<Card *> cardList = generateCardList();
+
+    plague->init(cardList);
 
     // auto choose team for player
     autoChooseIdentity();
@@ -375,7 +440,9 @@ void Room::gameLoop() {
         playerService->sendInformUseCardRequest(currentPlayer);
         sleepUntil(RoomState::PlayerCompleteUsedCard);//end using card
 
-        // TODO check game end every death
+        if(roomState == RoomState::EndGame) {
+            break;
+        }
         while (currentPlayer->getHoldingCardAmount() > currentPlayer->getHp()) {
             roomState = RoomState::WaitPlayerToFoldCard;
             playerService->sendInformFoldCardRequest(currentPlayer);

@@ -5,7 +5,7 @@
 
 class Plague {
 public:
-    void init();
+    void init(std::vector<Card *> initCardList);
 
     size_t getPlagueCardAmount() const;
 
@@ -22,5 +22,5 @@ public:
     void flushPlague();
 
 private:
-    std::vector<Card *> Plague;
+    std::vector<Card *> plague;
 };

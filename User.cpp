@@ -87,7 +87,7 @@ void User::handleMessage(const json &jsonMessage) {
     } else if (jsonMessage.at("startLoungeGame")) {
         auto lounge = loungeManager->searchLounge(this);
         auto roomManager = RoomManager::getInstance();
-        if (lounge->getRoomOwner() == this && lounge->isAllUserReady()) {
+        if (lounge->getRoomOwner() == this && lounge->isAllUserReady() && lounge->getLoungeSize() == Lounge::MAX_LOUNGE_SIZE) {
             auto room = roomManager->createRoom();
             for (auto user : lounge->getUserList()) {
                 room->playerJoin(user->getAgent());

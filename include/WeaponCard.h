@@ -3,7 +3,7 @@
 #include "Card.h"
 #include "EquipmentCard.h"
 
-class WeaponCard : public EquipmentCard {
+class WeaponCard : public Card {
 public:
     WeaponCard(Room *room, int number, Suit suit);
 
@@ -15,6 +15,6 @@ public:
 
     virtual bool isMultiAttack() const = 0;
 
-    virtual bool useCardEffect(Room *room, Player *myself, Player *target);
+    bool useCardEffect(Room *room, Player *myself, Player *target) final;
 
 };

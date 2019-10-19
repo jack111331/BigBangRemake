@@ -45,6 +45,8 @@ public:
     //  Room * getRoom();
     //    bool initGame();
 
+    static const size_t MAX_LOUNGE_SIZE = 4;
+
     bool getEnableExclusiveCard() const;
 
     void setEnableExclusiveCard(bool enable);
@@ -56,7 +58,6 @@ private:
     std::vector<User *> userList;
     std::map<User *, bool> readyMap;
     //  Room * room;
-    std::thread GameLoopThread;
     bool enableExclusiveCard = false;
     User *roomOwner;
     // Owner is for when all user ready, who will decide the game will start

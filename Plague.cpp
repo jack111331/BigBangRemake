@@ -9,28 +9,12 @@
 //#include "CardGenDecorator.h"
 //#include "ExclusiveCardStore.h"
 
-void Plague::init() {
-    //    CCardGenComponent *CardComponent = new CCardGenConcreteComponent(room);
-    //    if (room->GetLounge()->getEnableExclusiveCard()) {
-    //        // get all player's exclusive card
-    //        std::map<uint32_t, bool> EffectAndEquipmentCardSet;
-    //        for (std::vector<CPlayer *>::iterator it = room->GetPlayerList().begin();
-    //             it != room->GetPlayerList().end(); ++it) {
-    //            std::vector<uint32_t> CardList = (*it)->GetUser()->GetExclusiveCardInventory()->GetEffectAndEquipmentCardList();
-    //            for (int i = 0; i < static_cast<int>(CardList.size()); ++i) {
-    //                EffectAndEquipmentCardSet[CardList[i]] = 1;
-    //            }
-    //        }
-    //        CardComponent = CExclusiveCardStore::GetInstance()->GenerateExclusiveCard(EffectAndEquipmentCardSet,
-    //                                                                                  CardComponent, room);
-    //    }
-    //    Plague = CardComponent->GetGeneratePlague();
-    //    srand(time(0));
-    //    std::random_shuffle(Plague.begin(), Plague.end());
+void Plague::init(std::vector<Card *> initCardList) {
+    this->plague = initCardList;
 }
 
 size_t Plague::getPlagueCardAmount() const {
-    return Plague.size();
+    return plague.size();
 }
 
 Card *Plague::chooseRandomCard() {
@@ -38,31 +22,31 @@ Card *Plague::chooseRandomCard() {
     int PlagueCardAmount = getPlagueCardAmount();
     if (PlagueCardAmount) {
         int random = rand() % PlagueCardAmount;
-        return Plague[random];
+        return plague[random];
     } else {
         return nullptr;
     }
 }
 
 Card *Plague::chooseTopCard() {
-    return Plague.at(Plague.size() - 1);
+    return plague.at(plague.size() - 1);
 }
 
 void Plague::insertCardToPlague(Card *card) {
-    Plague.push_back(card);
+    plague.push_back(card);
 }
 
 void Plague::removeCardFromPlague(const Card *card) {
-    for (size_t i = 0; i < Plague.size(); ++i) {
-        if (Plague[i] == card) {
-            Plague.erase(Plague.begin() + i);
+    for (size_t i = 0; i < plague.size(); ++i) {
+        if (plague[i] == card) {
+            plague.erase(plague.begin() + i);
             break;
         }
     }
 }
 
 Card *Plague::getPlagueCardById(int cardId) {
-    for (auto card : Plague) {
+    for (auto card : plague) {
         if (card->getId() == cardId) {
             return card;
         }
@@ -71,5 +55,5 @@ Card *Plague::getPlagueCardById(int cardId) {
 }
 
 void Plague::flushPlague() {
-    std::shuffle(Plague.begin(), Plague.end(), std::mt19937(std::random_device()()));
+    std::shuffle(plague.begin(), plague.end(), std::mt19937(std::random_device()()));
 }

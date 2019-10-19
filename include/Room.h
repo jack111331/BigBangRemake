@@ -22,7 +22,8 @@ enum class RoomState {
     WaitPlayerToUseCard,
     PlayerCompleteUsedCard,
     WaitPlayerToFoldCard,
-    PlayerCompleteFoldedCard
+    PlayerCompleteFoldedCard,
+    EndGame
 };
 
 enum class WinCondition {
@@ -93,7 +94,10 @@ private:
 
     void sleepUntil(RoomState roomState);
 
+    std::vector<Card *> generateCardList();
+
     void initGame();
+
 
     void endGame(WinCondition endGameState);
 

@@ -4,6 +4,7 @@
 #include <string>
 #include "Agent.h"
 #include "nlohmann/json.hpp"
+#include "UserService.h"
 
 class User {
 public:
@@ -33,8 +34,11 @@ public:
 
     void handleMessage(const nlohmann::json &jsonMessage);
 
+    ~User();
+
 private:
     Agent *agent;
+    UserService *userService;
     std::string name;
     int money;
     int win;

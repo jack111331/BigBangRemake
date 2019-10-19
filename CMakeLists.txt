@@ -109,6 +109,7 @@ list(APPEND SERVER_SOURCE
         GameEventListener.cpp
         Logger.cpp
         PlayerService.cpp
+        UserService.cpp
         vo/JoinLoungeRequest.cpp
         vo/RetrieveLoungeInfoResponse.cpp
         vo/RetrieveLoungeListInfoResponse.cpp
@@ -118,7 +119,7 @@ list(APPEND SERVER_SOURCE
         vo/WhoFoldCardRequest.cpp
         vo/WhoGiveCardRequest.cpp
         vo/ShowDetermineCardRequest.cpp
-        vo/StartGameRequest.cpp
+        vo/RetrieveGameInfoRequest.cpp
         vo/FoldCardRequest.cpp
         vo/FoldCardResponse.cpp
         vo/ChangeNicknameRequest.cpp
@@ -128,6 +129,9 @@ list(APPEND SERVER_SOURCE
         vo/ChooseCardFromAnotherPlayerResponse.cpp
         vo/ChooseCardFromCardListRequest.cpp
         vo/ChooseCardFromCardListResponse.cpp
+        vo/StartLoungeGameResponse.cpp
+        vo/InformUseCardRequest.cpp
+        vo/InformFoldCardRequest.cpp
         vo/ResistAttackRequest.cpp
         vo/ResistAttackResponse.cpp
         vo/EndGameRequest.cpp
@@ -154,6 +158,7 @@ list(APPEND SERVER_HEADER
         include/GameEventListener.h
         include/Logger.h
         include/PlayerService.h
+        include/UserService.h
         include/vo/
         )
 

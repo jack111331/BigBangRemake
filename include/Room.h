@@ -70,6 +70,8 @@ public:
 
     size_t getPlayerAmount();
 
+    void setGameEndState(WinCondition gameEndState);
+
     Player *getNextPlayer(Player *currentPlayer);
 
     Player *getPlayerByPosition(size_t position);
@@ -82,14 +84,14 @@ public:
 
     void updatePlayerPublicInfo();
 
+    void startGame();
+
     ~Room();
 
 private:
     void autoChooseIdentity();
 
     void sleepUntil(RoomState roomState);
-
-    void startGame();
 
     void initGame();
 
@@ -104,6 +106,7 @@ private:
     std::vector<Player *> playerList;
     Player *currentPlayer;
     EventSubject *eventListener;
+    WinCondition gameEndState;
 
     // Network related
     PlayerService *playerService;

@@ -7,12 +7,14 @@
 #include "Agent.h"
 #include "nlohmann/json.hpp"
 
-enum class Team {
+enum class Identity {
     Sergeant = 0, //警長
     ChiefSergeant = 1, //副警長
     BadAss = 2, //歹徒
     Traitor = 3 //叛徒
 };
+
+std::string toString(Identity identity);
 
 enum class PlayerState {
     Waiting,
@@ -20,6 +22,7 @@ enum class PlayerState {
 };
 
 class Room;
+
 class Equipment;
 
 class Player {
@@ -40,7 +43,7 @@ public:
 
     size_t getHoldingCardAmount() const;
 
-    Card *getCardInHoldingByName(const std::string& cardName);
+    Card *getCardInHoldingByName(const std::string &cardName);
 
     Card *getCardInHoldingById(uint32_t cardId);
 
@@ -54,7 +57,7 @@ public:
     // getter & setter
     Agent *getAgent() const;
 
-    Team getIdentity() const;
+    Identity getIdentity() const;
 
     Character *getCharacter() const;
 
@@ -78,7 +81,7 @@ public:
 
     bool isDead() const;
 
-    void setIdentity(Team identity);
+    void setIdentity(Identity identity);
 
     void setCharacter(Character *character);
 
@@ -94,7 +97,7 @@ public:
 
 private:
     Agent *agent;
-    Team identity;
+    Identity identity;
     Character *character = nullptr;
     Equipment *equipment = nullptr;
     int hp = 0;

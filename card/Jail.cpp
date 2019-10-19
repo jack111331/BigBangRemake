@@ -37,7 +37,7 @@ const std::string &Jail::getCardFeature() const {
 }
 
 bool Jail::useCardEffect(Room *room, Player *myself, Player *target) {
-    if (target->getIdentity() != Team::Sergeant) {
+    if (target->getIdentity() != Identity::Sergeant) {
         if(!EquipmentCard::useCardEffect(room, target, target)) {
             return false;
         }

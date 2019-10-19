@@ -12,6 +12,7 @@
 using nlohmann::json;
 
 User::User(Agent *agnet) : agent(agent), name(""), money(0), win(0), lose(0), id(0) {
+    this->userService = new UserService();
 }
 
 
@@ -69,11 +70,7 @@ void User::handleMessage(const json &jsonMessage) {
                 "changeNickname").get<Request::User::ChangeNicknameRequest>();
         this->name = request.nickname;
     } else if (jsonMessage.at("retrieveLoungeListInfo")) {
-        Response::User::RetrieveLoungeListInfoResponse response;
-        for (const auto lounge : loungeManager->getLoungeList()) {
-            response.loungeList.push_back({lounge->getId(), lounge->getLoungeSize()});
-        }
-        network->sendMessage(this->agent->getToken(), nlohmann::json(response).dump());
+        userService->sendRetrieveLoungeListInfoResponse(this, loungeManager->getLoungeList());
     } else if (jsonMessage.at("joinLounge")) {
         Request::User::JoinLoungeRequest request = jsonMessage.at(
                 "changeNickname").get<Request::User::JoinLoungeRequest>();
@@ -81,13 +78,7 @@ void User::handleMessage(const json &jsonMessage) {
     } else if (jsonMessage.at("leaveLounge")) {
         loungeManager->removeUserFromLounge(this);
     } else if (jsonMessage.at("retrieveLoungeInfo")) {
-        Response::User::RetrieveLoungeInfoResponse response;
-        auto lounge = loungeManager->searchLounge(this);
-        auto userList = lounge->getUserList();
-        for (const auto user : userList) {
-            response.memberList.push_back({user->getId(), user->getName(), lounge->getReadyState(user)});
-        }
-        network->sendMessage(this->agent->getToken(), nlohmann::json(response).dump());
+        userService->sendRetrieveLoungeInfoResponse(this, loungeManager->searchLounge(this));
     } else if (jsonMessage.at("readyInLounge")) {
         Request::User::ReadyInLoungeRequest request = jsonMessage.at(
                 "readyInLounge").get<Request::User::ReadyInLoungeRequest>();
@@ -96,14 +87,20 @@ void User::handleMessage(const json &jsonMessage) {
     } else if (jsonMessage.at("startLoungeGame")) {
         auto lounge = loungeManager->searchLounge(this);
         auto roomManager = RoomManager::getInstance();
-        if(lounge->getRoomOwner() == this && lounge->isAllUserReady()) {
+        if (lounge->getRoomOwner() == this && lounge->isAllUserReady()) {
             auto room = roomManager->createRoom();
-            for(auto user : lounge->getUserList()) {
+            for (auto user : lounge->getUserList()) {
                 room->playerJoin(user->getAgent());
             }
+            room->startGame();
+            userService->sendStartLoungeGameResponse(lounge->getUserList());
         }
     } else {
         auto logger = Logger::getLogger("[User]");
         logger->error("Wrong Message, jsonMessage={}", jsonMessage.dump());
     }
+}
+
+User::~User() {
+    delete this->userService;
 }

@@ -127,6 +127,9 @@
 		<Unit filename="/home/edge/BigBangRemake/User.cpp">
 			<Option target="BigBangRemake"/>
 		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/UserService.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
 		<Unit filename="/home/edge/BigBangRemake/WeaponCard.cpp">
 			<Option target="BigBangRemake"/>
 		</Unit>
@@ -280,6 +283,9 @@
 		<Unit filename="/home/edge/BigBangRemake/include/User.h">
 			<Option target="BigBangRemake"/>
 		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/include/UserService.h">
+			<Option target="BigBangRemake"/>
+		</Unit>
 		<Unit filename="/home/edge/BigBangRemake/include/WeaponCard.h">
 			<Option target="BigBangRemake"/>
 		</Unit>
@@ -409,6 +415,12 @@
 		<Unit filename="/home/edge/BigBangRemake/vo/FoldCardResponse.cpp">
 			<Option target="BigBangRemake"/>
 		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/vo/InformFoldCardRequest.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/vo/InformUseCardRequest.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
 		<Unit filename="/home/edge/BigBangRemake/vo/JoinLoungeRequest.cpp">
 			<Option target="BigBangRemake"/>
 		</Unit>
@@ -421,6 +433,9 @@
 		<Unit filename="/home/edge/BigBangRemake/vo/ResistAttackResponse.cpp">
 			<Option target="BigBangRemake"/>
 		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/vo/RetrieveGameInfoRequest.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
 		<Unit filename="/home/edge/BigBangRemake/vo/RetrieveLoungeInfoResponse.cpp">
 			<Option target="BigBangRemake"/>
 		</Unit>
@@ -430,7 +445,7 @@
 		<Unit filename="/home/edge/BigBangRemake/vo/ShowDetermineCardRequest.cpp">
 			<Option target="BigBangRemake"/>
 		</Unit>
-		<Unit filename="/home/edge/BigBangRemake/vo/StartGameRequest.cpp">
+		<Unit filename="/home/edge/BigBangRemake/vo/StartLoungeGameResponse.cpp">
 			<Option target="BigBangRemake"/>
 		</Unit>
 		<Unit filename="/home/edge/BigBangRemake/vo/UseCardRequest.cpp">

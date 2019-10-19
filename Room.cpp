@@ -16,6 +16,7 @@ Room::Room() {
     this->plague = new Plague;
     this->discardPlague = new Plague;
     this->roomState = RoomState::WaitPlayerToChooseCharacter;
+    this->gameEndState = WinCondition::None;
 }
 
 bool Room::drawCard(position drawerPosition, size_t amount) {
@@ -136,29 +137,29 @@ WinCondition Room::isGameEnd() {
             TeamSurviveAmount[static_cast<int>(player->getIdentity())]++;
         }
     }
-    if (!TeamSurviveAmount[static_cast<int>(Team::Sergeant)] &&
-        !TeamSurviveAmount[static_cast<int>(Team::ChiefSergeant)] &&
-        !TeamSurviveAmount[static_cast<int>(Team::BadAss)]) {
+    if (!TeamSurviveAmount[static_cast<int>(Identity::Sergeant)] &&
+        !TeamSurviveAmount[static_cast<int>(Identity::ChiefSergeant)] &&
+        !TeamSurviveAmount[static_cast<int>(Identity::BadAss)]) {
         return WinCondition::TraitorWin;
-    } else if (!TeamSurviveAmount[static_cast<int>(Team::Sergeant)]) {
+    } else if (!TeamSurviveAmount[static_cast<int>(Identity::Sergeant)]) {
         return WinCondition::BadAssWin;
-    } else if (!TeamSurviveAmount[static_cast<int>(Team::BadAss)] &&
-               !TeamSurviveAmount[static_cast<int>(Team::Traitor)]) {
+    } else if (!TeamSurviveAmount[static_cast<int>(Identity::BadAss)] &&
+               !TeamSurviveAmount[static_cast<int>(Identity::Traitor)]) {
         return WinCondition::SergeantWin;
     }
     return WinCondition::None;
 }
 
 void Room::autoChooseIdentity() {
-    Team teamDistribute[7] =
+    Identity teamDistribute[7] =
             {
-                    Team::Sergeant,
-                    Team::BadAss,
-                    Team::BadAss,
-                    Team::Traitor,
-                    Team::ChiefSergeant,
-                    Team::BadAss,
-                    Team::ChiefSergeant
+                    Identity::Sergeant,
+                    Identity::BadAss,
+                    Identity::BadAss,
+                    Identity::Traitor,
+                    Identity::ChiefSergeant,
+                    Identity::BadAss,
+                    Identity::ChiefSergeant
             };
     std::shuffle(teamDistribute, teamDistribute + static_cast<int>(playerList.size()),
                  std::mt19937(std::random_device()()));
@@ -269,6 +270,10 @@ size_t Room::getPlayerAmount() {
     return playerList.size();
 }
 
+void Room::setGameEndState(WinCondition gameEndState) {
+    this->gameEndState = gameEndState;
+}
+
 void Room::resetPlayerRoundState(Player *player) {
     roomState = RoomState::WaitPlayerToUseCard;
     player->setAttacked(false);
@@ -281,19 +286,25 @@ void Room::sleepUntil(RoomState untilRoomState) {
 
 void Room::startGame() {
     gameThread = std::thread(std::bind(&Room::gameLoop, this));
+    gameThread.detach();
 }
 
 void Room::initGame() {
     // TODO WIP
+    // TODO generate cardList
+    std::vector<Card *> cardList;
+
     plague->init();
+
+    // auto choose team for player
+    autoChooseIdentity();
+
     // let player choose character
     // generate 2 random character, this two can't be identical
     roomState = RoomState::WaitPlayerToChooseCharacter;
     auto characterPool = new RandomCharacterPool();
-    auto network = Network::getInstance();
     for (auto player : playerList) {
-        //        network->sendMessage(player->getAgent()->getToken(), );
-        //        (*it)->GetUser()->SendMessage("Send Message", NSWrapInfo::WrapStartGame(room, 1).dump());
+        playerService->sendRetrieveGameInfoRequest(player, this, playerList, cardList);
         characterPool->flushChoicePool();
         // Hard code to have 2 character
         playerService->sendChooseCardRequest(player, characterPool->choiceCharacterFromPool());
@@ -305,12 +316,10 @@ void Room::initGame() {
     sleepUntil(RoomState::PlayerCompleteChoosedCharacter);
     roomState = RoomState::StartGame;
 
-    // auto choose team for player, tbc
-    autoChooseIdentity();
 
     // choose Sergent as the first player
     for (auto player : playerList) {
-        if (player->getIdentity() == Team::Sergeant) {
+        if (player->getIdentity() == Identity::Sergeant) {
             currentPlayer = player;
             break;
         }
@@ -323,19 +332,19 @@ void Room::endGame(WinCondition endGameState) {
     std::vector<Player *> winnerList, loserList;
     for (auto player : playerList) {
         if (endGameState == WinCondition::SergeantWin) {
-            if (player->getIdentity() == Team::Sergeant || player->getIdentity() == Team::ChiefSergeant) {
+            if (player->getIdentity() == Identity::Sergeant || player->getIdentity() == Identity::ChiefSergeant) {
                 winnerList.push_back(player);
             } else {
                 loserList.push_back(player);
             }
         } else if (endGameState == WinCondition::BadAssWin) {
-            if (player->getIdentity() == Team::BadAss) {
+            if (player->getIdentity() == Identity::BadAss) {
                 winnerList.push_back(player);
             } else {
                 loserList.push_back(player);
             }
         } else if (endGameState == WinCondition::TraitorWin) {
-            if (player->getIdentity() == Team::Traitor) {
+            if (player->getIdentity() == Identity::Traitor) {
                 winnerList.push_back(player);
             } else {
                 loserList.push_back(player);
@@ -355,7 +364,6 @@ void Room::endGame(WinCondition endGameState) {
 void Room::gameLoop() {
     initGame();
 
-    WinCondition gameEndState;
     // Loop while game isn't end, gameEndState record what team win
     while ((gameEndState = isGameEnd()) == WinCondition::None) {
         // Draw card stage
@@ -364,20 +372,13 @@ void Room::gameLoop() {
         //        updatePlayerPublicInfo();
         // Inform user that it's his/her turn
         roomState = RoomState::WaitPlayerToUseCard;
-        //        currentPlayer->GetUser()->SendMessage("Send Message", NSWrapInfo::WrapConfirm(8).dump());
-
+        playerService->sendInformUseCardRequest(currentPlayer);
         sleepUntil(RoomState::PlayerCompleteUsedCard);//end using card
 
-        //        currentPlayer->GetUser()->SendMessage("Send Message", NSWrapInfo::WrapConfirm(13).dump());
-        updatePlayerPublicInfo();
         // TODO check game end every death
-        //        if ((gameEndState = room->isGameEnd()) != WinCondition::None) {
-        //            break;
-        //        }
         while (currentPlayer->getHoldingCardAmount() > currentPlayer->getHp()) {
             roomState = RoomState::WaitPlayerToFoldCard;
-            //            currentPlayer->GetUser()->SendMessage("Send Message", NSWrapInfo::WrapFoldAmount(
-            //                    currentPlayer->getHoldingCardAmount() - currentPlayer->GetHP()).dump());
+            playerService->sendInformFoldCardRequest(currentPlayer);
             sleepUntil(RoomState::PlayerCompleteFoldedCard);//fold card
             updatePlayerPublicInfo();
         }
@@ -398,4 +399,3 @@ Room::~Room() {
     delete this->eventListener;
     delete this->playerService;
 }
-

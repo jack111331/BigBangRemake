@@ -13,24 +13,80 @@
   <component name="ChangeListManager">
     <list default="true" id="53543359-5bb5-4bf5-9eda-a6871d9e451e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Action.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Action.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BigBangRemake.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/BigBangRemake.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/Action.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/Agent.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/Card.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/CardGenerator.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/Character.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/CharacterGenerator.cpp.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/Equipment.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/EquipmentCard.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/GameEventListener.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/Lounge.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/LoungeManager.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/Network.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/Plague.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/Player.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/Room.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/RoomManager.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/User.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/WeaponCard.cpp.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/card/Bang.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/card/Bang.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/card/Barrel.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/card/Barrel.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/card/Beer.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/card/Beer.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/card/Carabine.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/card/Carabine.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/card/CatBalou.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/card/CatBalou.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/card/Duel.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/card/Duel.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/card/Dynamite.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/card/Dynamite.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/card/Gatling.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/card/Gatling.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/card/GeneralStore.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/card/Indians.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/card/Jail.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/card/Missed.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/card/Mustang.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/card/Panic.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/card/Remington.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/card/Saloon.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/card/Schofield.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/card/Stagecoach.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/card/Volcanic.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/card/Wellsfargo.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/card/Winchester.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/character/BartCassidy.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/character/BlackJack.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/character/ElGringo.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/character/GodDeveloper.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/character/PaulRegret.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/character/RoseDoolan.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/character/SuzyLafayette.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/character/VultureSam.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/character/WillyTheKid.cpp.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/BigBangRemake.dir/vo/ResistAttackResponse.cpp.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Card.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Card.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Player.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Player.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlayerService.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/PlayerService.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Room.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Room.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/card/Duel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/card/Duel.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/card/Gatling.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/card/Gatling.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/card/Indians.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/card/Indians.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/User.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/card/Jail.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/card/Jail.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/Card.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Card.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/Player.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Player.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/PlayerService.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/PlayerService.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/Room.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Room.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/vo/ResistAttackResponse.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/vo/ResistAttackResponse.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vo/ResistAttackResponse.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/vo/ResistAttackResponse.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/User.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/User.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/vo/StartGameRequest.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vo/StartGameRequest.cpp" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,16 +112,16 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/include/vo" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/include/vo" />
-      <recent name="$PROJECT_DIR$/vo" />
-      <recent name="$PROJECT_DIR$/character" />
-      <recent name="$PROJECT_DIR$/include/character" />
-      <recent name="$PROJECT_DIR$/include" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/include" />
       <recent name="$PROJECT_DIR$/card" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/include/vo" />
+      <recent name="$PROJECT_DIR$/vo" />
+      <recent name="$PROJECT_DIR$/include" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/character" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -135,6 +191,7 @@
       <workItem from="1571204120088" duration="1085000" />
       <workItem from="1571281577699" duration="5006000" />
       <workItem from="1571400443724" duration="8023000" />
+      <workItem from="1571462383742" duration="7790000" />
     </task>
     <servers />
   </component>

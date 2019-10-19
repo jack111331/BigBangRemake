@@ -16,6 +16,8 @@ enum class Suit {
     Club //梅花
 };
 
+std::string toString(Suit suit);
+
 
 class Card {
 public:

@@ -12,6 +12,27 @@
 
 using nlohmann::json;
 
+std::string toString(Identity identity) {
+    switch (identity) {
+        case Identity::Sergeant: {
+            return "Sergeant";
+        }
+        case Identity::ChiefSergeant: {
+            return "ChiefSergeant";
+        }
+        case Identity::BadAss: {
+            return "BadAss";
+        }
+        case Identity::Traitor: {
+            return "Traitor";
+        }
+        default: {
+            return "Unknown";
+        }
+    }
+}
+
+
 Player::Player(Agent *agent) : agent(agent) {
     this->equipment = new Equipment();
 }
@@ -33,7 +54,7 @@ void Player::handleMessage(const json &jsonMessage) {
                 "chooseCharacter").get<Response::Player::ChooseCharacterResponse>();
         this->character = CharacterGenerator::createCharacter(response.chooseCharacterName, room);
         for (auto player:room->getPlayerList()) {
-            if(!player->getCharacter()) {
+            if (!player->getCharacter()) {
                 return;
             }
         }
@@ -127,7 +148,7 @@ Agent *Player::getAgent() const {
     return agent;
 }
 
-void Player::setIdentity(Team identity) {
+void Player::setIdentity(Identity identity) {
     this->identity = identity;
 }
 
@@ -147,7 +168,7 @@ void Player::setDead(bool dead) {
     this->dead = dead;
 }
 
-Team Player::getIdentity() const {
+Identity Player::getIdentity() const {
     return identity;
 }
 
@@ -164,7 +185,7 @@ int Player::getHp() const {
 }
 
 int Player::getMaxHp() const {
-    return (character->getMaxHp() + (identity == Team::Sergeant ? 1 : 0));
+    return (character->getMaxHp() + (identity == Identity::Sergeant ? 1 : 0));
 }
 
 const std::vector<Card *> &Player::getHolding() const {

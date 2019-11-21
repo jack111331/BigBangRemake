@@ -78,6 +78,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/edge/BigBangRemake/vo/RetrieveLoungeListInfoResponse.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/vo/RetrieveLoungeListInfoResponse.cpp.o"
   "/home/edge/BigBangRemake/vo/ShowDetermineCardRequest.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/vo/ShowDetermineCardRequest.cpp.o"
   "/home/edge/BigBangRemake/vo/StartLoungeGameResponse.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/vo/StartLoungeGameResponse.cpp.o"
+  "/home/edge/BigBangRemake/vo/UpdatePlayerInfoRequest.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/vo/UpdatePlayerInfoRequest.cpp.o"
   "/home/edge/BigBangRemake/vo/UseCardRequest.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/vo/UseCardRequest.cpp.o"
   "/home/edge/BigBangRemake/vo/WhoFoldCardRequest.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/vo/WhoFoldCardRequest.cpp.o"
   "/home/edge/BigBangRemake/vo/WhoGiveCardRequest.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/vo/WhoGiveCardRequest.cpp.o"

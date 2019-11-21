@@ -2,7 +2,6 @@
 #include <CharacterGenerator.h>
 #include <vo/ChooseCharacterResponse.h>
 #include <vo/UseCardRequest.h>
-#include <vo/FoldCardRequest.h>
 #include <vo/FoldCardResponse.h>
 #include <Logger.h>
 #include "Player.h"
@@ -26,12 +25,14 @@ std::string toString(Identity identity) {
         case Identity::Traitor: {
             return "Traitor";
         }
+        case Identity::Unknown: {
+            return "Unknown";
+        }
         default: {
             return "Unknown";
         }
     }
 }
-
 
 Player::Player(Agent *agent) : agent(agent) {
     this->equipment = new Equipment();
@@ -94,7 +95,6 @@ void Player::informFinishFoldingCard() {
     room->changeRoomState(RoomState::PlayerCompleteFoldedCard);
 }
 
-
 void Player::addCardToHolding(Card *card) {
     holding.push_back(card);
 }
@@ -132,6 +132,7 @@ void Player::removeCardInHolding(const Card *card) {
     for (auto it = holding.begin(); it != holding.end(); ++it) {
         if ((*it) == card) {
             holding.erase(it);
+            this->dirty = true;
             break;
         }
     }
@@ -150,22 +151,27 @@ Agent *Player::getAgent() const {
 
 void Player::setIdentity(Identity identity) {
     this->identity = identity;
+    this->dirty = true;
 }
 
 void Player::setCharacter(Character *character) {
     this->character = character;
+    this->dirty = true;
 }
 
 void Player::setHp(int hp) {
     this->hp = hp;
+    this->dirty = true;
 }
 
 void Player::setAttacked(bool attacked) {
     this->attacked = attacked;
+    this->dirty = true;
 }
 
 void Player::setDead(bool dead) {
     this->dead = dead;
+    this->dirty = true;
 }
 
 Identity Player::getIdentity() const {
@@ -214,6 +220,10 @@ bool Player::isAttacked() const {
 
 bool Player::isDead() const {
     return dead;
+}
+
+bool Player::isDirty() const {
+    return dirty;
 }
 
 Player::~Player() {

@@ -111,6 +111,7 @@ list(APPEND SERVER_SOURCE
         PlayerService.cpp
         UserService.cpp
         vo/JoinLoungeRequest.cpp
+        vo/UpdatePlayerInfoRequest.cpp
         vo/RetrieveLoungeInfoResponse.cpp
         vo/RetrieveLoungeListInfoResponse.cpp
         vo/ReadyInLoungeRequest.cpp

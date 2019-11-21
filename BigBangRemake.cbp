@@ -109,7 +109,7 @@
 		<Unit filename="/home/edge/BigBangRemake/Network.cpp">
 			<Option target="BigBangRemake"/>
 		</Unit>
-		<Unit filename="/home/edge/BigBangRemake/plague.cpp">
+		<Unit filename="/home/edge/BigBangRemake/Plague.cpp">
 			<Option target="BigBangRemake"/>
 		</Unit>
 		<Unit filename="/home/edge/BigBangRemake/Player.cpp">
@@ -265,7 +265,7 @@
 		<Unit filename="/home/edge/BigBangRemake/include/Network.h">
 			<Option target="BigBangRemake"/>
 		</Unit>
-		<Unit filename="/home/edge/BigBangRemake/include/plague.h">
+		<Unit filename="/home/edge/BigBangRemake/include/Plague.h">
 			<Option target="BigBangRemake"/>
 		</Unit>
 		<Unit filename="/home/edge/BigBangRemake/include/Player.h">
@@ -446,6 +446,9 @@
 			<Option target="BigBangRemake"/>
 		</Unit>
 		<Unit filename="/home/edge/BigBangRemake/vo/StartLoungeGameResponse.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/vo/UpdatePlayerInfoRequest.cpp">
 			<Option target="BigBangRemake"/>
 		</Unit>
 		<Unit filename="/home/edge/BigBangRemake/vo/UseCardRequest.cpp">

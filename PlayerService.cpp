@@ -2,6 +2,7 @@
 // Created by edge on 2019-10-18.
 //
 
+#include <vo/UpdatePlayerInfoRequest.h>
 #include <vo/ShowDetermineCardRequest.h>
 #include <vo/ChooseCharacterRequest.h>
 #include <vo/RetrieveGameInfoRequest.h>
@@ -74,3 +75,14 @@ void PlayerService::sendChooseCardRequest(Player *sendToPlayer, const std::vecto
     network->sendMessage(sendToPlayer->getAgent()->getToken(), json(chooseCharacterRequest).dump());
 }
 
+void PlayerService::sendUpdatePlayerInfoRequest(const std::vector<Player *> &sendToPlayerList, Player *player) {
+    std::string identity = player->isDead() ? toString(player->getIdentity()) : toString(Identity::Unknown);
+    Request::Player::UpdatePlayerInfoRequest request = {
+            identity, player->getCharacter()->getCharacterName(), player->getHp(),
+            player->getHoldingCardAmount(), player->isDead()
+    };
+    json updatePlayerInfoRequest = packAsJson("updatePlayerInfo", request);
+    for (auto player : sendToPlayerList) {
+        network->sendMessage(player->getAgent()->getToken(), json(updatePlayerInfoRequest).dump());
+    }
+}

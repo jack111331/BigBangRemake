@@ -33,8 +33,8 @@
 
 Room::Room() {
     this->eventListener = new EventSubject();
-    this->plague = new plague;
-    this->discardPlague = new plague;
+    this->plague = new Plague();
+    this->discardPlague = new Plague();
     this->roomState = RoomState::WaitPlayerToChooseCharacter;
     this->gameEndState = WinCondition::None;
 }
@@ -229,13 +229,6 @@ EventSubject *Room::getEventListener() const {
     return eventListener;
 }
 
-void Room::updatePlayerPublicInfo() {
-    // TODO better design to update player's info
-    //    for (auto it = playerList.begin(); it != playerList.end(); ++it) {
-    //        (*it)->GetUser()->SendMessage("Send Message", NSWrapInfo::WrapPublicGameInfo(this, *it).dump());
-    //    }
-}
-
 void Room::initPlayerState() {
     for (auto it : playerList) {
         //setup initial hp
@@ -318,7 +311,7 @@ std::vector<Card *> Room::generateCardList() {
     cardList.push_back(CardGenerator::createCard(BangCard::Carabine::getName(), this, 7, Suit::Spade));
     cardList.push_back(CardGenerator::createCard(BangCard::Carabine::getName(), this, 2, Suit::Heart));
     cardList.push_back(CardGenerator::createCard(BangCard::Mustang::getName(), this, 3, Suit::Heart));
-    cardList.push_back(CardGenerator::createCard(BangCard::Mustang::getName(),, this, 8, Suit::Diamond));
+    cardList.push_back(CardGenerator::createCard(BangCard::Mustang::getName(), this, 8, Suit::Diamond));
     cardList.push_back(CardGenerator::createCard(BangCard::Saloon::getName(), this, 12, Suit::Diamond));
     cardList.push_back(CardGenerator::createCard(BangCard::Saloon::getName(), this, 10, Suit::Heart));
     cardList.push_back(CardGenerator::createCard(BangCard::Schofield::getName(), this, 13, Suit::Club));
@@ -330,7 +323,7 @@ std::vector<Card *> Room::generateCardList() {
     cardList.push_back(CardGenerator::createCard(BangCard::Wellsfargo::getName(), this, 11, Suit::Diamond));
     cardList.push_back(CardGenerator::createCard(BangCard::Wellsfargo::getName(), this, 7, Suit::Heart));
     cardList.push_back(CardGenerator::createCard(BangCard::Jail::getName(), this, 9, Suit::Club));
-    cardList.push_back(CardGenerator::createCard(BangCard::Jail::getName(),, this, 4, Suit::Spade));
+    cardList.push_back(CardGenerator::createCard(BangCard::Jail::getName(), this, 4, Suit::Spade));
     cardList.push_back(CardGenerator::createCard(BangCard::Bang::getName(), this, 5, Suit::Diamond));
     cardList.push_back(CardGenerator::createCard(BangCard::Bang::getName(), this, 6, Suit::Heart));
     cardList.push_back(CardGenerator::createCard(BangCard::Bang::getName(), this, 7, Suit::Club));
@@ -338,7 +331,7 @@ std::vector<Card *> Room::generateCardList() {
     cardList.push_back(CardGenerator::createCard(BangCard::Missed::getName(), this, 9, Suit::Diamond));
     cardList.push_back(CardGenerator::createCard(BangCard::Missed::getName(), this, 10, Suit::Heart));
     cardList.push_back(CardGenerator::createCard(BangCard::Missed::getName(), this, 11, Suit::Club));
-    cardList.push_back(CardGenerator::createCard(BangCard::Missed::getName() this, 12, Suit::Spade));
+    cardList.push_back(CardGenerator::createCard(BangCard::Missed::getName(), this, 12, Suit::Spade));
     cardList.push_back(CardGenerator::createCard(BangCard::Indians::getName(), this, 9, Suit::Heart));
     cardList.push_back(CardGenerator::createCard(BangCard::Indians::getName(), this, 4, Suit::Club));
     cardList.push_back(CardGenerator::createCard(BangCard::Gatling::getName(), this, 9, Suit::Diamond));

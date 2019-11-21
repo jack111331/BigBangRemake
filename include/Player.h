@@ -11,7 +11,8 @@ enum class Identity {
     Sergeant = 0, //警長
     ChiefSergeant = 1, //副警長
     BadAss = 2, //歹徒
-    Traitor = 3 //叛徒
+    Traitor = 3, //叛徒
+    Unknown = 4
 };
 
 std::string toString(Identity identity);
@@ -24,7 +25,7 @@ enum class PlayerState {
 class Room;
 
 class Equipment;
-
+// TODO a thread to detect player's state is dirty, if dirty, then update everyone in room
 class Player {
 public:
     Player(Agent *agent);
@@ -50,9 +51,6 @@ public:
     void removeCardInHolding(const Card *card);
 
     void removeCardFromMyselfById(uint32_t cardId);
-
-    // equipment related
-    void changeEquipment(Equipment *equipment);
 
     // getter & setter
     Agent *getAgent() const;
@@ -81,11 +79,11 @@ public:
 
     bool isDead() const;
 
+    bool isDirty() const;
+
     void setIdentity(Identity identity);
 
     void setCharacter(Character *character);
-
-    void setEquipment(Equipment *equipment);
 
     void setHp(int hp);
 
@@ -104,4 +102,5 @@ private:
     std::vector<Card *> holding;
     bool attacked = false; //是否已攻擊
     bool dead = false; //是否處於死亡狀態
+    bool dirty = false;
 };

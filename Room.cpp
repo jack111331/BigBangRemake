@@ -7,25 +7,6 @@
 #include <vo/WhoGiveCardRequest.h>
 #include <vo/ShowDetermineCardRequest.h>
 #include <CardGenerator.h>
-#include <card/Winchester.h>
-#include <card/Barrel.h>
-#include <card/Carabine.h>
-#include <card/Mustang.h>
-#include <card/Saloon.h>
-#include <card/Schofield.h>
-#include <card/Volcanic.h>
-#include <card/Stagecoach.h>
-#include <card/Wellsfargo.h>
-#include <card/Jail.h>
-#include <card/Bang.h>
-#include <card/CatBalou.h>
-#include <card/Gatling.h>
-#include <card/Indians.h>
-#include <card/Missed.h>
-#include <card/Duel.h>
-#include <card/Beer.h>
-#include <card/Panic.h>
-#include <card/Dynamite.h>
 #include "Room.h"
 #include "User.h"
 #include "GameEventListener.h"
@@ -440,7 +421,7 @@ void Room::gameLoop() {
             roomState = RoomState::WaitPlayerToFoldCard;
             playerService->sendInformFoldCardRequest(currentPlayer);
             sleepUntil(RoomState::PlayerCompleteFoldedCard);//fold card
-            updatePlayerPublicInfo();
+//            updatePlayerPublicInfo();
         }
         // Reset player's state
         resetPlayerRoundState(currentPlayer);

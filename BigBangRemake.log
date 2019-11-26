@@ -1,0 +1,4 @@
+[2019-11-27 00:15:36.477] [Agent] [info] Message, jsonMessage=
+[2019-11-27 00:17:43.440] [Agent] [info] Message, jsonMessage=
+[2019-11-27 00:20:30.823] [Agent] [info] Message, jsonMessage="{\"use\":\"dsad\"}"
+[2019-11-27 00:20:30.823] [Agent] [error] Wrong Message, jsonMessage="{\"use\":\"dsad\"}"

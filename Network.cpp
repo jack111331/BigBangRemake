@@ -10,6 +10,9 @@ Network *Network::instance = nullptr;
 Network::Network() {
     this->gameServer = new server();
 
+}
+
+void Network::setup() {
     // Set logging level
     gameServer->set_error_channels(websocketpp::log::elevel::all);
     gameServer->set_access_channels(websocketpp::log::alevel::all ^ websocketpp::log::alevel::frame_payload);
@@ -30,17 +33,17 @@ Network::Network() {
 
     // Start the Asio io_service run loop
     gameServer->run();
-
 }
 
 Network *Network::getInstance() {
     if (Network::instance == nullptr) {
         Network::instance = new Network();
+        Network::instance->setup();
     }
     return Network::instance;
 }
 
-void Network::onOpen(const websocketpp::connection_hdl &hdl) {
+void Network::onOpen(websocketpp::connection_hdl hdl) {
     auto agent = new Agent(hdl);
     auto user = new User(agent);
     agent->setUser(user);

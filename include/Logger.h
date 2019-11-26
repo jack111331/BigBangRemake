@@ -16,8 +16,6 @@ public:
     ~Logger();
 
 private:
-    Logger();
-
     static std::map<std::string, std::shared_ptr<spdlog::logger>> loggerMap;
     static std::shared_ptr<spdlog::sinks::basic_file_sink_mt> loggerSink;
 };

@@ -15,7 +15,8 @@ class Network {
 public:
     Network();
     static Network *getInstance();
-    void onOpen(const websocketpp::connection_hdl& hdl);
+    void setup();
+    void onOpen(websocketpp::connection_hdl hdl);
     void onMessage(websocketpp::connection_hdl hdl, server::message_ptr msg);
     void sendMessage(websocketpp::connection_hdl hdl, const std::string &message);
     void onClose(const websocketpp::connection_hdl& hdl);

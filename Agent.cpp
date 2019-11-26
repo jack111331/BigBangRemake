@@ -18,19 +18,22 @@ const websocketpp::connection_hdl &Agent::getToken() const {
 
 void Agent::handleMessage(const std::string &message) {
     json jsonMessage = json(message);
-    auto logger = Logger::getLogger("[Agent]");
-    if(jsonMessage.at("user")) {
+    auto logger = Logger::getLogger("Agent");
+    logger->info("jsonMessage={}", jsonMessage.dump());
+    if(jsonMessage.find("user") != jsonMessage.end()) {
         if(user) {
             user->handleMessage(jsonMessage.at("user"));
         } else {
             logger->error("Wrong Message, jsonMessage={}", jsonMessage.dump());
         }
-    } else if(jsonMessage.at("player")) {
+    } else if(jsonMessage.find("player") != jsonMessage.end()) {
         if(player) {
             player->handleMessage(jsonMessage.at("player"));
         } else {
             logger->error("Wrong Message, jsonMessage={}", jsonMessage.dump());
         }
+    } else {
+        logger->error("Wrong Message, jsonMessage={}", jsonMessage.dump());
     }
 }
 

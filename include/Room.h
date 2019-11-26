@@ -83,8 +83,6 @@ public:
 
     EventSubject *getEventListener() const;
 
-    void updatePlayerPublicInfo();
-
     void startGame();
 
     ~Room();

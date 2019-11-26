@@ -42,7 +42,7 @@ void Player::handleMessage(const json &jsonMessage) {
     auto roomManager = RoomManager::getInstance();
     auto room = roomManager->searchRoom(this);
     auto logger = Logger::getLogger("[Player]");
-    if (jsonMessage.at("card")) {
+    if (jsonMessage.find("card") != jsonMessage.end()) {
         uint32_t cardId = jsonMessage.at("card").at("id");
         if (cardId) {
             auto card = getCardInHoldingById(cardId);
@@ -50,7 +50,7 @@ void Player::handleMessage(const json &jsonMessage) {
         } else {
             logger->error("Wrong Message, jsonMessage={}", jsonMessage.dump());
         }
-    } else if (jsonMessage.at("chooseCharacter")) {
+    } else if (jsonMessage.find("chooseCharacter") != jsonMessage.end()) {
         Response::Player::ChooseCharacterResponse response = jsonMessage.at(
                 "chooseCharacter").get<Response::Player::ChooseCharacterResponse>();
         this->character = CharacterGenerator::createCharacter(response.chooseCharacterName, room);
@@ -60,16 +60,16 @@ void Player::handleMessage(const json &jsonMessage) {
             }
         }
         room->changeRoomState(RoomState::PlayerCompleteChoosedCharacter);
-    } else if (jsonMessage.at("useCard")) {
+    } else if (jsonMessage.find("useCard") != jsonMessage.end()) {
         if (room->isPlayerTurn(this)) {
             Request::Player::UseCardRequest request = jsonMessage.at("useCard").get<Request::Player::UseCardRequest>();
             room->useCard(request.cardId, room->getPositionByPlayer(this), request.targetPosition);
         }
-    } else if (jsonMessage.at("endUsingCard")) {
+    } else if (jsonMessage.find("endUsingCard") != jsonMessage.end()) {
         if (room->isPlayerTurn(this)) {
             room->changeRoomState(RoomState::PlayerCompleteUsedCard);
         }
-    } else if (jsonMessage.at("foldCard")) {
+    } else if (jsonMessage.find("foldCard") != jsonMessage.end()) {
         if (room->isPlayerTurn(this)) {
             Response::Player::FoldCardResponse response = jsonMessage.at(
                     "foldCard").get<Response::Player::FoldCardResponse>();

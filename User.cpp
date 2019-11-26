@@ -11,7 +11,7 @@
 
 using nlohmann::json;
 
-User::User(Agent *agnet) : agent(agent), name(""), money(0), win(0), lose(0), id(0) {
+User::User(Agent *agent) : agent(agent), name(""), money(0), win(0), lose(0), id(0) {
     this->userService = new UserService();
 }
 
@@ -63,28 +63,28 @@ void User::setId(uint32_t id) {
 void User::handleMessage(const json &jsonMessage) {
     auto loungeManager = LoungeManager::getInstance();
     auto network = Network::getInstance();
-    if (jsonMessage.at("registerAndLogin")) {
+    if (jsonMessage.find("registerAndLogin") != jsonMessage.end()) {
 
-    } else if (jsonMessage.at("changeNickname")) {
+    } else if (jsonMessage.find("changeNickname") != jsonMessage.end()) {
         Request::User::ChangeNicknameRequest request = jsonMessage.at(
                 "changeNickname").get<Request::User::ChangeNicknameRequest>();
         this->name = request.nickname;
-    } else if (jsonMessage.at("retrieveLoungeListInfo")) {
+    } else if (jsonMessage.find("retrieveLoungeListInfo") != jsonMessage.end()) {
         userService->sendRetrieveLoungeListInfoResponse(this, loungeManager->getLoungeList());
-    } else if (jsonMessage.at("joinLounge")) {
+    } else if (jsonMessage.find("joinLounge") != jsonMessage.end()) {
         Request::User::JoinLoungeRequest request = jsonMessage.at(
                 "changeNickname").get<Request::User::JoinLoungeRequest>();
         loungeManager->addUserToLounge(this, request.loungeId);
-    } else if (jsonMessage.at("leaveLounge")) {
+    } else if (jsonMessage.find("leaveLounge") != jsonMessage.end()) {
         loungeManager->removeUserFromLounge(this);
-    } else if (jsonMessage.at("retrieveLoungeInfo")) {
+    } else if (jsonMessage.find("retrieveLoungeInfo") != jsonMessage.end()) {
         userService->sendRetrieveLoungeInfoResponse(this, loungeManager->searchLounge(this));
-    } else if (jsonMessage.at("readyInLounge")) {
+    } else if (jsonMessage.find("readyInLounge") != jsonMessage.end()) {
         Request::User::ReadyInLoungeRequest request = jsonMessage.at(
                 "readyInLounge").get<Request::User::ReadyInLoungeRequest>();
         auto lounge = loungeManager->searchLounge(this);
         lounge->setReadyState(this, request.ready);
-    } else if (jsonMessage.at("startLoungeGame")) {
+    } else if (jsonMessage.find("startLoungeGame") != jsonMessage.end()) {
         auto lounge = loungeManager->searchLounge(this);
         auto roomManager = RoomManager::getInstance();
         if (lounge->getRoomOwner() == this && lounge->isAllUserReady() && lounge->getLoungeSize() == Lounge::MAX_LOUNGE_SIZE) {

@@ -71,6 +71,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/edge/BigBangRemake/vo/InformUseCardRequest.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/vo/InformUseCardRequest.cpp.o"
   "/home/edge/BigBangRemake/vo/JoinLoungeRequest.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/vo/JoinLoungeRequest.cpp.o"
   "/home/edge/BigBangRemake/vo/ReadyInLoungeRequest.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/vo/ReadyInLoungeRequest.cpp.o"
+  "/home/edge/BigBangRemake/vo/RegisterAndLoginResponse.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/vo/RegisterAndLoginResponse.cpp.o"
   "/home/edge/BigBangRemake/vo/ResistAttackRequest.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/vo/ResistAttackRequest.cpp.o"
   "/home/edge/BigBangRemake/vo/ResistAttackResponse.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/vo/ResistAttackResponse.cpp.o"
   "/home/edge/BigBangRemake/vo/RetrieveGameInfoRequest.cpp" "/home/edge/BigBangRemake/CMakeFiles/BigBangRemake.dir/vo/RetrieveGameInfoRequest.cpp.o"

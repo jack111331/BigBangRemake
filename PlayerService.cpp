@@ -21,7 +21,10 @@ PlayerService::PlayerService() {
 
 template<typename T>
 json PlayerService::packAsJson(std::string requestName, T request) {
-    json completeRequest = {{"player", {requestName, request}}};
+    json functionRequest;
+    functionRequest[requestName] = request;
+    json completeRequest;
+    completeRequest["player"] = functionRequest;
     return completeRequest;
 }
 

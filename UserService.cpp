@@ -2,6 +2,7 @@
 // Created by edge on 2019-10-18.
 //
 
+#include <vo/RegisterAndLoginResponse.h>
 #include <vo/StartLoungeGameResponse.h>
 #include <vo/RetrieveLoungeListInfoResponse.h>
 #include <vo/RetrieveLoungeInfoResponse.h>
@@ -17,8 +18,22 @@ UserService::UserService() {
 
 template<typename T>
 json UserService::packAsJson(std::string requestName, T request) {
-    json completeRequest = {{"user", {requestName, request}}};
+    json functionRequest;
+    functionRequest[requestName] = request;
+    json completeRequest;
+    completeRequest["user"] = functionRequest;
     return completeRequest;
+}
+
+void UserService::sendRegisterAndLoginResponse(User *sendToUser,
+                                                     User *user) {
+    Response::User::RegisterAndLoginResponse response;
+    response.name = user->getName();
+    response.win = user->getWin();
+    response.lose = user->getLose();
+    response.money = user->getMoney();
+    json registerAndLoginResponse = packAsJson("registerAndLogin", response);
+    network->sendMessage(sendToUser->getAgent()->getToken(), json(registerAndLoginResponse).dump());
 }
 
 void UserService::sendRetrieveLoungeListInfoResponse(User *sendToUser,
@@ -28,7 +43,7 @@ void UserService::sendRetrieveLoungeListInfoResponse(User *sendToUser,
         response.loungeList.push_back({lounge->getId(), lounge->getLoungeSize()});
     }
     json retrieveLoungeListInfoResponse = packAsJson("retrieveLoungeListInfo", response);
-    network->sendMessage(sendToUser->getAgent()->getToken(), nlohmann::json(retrieveLoungeListInfoResponse).dump());
+    network->sendMessage(sendToUser->getAgent()->getToken(), json(retrieveLoungeListInfoResponse).dump());
 }
 
 void UserService::sendRetrieveLoungeInfoResponse(User *sendToUser, Lounge * lounge) {
@@ -38,7 +53,7 @@ void UserService::sendRetrieveLoungeInfoResponse(User *sendToUser, Lounge * loun
         response.memberList.push_back({user->getId(), user->getName(), lounge->getReadyState(user)});
     }
     json retrieveLoungeInfoResponse = packAsJson("retrieveLoungeInfo", response);
-    network->sendMessage(sendToUser->getAgent()->getToken(), nlohmann::json(retrieveLoungeInfoResponse).dump());
+    network->sendMessage(sendToUser->getAgent()->getToken(), json(retrieveLoungeInfoResponse).dump());
 }
 
 void UserService::sendStartLoungeGameResponse(const std::vector<User *> &sendToUserList) {

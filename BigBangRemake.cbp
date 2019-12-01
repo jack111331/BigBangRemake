@@ -427,6 +427,9 @@
 		<Unit filename="/home/edge/BigBangRemake/vo/ReadyInLoungeRequest.cpp">
 			<Option target="BigBangRemake"/>
 		</Unit>
+		<Unit filename="/home/edge/BigBangRemake/vo/RegisterAndLoginResponse.cpp">
+			<Option target="BigBangRemake"/>
+		</Unit>
 		<Unit filename="/home/edge/BigBangRemake/vo/ResistAttackRequest.cpp">
 			<Option target="BigBangRemake"/>
 		</Unit>

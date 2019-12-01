@@ -1,4 +1,13 @@
-[2019-11-27 00:15:36.477] [Agent] [info] Message, jsonMessage=
-[2019-11-27 00:17:43.440] [Agent] [info] Message, jsonMessage=
-[2019-11-27 00:20:30.823] [Agent] [info] Message, jsonMessage="{\"use\":\"dsad\"}"
-[2019-11-27 00:20:30.823] [Agent] [error] Wrong Message, jsonMessage="{\"use\":\"dsad\"}"
+[2019-12-01 22:58:06.508] [Agent] [info] jsonMessage={"user":{"registerAndLogin":{"password":"","username":""}}}
+[2019-12-01 22:58:06.602] [Agent] [info] jsonMessage={"user":{"retrieveLoungeInfo":{}}}
+[2019-12-01 23:00:49.476] [Agent] [info] jsonMessage={"user":{"registerAndLogin":{"password":"","username":""}}}
+[2019-12-01 23:00:49.566] [Agent] [info] jsonMessage={"user":{"retrieveLoungeInfo":{}}}
+[2019-12-01 23:02:00.155] [Agent] [info] jsonMessage={"user":{"registerAndLogin":{"password":"","username":""}}}
+[2019-12-01 23:02:00.243] [Agent] [info] jsonMessage={"user":{"retrieveLoungeInfo":{}}}
+[2019-12-01 23:03:32.859] [Agent] [info] jsonMessage={"user":{"registerAndLogin":{"password":"","username":""}}}
+[2019-12-01 23:03:32.946] [Agent] [info] jsonMessage={"user":{"retrieveLoungeInfo":{}}}
+[2019-12-01 23:08:55.142] [Agent] [info] jsonMessage={"user":{"retrieveLoungeInfo":{}}}
+[2019-12-01 23:09:08.141] [Agent] [info] jsonMessage={"user":{"registerAndLogin":{"password":"","username":""}}}
+[2019-12-01 23:09:08.244] [Agent] [info] jsonMessage={"user":{"retrieveLoungeInfo":{}}}
+[2019-12-01 23:12:41.953] [Agent] [info] jsonMessage={"user":{"registerAndLogin":{"password":"","username":""}}}
+[2019-12-01 23:12:42.056] [Agent] [info] jsonMessage={"user":{"retrieveLoungeInfo":{}}}

@@ -24,6 +24,7 @@ void Network::setup() {
     gameServer->set_message_handler(
             std::bind(&Network::onMessage, this, std::placeholders::_1, std::placeholders::_2));
     gameServer->set_close_handler(std::bind(&Network::onClose, this, std::placeholders::_1));
+    gameServer->set_reuse_addr(true);
 
     // Listen on port
     gameServer->listen(PORT);
@@ -53,8 +54,6 @@ void Network::onOpen(websocketpp::connection_hdl hdl) {
 void Network::onMessage(websocketpp::connection_hdl hdl, server::message_ptr msg) {
     std::thread thread(std::bind(&Agent::handleMessage, agentSet.at(hdl), std::placeholders::_1), msg->get_payload());
     thread.detach();
-    // single thread approach
-    //    agentSet.at(hdl)->handleMessage(msg->get_payload());
 }
 
 void Network::sendMessage(websocketpp::connection_hdl hdl, const std::string &message) {

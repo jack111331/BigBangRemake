@@ -9,28 +9,28 @@
 #include "User.h"
 #include "Player.h"
 using nlohmann::json;
-Agent::Agent(websocketpp::connection_hdl hdl) : token(std::move(hdl)), user(nullptr), player(nullptr) {
-
+Agent::Agent(websocketpp::connection_hdl hdl) : token(std::move(hdl)), player(nullptr) {
+    user = new User(this);
 }
 const websocketpp::connection_hdl &Agent::getToken() const {
     return token;
 }
 
 void Agent::handleMessage(const std::string &message) {
-    json jsonMessage = json(message);
+    json jsonMessage = json::parse(message);
     auto logger = Logger::getLogger("Agent");
     logger->info("jsonMessage={}", jsonMessage.dump());
     if(jsonMessage.find("user") != jsonMessage.end()) {
         if(user) {
             user->handleMessage(jsonMessage.at("user"));
         } else {
-            logger->error("Wrong Message, jsonMessage={}", jsonMessage.dump());
+            logger->error("No such user.");
         }
     } else if(jsonMessage.find("player") != jsonMessage.end()) {
         if(player) {
             player->handleMessage(jsonMessage.at("player"));
         } else {
-            logger->error("Wrong Message, jsonMessage={}", jsonMessage.dump());
+            logger->error("No such player.");
         }
     } else {
         logger->error("Wrong Message, jsonMessage={}", jsonMessage.dump());

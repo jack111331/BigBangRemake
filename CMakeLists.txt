@@ -110,6 +110,7 @@ list(APPEND SERVER_SOURCE
         Logger.cpp
         PlayerService.cpp
         UserService.cpp
+        vo/RegisterAndLoginResponse.cpp
         vo/JoinLoungeRequest.cpp
         vo/UpdatePlayerInfoRequest.cpp
         vo/RetrieveLoungeInfoResponse.cpp

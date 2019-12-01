@@ -26,8 +26,6 @@ public:
 
     void changeRoomOwner(User *user);
 
-    void setRoomOwner(User *roomOwner);
-
     User *getRoomOwner();
 
     bool searchUserInLounge(User *user);
@@ -60,5 +58,6 @@ private:
     //  Room * room;
     bool enableExclusiveCard = false;
     User *roomOwner;
+    bool dirty;
     // Owner is for when all user ready, who will decide the game will start
 };

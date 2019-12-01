@@ -18,9 +18,11 @@ public:
     template<typename T>
     nlohmann::json packAsJson(std::string requestName, T request);
 
+    void sendRegisterAndLoginResponse(User *sendToUser, User *user);
+
     void sendRetrieveLoungeListInfoResponse(User *sendToUser, const std::vector<Lounge *> &loungeList);
 
-    void sendRetrieveLoungeInfoResponse(User *sendToUser, Lounge * lounge);
+    void sendRetrieveLoungeInfoResponse(User *sendToUser, Lounge *lounge);
 
     void sendStartLoungeGameResponse(const std::vector<User *> &sendToUserList);
 

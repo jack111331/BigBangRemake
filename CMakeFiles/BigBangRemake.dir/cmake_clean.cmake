@@ -51,6 +51,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/BigBangRemake.dir/Logger.cpp.o"
   "CMakeFiles/BigBangRemake.dir/PlayerService.cpp.o"
   "CMakeFiles/BigBangRemake.dir/UserService.cpp.o"
+  "CMakeFiles/BigBangRemake.dir/vo/RegisterAndLoginResponse.cpp.o"
   "CMakeFiles/BigBangRemake.dir/vo/JoinLoungeRequest.cpp.o"
   "CMakeFiles/BigBangRemake.dir/vo/UpdatePlayerInfoRequest.cpp.o"
   "CMakeFiles/BigBangRemake.dir/vo/RetrieveLoungeInfoResponse.cpp.o"

@@ -63,8 +63,11 @@ void User::setId(uint32_t id) {
 void User::handleMessage(const json &jsonMessage) {
     auto loungeManager = LoungeManager::getInstance();
     auto network = Network::getInstance();
+    auto logger = Logger::getLogger("User");
     if (jsonMessage.find("registerAndLogin") != jsonMessage.end()) {
-
+        // TODO retrieve user from DB
+        loungeManager->addUserToNewLounge(this);
+        userService->sendRegisterAndLoginResponse(this, this);
     } else if (jsonMessage.find("changeNickname") != jsonMessage.end()) {
         Request::User::ChangeNicknameRequest request = jsonMessage.at(
                 "changeNickname").get<Request::User::ChangeNicknameRequest>();
@@ -78,7 +81,8 @@ void User::handleMessage(const json &jsonMessage) {
     } else if (jsonMessage.find("leaveLounge") != jsonMessage.end()) {
         loungeManager->removeUserFromLounge(this);
     } else if (jsonMessage.find("retrieveLoungeInfo") != jsonMessage.end()) {
-        userService->sendRetrieveLoungeInfoResponse(this, loungeManager->searchLounge(this));
+        Lounge *lounge = loungeManager->searchLounge(this);
+        userService->sendRetrieveLoungeInfoResponse(this, lounge);
     } else if (jsonMessage.find("readyInLounge") != jsonMessage.end()) {
         Request::User::ReadyInLoungeRequest request = jsonMessage.at(
                 "readyInLounge").get<Request::User::ReadyInLoungeRequest>();
@@ -87,7 +91,8 @@ void User::handleMessage(const json &jsonMessage) {
     } else if (jsonMessage.find("startLoungeGame") != jsonMessage.end()) {
         auto lounge = loungeManager->searchLounge(this);
         auto roomManager = RoomManager::getInstance();
-        if (lounge->getRoomOwner() == this && lounge->isAllUserReady() && lounge->getLoungeSize() == Lounge::MAX_LOUNGE_SIZE) {
+        if (lounge->getRoomOwner() == this && lounge->isAllUserReady() &&
+            lounge->getLoungeSize() == Lounge::MAX_LOUNGE_SIZE) {
             auto room = roomManager->createRoom();
             for (auto user : lounge->getUserList()) {
                 room->playerJoin(user->getAgent());

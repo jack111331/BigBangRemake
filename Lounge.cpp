@@ -4,20 +4,18 @@ Lounge::Lounge(User *roomOwner){
 
 }
 
-void Lounge::setRoomOwner(User *roomOwner) {
-    this->roomOwner = roomOwner;
-}
-
 uint32_t Lounge::getId() const {
     return id;
 }
 
 void Lounge::setId(uint32_t id) {
+    // TODO randomly generate id
     this->id = id;
 }
 
 void Lounge::joinLounge(User *user) {
     userList.push_back(user);
+    this->dirty = true;
 }
 
 size_t Lounge::getLoungeSize() {
@@ -47,6 +45,7 @@ bool Lounge::searchUserInLounge(uint32_t ID) {
 
 void Lounge::changeRoomOwner(User *user) {
     this->roomOwner = user;
+    this->dirty = true;
 }
 
 User *Lounge::getRoomOwner() {
@@ -70,7 +69,10 @@ bool Lounge::getReadyState(User *user) {
 }
 
 void Lounge::setReadyState(User *user, bool state) {
-    readyMap.at(user) = state;
+    if(readyMap.at(user) != state) {
+        readyMap.at(user) = state;
+        this->dirty = true;
+    }
 }
 
 void Lounge::exitLounge(User *user) {
@@ -78,6 +80,7 @@ void Lounge::exitLounge(User *user) {
         if (*it == user) {
             userList.erase(it);
             readyMap.erase(user);
+            this->dirty = true;
             break;
         }
     }

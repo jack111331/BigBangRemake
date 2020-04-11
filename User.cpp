@@ -72,6 +72,9 @@ void User::handleMessage(const json &jsonMessage) {
         Request::User::ChangeNicknameRequest request = jsonMessage.at(
                 "changeNickname").get<Request::User::ChangeNicknameRequest>();
         this->name = request.nickname;
+    } else if (jsonMessage.find("retrieveFriendList") != jsonMessage.end()) {
+//        TODO query frined list
+//        userService->sendRetrieveFriendListResponse(this, loungeManager->getLoungeList());
     } else if (jsonMessage.find("retrieveLoungeListInfo") != jsonMessage.end()) {
         userService->sendRetrieveLoungeListInfoResponse(this, loungeManager->getLoungeList());
     } else if (jsonMessage.find("joinLounge") != jsonMessage.end()) {
@@ -107,5 +110,7 @@ void User::handleMessage(const json &jsonMessage) {
 }
 
 User::~User() {
+    auto loungeManager = LoungeManager::getInstance();
+    loungeManager->removeUserFromLounge(this);
     delete this->userService;
 }

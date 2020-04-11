@@ -19,7 +19,7 @@ public:
     void onOpen(websocketpp::connection_hdl hdl);
     void onMessage(websocketpp::connection_hdl hdl, server::message_ptr msg);
     void sendMessage(websocketpp::connection_hdl hdl, const std::string &message);
-    void onClose(const websocketpp::connection_hdl& hdl);
+    void onClose(websocketpp::connection_hdl hdl);
     ~Network();
 private:
     static Network *instance;

@@ -60,7 +60,7 @@ void Network::sendMessage(websocketpp::connection_hdl hdl, const std::string &me
     gameServer->send(hdl, message, websocketpp::frame::opcode::value::TEXT);
 }
 
-void Network::onClose(const websocketpp::connection_hdl &hdl) {
+void Network::onClose(websocketpp::connection_hdl hdl) {
     delete agentSet.at(hdl);
     agentSet.erase(hdl);
 }

@@ -43,9 +43,9 @@ Lounge *LoungeManager::searchLounge(User *user) const {
     return searchLounge(user->getId());
 }
 
-Lounge *LoungeManager::searchLounge(uint32_t id) const {
+Lounge *LoungeManager::searchLounge(uint32_t userId) const {
     for (auto lounge : loungeList) {
-        if (lounge->searchUserInLounge(id)) {
+        if (lounge->searchUserInLounge(userId)) {
             return lounge;
         }
     }
@@ -59,6 +59,7 @@ const std::vector<Lounge *> &LoungeManager::getLoungeList() const {
 void LoungeManager::removeLounge(Lounge *targetLounge) {
     for (auto lounge = loungeList.begin(); lounge != loungeList.end(); ++lounge) {
         if (*lounge == targetLounge) {
+            delete *lounge;
             loungeList.erase(lounge);
             break;
         }
@@ -71,12 +72,12 @@ void LoungeManager::removeUserFromLounge(User *user) {
     if (targetLounge == nullptr) {
         return;
     }
-    targetLounge->exitLounge(user);
     if (user == targetLounge->getRoomOwner()) {
-        targetLounge->setRoomOwner(targetLounge->getFirstUser());
-        if (targetLounge->getLoungeSize() <= 0) {
-            removeLounge(targetLounge);
-        }
+        targetLounge->changeRoomOwner(targetLounge->getFirstUser());
+    }
+    targetLounge->exitLounge(user);
+    if (targetLounge->getLoungeSize() <= 0) {
+        removeLounge(targetLounge);
     }
 }
 

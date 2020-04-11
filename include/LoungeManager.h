@@ -20,7 +20,7 @@ public:
 
     Lounge *searchLounge(User *user) const;
 
-    Lounge *searchLounge(uint32_t id) const;
+    Lounge *searchLounge(uint32_t userId) const;
 
     void removeLounge(Lounge *targetLounge);
 

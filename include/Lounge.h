@@ -12,9 +12,9 @@ class Lounge {
 public:
     Lounge(User *roomOwner);
 
-    uint32_t getId() const;
+    void pollingForSync();
 
-    void setId(uint32_t id);
+    uint32_t getId() const;
 
     void joinLounge(User *user);
 
@@ -30,7 +30,7 @@ public:
 
     bool searchUserInLounge(User *user);
 
-    bool searchUserInLounge(uint32_t ID);
+    bool searchUserInLounge(uint32_t id);
 
     bool isAllUserReady();
 
@@ -57,7 +57,11 @@ private:
     std::map<User *, bool> readyMap;
     //  Room * room;
     bool enableExclusiveCard = false;
+    // Owner is for when all user ready, who will decide the game will start
     User *roomOwner;
     bool dirty;
-    // Owner is for when all user ready, who will decide the game will start
+
+    std::thread syncThread;
+    bool threadDone;
+    static constexpr int SYNC_TIME_IN_SECOND = 1;
 };

@@ -1,20 +1,33 @@
 #include "Lounge.h"
 #include "User.h"
-Lounge::Lounge(User *roomOwner){
 
+Lounge::Lounge(User *roomOwner) {
+    this->id = (uint32_t) ((uint64_t) this & 0xffffffff);
+    this->threadDone = false;
+    this->syncThread = std::thread(std::bind(&Lounge::pollingForSync, this));
+    syncThread.detach();
+}
+
+void Lounge::pollingForSync() {
+    auto userService = new UserService();
+    while (!threadDone) {
+        if (dirty) {
+            for (auto user : userList) {
+                userService->sendRetrieveLoungeInfoResponse(user, this);
+            }
+            dirty = false;
+        }
+        std::this_thread::sleep_for(std::chrono::seconds(SYNC_TIME_IN_SECOND));
+    }
 }
 
 uint32_t Lounge::getId() const {
     return id;
 }
 
-void Lounge::setId(uint32_t id) {
-    // TODO randomly generate id
-    this->id = id;
-}
-
 void Lounge::joinLounge(User *user) {
     userList.push_back(user);
+    readyMap.insert(std::pair<User *, bool>(user, false));
     this->dirty = true;
 }
 
@@ -34,9 +47,9 @@ bool Lounge::searchUserInLounge(User *user) {
     return searchUserInLounge(user->getId());
 }
 
-bool Lounge::searchUserInLounge(uint32_t ID) {
-    for (int i = 0; i < static_cast<int>(userList.size()); ++i) {
-        if (userList[i]->getId() == ID) {
+bool Lounge::searchUserInLounge(uint32_t id) {
+    for (auto user : userList) {
+        if (user->getId() == id) {
             return true;
         }
     }
@@ -62,14 +75,14 @@ bool Lounge::isAllUserReady() {
 }
 
 bool Lounge::getReadyState(User *user) {
-    if(readyMap.find(user) != readyMap.end()) {
+    if (readyMap.find(user) != readyMap.end()) {
         return readyMap.at(user);
     }
     return false;
 }
 
 void Lounge::setReadyState(User *user, bool state) {
-    if(readyMap.at(user) != state) {
+    if (readyMap.at(user) != state) {
         readyMap.at(user) = state;
         this->dirty = true;
     }
@@ -95,5 +108,5 @@ void Lounge::setEnableExclusiveCard(bool enable) {
 }
 
 Lounge::~Lounge() {
+    threadDone = true;
 }
-
